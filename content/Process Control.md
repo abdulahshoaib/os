@@ -1,5 +1,7 @@
 ---
-date: '2025-05-22T05:24:42+05:00'
+breadcrumbs: false
+title: Process Control
+weight: 1
 ---
 ## Library Required
 ```c

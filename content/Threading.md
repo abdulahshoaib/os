@@ -1,5 +1,7 @@
 ---
-date: '2025-05-22T05:22:42+05:00'
+breadcrumbs: false
+title: Threading
+weight: 5
 ---
 ## Library Required
 ```c
@@ -297,3 +299,4 @@ pthread_attr_getstack(&attr, &addr, &sz);       // addr == stack_area, sz == 655
 
 pthread_attr_destroy(&attr);
 ```
+

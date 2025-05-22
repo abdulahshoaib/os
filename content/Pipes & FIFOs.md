@@ -1,5 +1,7 @@
 ---
-date: '2025-05-22T05:23:27+05:00'
+breadcrumbs: false
+title: Pipes & FIFOs
+weight: 4
 ---
 ## Libraries Required
 ```c
@@ -69,3 +71,4 @@ mkfifo("mypipe", 0666);
 int fd = open("mypipe", O_WRONLY);
 write(fd, "Hi", 2);
 ```
+

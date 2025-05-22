@@ -1,5 +1,7 @@
 ---
-date: '2025-05-22T05:22:08+05:00'
+breadcrumbs: false
+title: Shared Memory
+weight: 7
 ---
 ## Libraries Required
 ```c

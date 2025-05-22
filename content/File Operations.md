@@ -1,5 +1,5 @@
 ---
-date: '2025-05-22T05:24:21+05:00'
+weight: 3
 ---
 ## Libraries Required
 ```c
@@ -415,13 +415,3 @@ int fflush(FILE *stream);
 ```c
 fflush(fp);     // force buffered output to disk
 ```
-
-
-
-
-
-
-
-
-
-

@@ -1,5 +1,7 @@
 ---
-date: '2025-05-22T05:22:26+05:00'
+breadcrumbs: false
+title: Semaphore
+weight: 6
 ---
 ## Library Required
 ```c
@@ -141,4 +143,5 @@ Return Value:
 ```c
 sem_destroy(&sem_local);
 ```
+
 
