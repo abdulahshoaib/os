@@ -1,9 +1,6 @@
 ---
 date: '2025-05-22T05:24:56+05:00'
 ---
-## Process Control in UNIX
-This document covers key process control functions and macros in UNIX, typically used for process creation and synchronization.
-
 ## fork()
 Creates a new child process by duplicating the calling (parent) process.
 ```c
