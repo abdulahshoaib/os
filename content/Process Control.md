@@ -3,97 +3,131 @@ breadcrumbs: false
 title: Process Control
 weight: 1
 ---
-## Library Required
+## fork()
+Creates a new child process by duplicating the calling (parent) process.
 ```c
-#include <unistd.h>
+pid_t fork(void);
 ```
-
-## execl()
-Replaces current process with a new one using a path and a list of arguments
-```c
-int execl(const char *path, const char *arg, ..);
-```
-**Return Values:**
-- Success: No return
+**Return Value:**
+- Parent: child's PID (positive)
+- Child: 0
 - Error: -1
 
 **Example:**
 ```c
-execl("/bin/ls", "ls", "-l", NULL);
+pid_t pid = fork();
+if (pid == 0) {
+    printf("Child process\n");
+    _exit(0);
+} else {
+    printf("Parent process, child PID: %d\n", pid);
+}
 ```
 
-## execlp()
-Like `execl()` but searches `PATH` for the executable
+## wait()
+Suspends execution of the calling process until any of its child processes terminates.
 ```c
-int execlp(const char *file, const char *arg, ..);
+pid_t wait(int *status);
 ```
-**Return Values:**
-- Success: No return
+**Return Value:**
+- Success: PID of terminated child
 - Error: -1
 
 **Example:**
 ```c
-execlp("ls", "ls", "-l", NULL);
+int status;
+wait(&status);
 ```
 
-## execle()
-Like `execl()` but allows specifying a custom environment
+## waitpid()
+Waits for a specific child process or set of children to terminate.
 ```c
-int execle(const char *path, const char *arg, .., char * const envp[]);
+pid_t waitpid(pid_t pid, int *status, int options);
 ```
-**Return Values:**
-- Success: No return
+**Return Value:**
+- Success: PID of child
 - Error: -1
+- With WNOHANG and no children ready: 0
 
 **Example:**
 ```c
-char *env[] = { "MYVAR=VALUE", NULL };
-execle("/bin/ls", "ls", "-l", NULL, env);
+int status;
+pid_t child = fork();
+if (child == 0) _exit(5);
+waitpid(child, &status, 0);
 ```
 
-## execv()
-Replaces current process using a path and an argument vector (array)
+## exit()
+Terminates the calling process and performs cleanup (e.g., flushes stdio buffers).
 ```c
-int execv(const char *path, char *const argv[]);
+void exit(int status);
 ```
-**Return Values:**
-- Success: No return
-- Error: -1
+**Return Value:**
+- Does not return
 
 **Example:**
 ```c
-char *args[] = { "ls", "-l", NULL };
-execv("/bin/ls", args);
+exit(0);
 ```
 
-## execvp()
-Like `execv()` but searches `PATH` for the executable
+## _exit()
+Immediately terminates the process without flushing stdio buffers or calling cleanup handlers.
 ```c
-int execvp(const char *file, char *const argv[]);
+void _exit(int status);
 ```
-**Return Values:**
-- Success: No return
-- Error: -1
+**Return Value:**
+- Does not return
 
 **Example:**
 ```c
-char *args[] = { "ls", "-l", NULL };
-execvp("ls", args);
+_exit(0);
 ```
 
-## execvpe()
-Like `execvp()` but also allows specifying a custom environment
+## MACROS
+### WIFEXITED
+Returns true if the child terminated normally (via exit() or _exit()).
 ```c
-int execvpe(const char *file, char *const argv[], char *const envp[]);
+WIFEXITED(status)
 ```
-**Return Values:**
-- Success: No return
-- Error: -1
+**Return Value:**
+- True if child terminated normally
 
 **Example:**
 ```c
-char *args[] = { "ls", "-l", NULL };
-char *env[] = { "MYVAR=VALUE", NULL };
-execvpe("ls", args, env);
+int status;
+wait(&status);
+if (WIFEXITED(status)) {
+    printf("Child exited normally\n");
+}
 ```
 
+### WEXITSTATUS
+Returns the exit status code of the child (only valid if WIFEXITED(status) is true).
+```c
+WEXITSTATUS(status)
+```
+**Return Value:**
+- Return code when WIFEXITED is true
+
+**Example:**
+```c
+if (WIFEXITED(status)) {
+    int code = WEXITSTATUS(status);
+    printf("Exit code: %d\n", code);
+}
+```
+
+### WIFSIGNALED
+Returns true if the child terminated due to an uncaught signal.
+```c
+WIFSIGNALED(status)
+```
+**Return Value:**
+- True if child terminated by signal
+
+**Example:**
+```c
+if (WIFSIGNALED(status)) {
+    printf("Child killed by signal\n");
+}
+```
