@@ -1,0 +1,19 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> – Process Controll</title>
+    <link>//localhost:1313/process-controll/</link>
+    <description>Recent content in Process Controll on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 May 2025 05:17:26 +0500</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/process-controll/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+  </channel>
+</rss>
