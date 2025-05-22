@@ -1,13 +1,13 @@
 ---
 date: '2025-05-22T05:24:21+05:00'
 ---
-## Libraries Used
+## Libraries Required
 ```c
 #include <fcntl.h>
 #include <unistd.h>
 ```
 
-## Types Used
+## Types
 ```c
 size_t      // is a unsigned integer type used to represent the number of bytes read or written
 ssize_t     // is a signed integer type used to represent the number of bytes read or written
