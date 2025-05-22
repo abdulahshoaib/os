@@ -33,7 +33,7 @@ Click to explore:
   - [Bounded Buffer Problem](content/Process%20Synchronization/Bounded%20Buffer%20Problem.md)
   - [Readers Writers Problem](content/Process%20Synchronization/Reader%20Writer%20Problem.md)
   - [Dining Philosipher Problem](content/Process%20Synchronization/Dining%20Philosipher%20Problem.md)
-  - [Sleeping Barber Problem](content/Process%20Synchronization/Sleeping%20Barber%20Problem.md)
+  - [Sleeping Barber Problem](content/Process%20Synchronization/The%20Sleeping%20Barber%20Problem.md)
 - [Deadlock](content/Deadlock/_index.md)
   - [Deadlock Problem](content/Deadlock/Deadlock%20Problem.md)
   - [Resource Allocation Graphs](content/Deadlock/Resource%20Allocation%20Graphs.md)
