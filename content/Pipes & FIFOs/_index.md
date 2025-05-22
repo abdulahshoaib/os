@@ -1,7 +1,7 @@
 ---
 date: '2025-05-22T05:23:27+05:00'
 ---
-## Libraries Used
+## Libraries Required
 ```c
 #include <unistd.h>
 #include <sys/stat.h>
