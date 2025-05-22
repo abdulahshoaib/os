@@ -1,6 +1,11 @@
 ---
 date: '2025-05-22T05:24:42+05:00'
 ---
+## Library Used
+```c
+#include <unistd.h>
+```
+
 ## execl()
 Replaces current process with a new one using a path and a list of arguments
 ```c
