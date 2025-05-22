@@ -1,0 +1,156 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> – </title>
+    <link>//localhost:1313/operating-system/process-synchronization/</link>
+    <description>Recent content on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 22 May 2025 16:24:31 +0500</lastBuildDate>
+    
+	  <atom:link href="//localhost:1313/operating-system/process-synchronization/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+      
+        
+      
+    
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/operating-system/process-synchronization/shared-memory/</link>
+      <pubDate>Thu, 22 May 2025 16:24:31 +0500</pubDate>
+      
+      <guid>//localhost:1313/operating-system/process-synchronization/shared-memory/</guid>
+      <description>
+        
+        
+        &lt;h2&gt;Shared Memory&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;shared-memory&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#shared-memory&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Concept&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;concept&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#concept&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Shared memory is an inter-process communication (IPC) mechanism where multiple processes share a region of memory. This region is created by one process using &lt;code&gt;shmget()&lt;/code&gt; and then mapped into the address space of other processes via &lt;code&gt;shmat()&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;The OS typically isolates memory between processes. However, shared memory explicitly bypasses this restriction by mutual agreement between processes.&lt;/li&gt;
+&lt;li&gt;Once attached, processes can directly read from and write to the shared region.&lt;/li&gt;
+&lt;li&gt;This memory is not controlled or interpreted by the OS—the processes using it define the format, meaning, and structure of the data.&lt;/li&gt;
+&lt;li&gt;Synchronization is critical: the OS does not prevent race conditions. It’s up to the processes to ensure safe access—typically by using semaphores or mutexes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This makes shared memory very fast for IPC, since there&amp;rsquo;s no copying of data between processes, but it also requires careful coordination.&lt;/p&gt;
+&lt;h3&gt;Race Condition&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;race-condition&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#race-condition&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A &lt;strong&gt;race condition&lt;/strong&gt; occurs when the outcome of a program depends on the &lt;strong&gt;timing or sequence&lt;/strong&gt; of uncontrollable events like context switches between threads or processes. It happens when:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Two or more threads/processes &lt;strong&gt;access shared data simultaneously&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;At least one of them is &lt;strong&gt;modifying the data&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;There is &lt;strong&gt;no proper synchronization&lt;/strong&gt; to control the access.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This can lead to &lt;strong&gt;unexpected behavior&lt;/strong&gt;, data corruption, or crashes.&lt;/p&gt;
+&lt;h3&gt;Race Condition Scenario&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;race-condition-scenario&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#race-condition-scenario&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;
+  sequenceDiagram
+    participant Thread A
+    participant Shared Memory
+    participant Thread B
+
+    Thread A-&amp;gt;&amp;gt;Shared Memory: Read value (x = 5)
+    Thread B-&amp;gt;&amp;gt;Shared Memory: Read value (x = 5)
+    Thread A-&amp;gt;&amp;gt;Thread A: Increment x (x = 6)
+    Thread B-&amp;gt;&amp;gt;Thread B: Increment x (x = 6)
+    Thread A-&amp;gt;&amp;gt;Shared Memory: Write x = 6
+    Thread B-&amp;gt;&amp;gt;Shared Memory: Write x = 6
+    Note over Shared Memory: Final value 7 but is 6 (race condition)
+&lt;/pre&gt;&lt;p&gt;In the above diagram, both threads read the same initial value and update it without knowing the other thread’s action. The final result does not reflect both increments, demonstrating a race condition.&lt;/p&gt;
+
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/operating-system/process-synchronization/producer-consumer-problem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/operating-system/process-synchronization/producer-consumer-problem/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Producer Consumer Problem&lt;/h1&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/operating-system/process-synchronization/critical-section-problem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/operating-system/process-synchronization/critical-section-problem/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Critical Section Problem&lt;/h1&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/operating-system/process-synchronization/semaphores/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/operating-system/process-synchronization/semaphores/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Semaphore&lt;/h1&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/operating-system/process-synchronization/bounded-buffer-problem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/operating-system/process-synchronization/bounded-buffer-problem/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Bounded Buffer Problem&lt;/h1&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/operating-system/process-synchronization/reader-writer-problem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/operating-system/process-synchronization/reader-writer-problem/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Readers Writers Problem&lt;/h1&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/operating-system/process-synchronization/dining-philosiphers-problem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/operating-system/process-synchronization/dining-philosiphers-problem/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Dining Philosipher Problem&lt;/h1&gt;
+      </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//localhost:1313/operating-system/process-synchronization/the-sleeping-barber-problem/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//localhost:1313/operating-system/process-synchronization/the-sleeping-barber-problem/</guid>
+      <description>
+        
+        
+        &lt;h1&gt;Sleeping Barber Problem&lt;/h1&gt;
+      </description>
+    </item>
+    
+  </channel>
+</rss>
