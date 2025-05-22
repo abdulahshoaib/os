@@ -1,6 +1,11 @@
 ---
 date: '2025-05-22T05:24:56+05:00'
 ---
+## Library Used
+```c
+#include <sys/wait.h>
+```
+
 ## fork()
 Creates a new child process by duplicating the calling (parent) process.
 ```c
