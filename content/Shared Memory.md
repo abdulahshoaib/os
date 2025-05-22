@@ -1,6 +1,7 @@
 ---
 breadcrumbs: false
 title: Shared Memory
+next: "CPU Scheduling"
 weight: 7
 ---
 ## Libraries Required

@@ -1,6 +1,7 @@
 ---
 breadcrumbs: true
 title: Shared Memory
+prev: "Process Synchronization"
 weight: 1
 ---
 ## Concept

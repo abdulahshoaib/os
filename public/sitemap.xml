@@ -2,42 +2,90 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/process-control/</loc>
+    <loc>//localhost:1313/deadlock/deadlock-handling/deadlock-prevention/</loc>
   </url><url>
-    <loc>/process-synchronization/shared-memory/</loc>
+    <loc>//localhost:1313/deadlock/deadlock-problem/</loc>
   </url><url>
-    <loc>/exec-family/</loc>
+    <loc>//localhost:1313/cpu-scheduling/scheduling-algorithms/fcfs/</loc>
   </url><url>
-    <loc>/process-synchronization/producer-consumer-problem/</loc>
+    <loc>//localhost:1313/virtual-memory/page-replacement-algorithm/</loc>
   </url><url>
-    <loc>/file-operations/</loc>
+    <loc>//localhost:1313/process-control/</loc>
   </url><url>
-    <loc>/process-synchronization/critical-section-problem/</loc>
+    <loc>//localhost:1313/cpu-scheduling/scheduling/</loc>
   </url><url>
-    <loc>/pipes--fifos/</loc>
+    <loc>//localhost:1313/process-synchronization/shared-memory/</loc>
   </url><url>
-    <loc>/process-synchronization/semaphores/</loc>
+    <loc>//localhost:1313/deadlock/deadlock-handling/deadlock-avoidance/</loc>
   </url><url>
-    <loc>/process-synchronization/bounded-buffer-problem/</loc>
+    <loc>//localhost:1313/exec-family/</loc>
   </url><url>
-    <loc>/threading/</loc>
+    <loc>//localhost:1313/virtual-memory/page-replacement-algorithm/fif0/</loc>
   </url><url>
-    <loc>/process-synchronization/reader-writer-problem/</loc>
+    <loc>//localhost:1313/process-synchronization/producer-consumer-problem/</loc>
   </url><url>
-    <loc>/semaphores/</loc>
+    <loc>//localhost:1313/deadlock/resource-allocation-graphs/</loc>
   </url><url>
-    <loc>/shared-memory/</loc>
+    <loc>//localhost:1313/cpu-scheduling/scheduling-algorithms/</loc>
   </url><url>
-    <loc>/process-synchronization/dining-philosipher-problem/</loc>
+    <loc>//localhost:1313/cpu-scheduling/scheduling-algorithms/sjf/</loc>
   </url><url>
-    <loc>/process-synchronization/</loc>
+    <loc>//localhost:1313/process-synchronization/critical-section-problem/</loc>
   </url><url>
-    <loc>/process-synchronization/the-sleeping-barber-problem/</loc>
+    <loc>//localhost:1313/deadlock/deadlock-handling/deadlock-detection/</loc>
   </url><url>
-    <loc>/</loc>
+    <loc>//localhost:1313/file-operations/</loc>
   </url><url>
-    <loc>/categories/</loc>
+    <loc>//localhost:1313/virtual-memory/page-replacement-algorithm/opt/</loc>
   </url><url>
-    <loc>/tags/</loc>
+    <loc>//localhost:1313/cpu-scheduling/scheduling-algorithms/srtf/</loc>
+  </url><url>
+    <loc>//localhost:1313/deadlock/deadlock-handling/deadlock-recovery/</loc>
+  </url><url>
+    <loc>//localhost:1313/virtual-memory/page-replacement-algorithm/lru/</loc>
+  </url><url>
+    <loc>//localhost:1313/pipes--fifos/</loc>
+  </url><url>
+    <loc>//localhost:1313/cpu-scheduling/scheduling-algorithms/ps/</loc>
+  </url><url>
+    <loc>//localhost:1313/process-synchronization/semaphores/</loc>
+  </url><url>
+    <loc>//localhost:1313/process-synchronization/bounded-buffer-problem/</loc>
+  </url><url>
+    <loc>//localhost:1313/virtual-memory/page-replacement-algorithm/clock/</loc>
+  </url><url>
+    <loc>//localhost:1313/cpu-scheduling/scheduling-algorithms/rr/</loc>
+  </url><url>
+    <loc>//localhost:1313/threading/</loc>
+  </url><url>
+    <loc>//localhost:1313/process-synchronization/reader-writer-problem/</loc>
+  </url><url>
+    <loc>//localhost:1313/cpu-scheduling/scheduling-algorithms/multilevel-queues-scheduling/</loc>
+  </url><url>
+    <loc>//localhost:1313/semaphores/</loc>
+  </url><url>
+    <loc>//localhost:1313/cpu-scheduling/scheduling-algorithms/multilevel-feedback-queues-scheduling/</loc>
+  </url><url>
+    <loc>//localhost:1313/shared-memory/</loc>
+  </url><url>
+    <loc>//localhost:1313/cpu-scheduling/</loc>
+  </url><url>
+    <loc>//localhost:1313/process-synchronization/dining-philosipher-problem/</loc>
+  </url><url>
+    <loc>//localhost:1313/process-synchronization/</loc>
+  </url><url>
+    <loc>//localhost:1313/process-synchronization/the-sleeping-barber-problem/</loc>
+  </url><url>
+    <loc>//localhost:1313/deadlock/</loc>
+  </url><url>
+    <loc>//localhost:1313/virtual-memory/</loc>
+  </url><url>
+    <loc>//localhost:1313/</loc>
+  </url><url>
+    <loc>//localhost:1313/categories/</loc>
+  </url><url>
+    <loc>//localhost:1313/deadlock/deadlock-handling/</loc>
+  </url><url>
+    <loc>//localhost:1313/tags/</loc>
   </url>
 </urlset>
