@@ -11,25 +11,19 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title></title>
-  <meta name="description" content="pthread_create() Creates a new thread and starts executing the specified routine in parallel
-int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void *), void *arg); Return Value:
-Success: 0 Error: Error number pthread_join() Waits for the specified thread to terminate and optionally collects its return value" /><link rel="canonical" href="/threading/" itemprop="url" />
+  <meta name="description" content="Library Used #include &lt;pthread&gt; Types pthread_t // uniquely identify a thread in POSIX thread programming pthread_attr_t // uniquely identify a thread attributes in POSIX pthread_create() Creates a new thread and starts executing the specified routine in parallel" /><link rel="canonical" href="/threading/" itemprop="url" />
 
 <meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/threading/" />
 
-  <meta itemprop="description" content="pthread_create() Creates a new thread and starts executing the specified routine in parallel
-int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void *), void *arg); Return Value:
-Success: 0 Error: Error number pthread_join() Waits for the specified thread to terminate and optionally collects its return value">
+  <meta itemprop="description" content="Library Used #include &lt;pthread&gt; Types pthread_t // uniquely identify a thread in POSIX thread programming pthread_attr_t // uniquely identify a thread attributes in POSIX pthread_create() Creates a new thread and starts executing the specified routine in parallel">
   <meta itemprop="datePublished" content="2025-05-22T05:22:42+05:00">
-  <meta itemprop="dateModified" content="2025-05-22T06:53:39+05:00">
-  <meta itemprop="wordCount" content="163">
+  <meta itemprop="dateModified" content="2025-05-22T14:08:46+05:00">
+  <meta itemprop="wordCount" content="582">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="pthread_create() Creates a new thread and starts executing the specified routine in parallel
-int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void *), void *arg); Return Value:
-Success: 0 Error: Error number pthread_join() Waits for the specified thread to terminate and optionally collects its return value">
+  <meta name="twitter:description" content="Library Used #include &lt;pthread&gt; Types pthread_t // uniquely identify a thread in POSIX thread programming pthread_attr_t // uniquely identify a thread attributes in POSIX pthread_create() Creates a new thread and starts executing the specified routine in parallel">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -176,6 +170,18 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
   
     <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
               <a
+                href="#library-used"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Library Used</a>
+            </li>
+          <li>
+              <a
+                href="#types"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Types</a>
+            </li>
+          <li>
+              <a
                 href="#pthread_create"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
               >pthread_create()</a>
@@ -206,15 +212,21 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
             </li>
           <li>
               <a
-                href="#pthread_cond_init"
+                href="#pthread_attr_init"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >pthread_cond_init()</a>
+              >pthread_attr_init()</a>
             </li>
           <li>
               <a
-                href="#pthread_cond_destroy"
+                href="#pthread_attr_destroy"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >pthread_cond_destroy()</a>
+              >pthread_attr_destroy()</a>
+            </li>
+          <li>
+              <a
+                href="#thread-attr-settergetter"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Thread Attr Setter/Getter</a>
             </li>
           </ul>
   </li>
@@ -304,6 +316,14 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#library-used">Library Used
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#types">Types
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_create">pthread_create()
         </a>
       </li>
@@ -324,11 +344,39 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_cond_init">pthread_cond_init()
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_attr_init">pthread_attr_init()
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_cond_destroy">pthread_cond_destroy()
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_attr_destroy">pthread_attr_destroy()
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#thread-attr-settergetter">Thread Attr Setter/Getter
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_attr_setdetachstate--pthread_attr_getdetachstate">pthread_attr_setdetachstate / pthread_attr_getdetachstate
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_attr_setschedpolicy--pthread_attr_getschedpolicy">pthread_attr_setschedpolicy / pthread_attr_getschedpolicy
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_attr_setschedparam--pthread_attr_getschedparam">pthread_attr_setschedparam / pthread_attr_getschedparam
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_attr_setinheritsched--pthread_attr_getinheritsched">pthread_attr_setinheritsched / pthread_attr_getinheritsched
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_attr_setstacksize--pthread_attr_getstacksize">pthread_attr_setstacksize / pthread_attr_getstacksize
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pthread_attr_setstack--pthread_attr_getstack">pthread_attr_setstack / pthread_attr_getstack
         </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
@@ -351,7 +399,35 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
 
         <div class="content">
           
-          <h2>pthread_create()<span class="hx-absolute -hx-mt-20" id="pthread_create"></span>
+          <h2>Library Used<span class="hx-absolute -hx-mt-20" id="library-used"></span>
+    <a href="#library-used" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;pthread&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Types<span class="hx-absolute -hx-mt-20" id="types"></span>
+    <a href="#types" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">pthread_t</span>       <span style="color:#75715e">// uniquely identify a thread in POSIX thread programming
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">pthread_attr_t</span>  <span style="color:#75715e">// uniquely identify a thread attributes in POSIX
+</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h2>pthread_create()<span class="hx-absolute -hx-mt-20" id="pthread_create"></span>
     <a href="#pthread_create" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Creates a new thread and starts executing the specified routine in parallel</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
@@ -365,11 +441,30 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: Error number</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">print_msg</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> arg) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Thread: %s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (<span style="color:#66d9ef">char</span><span style="color:#f92672">*</span>)arg);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pthread_t</span> tid;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_create</span>(<span style="color:#f92672">&amp;</span>tid, NULL, print_msg, <span style="color:#e6db74">&#34;Hello from thread&#34;</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>pthread_join()<span class="hx-absolute -hx-mt-20" id="pthread_join"></span>
     <a href="#pthread_join" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Waits for the specified thread to terminate and optionally collects its return value</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -384,11 +479,30 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: Error number</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">thread_func</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> arg) { <span style="color:#66d9ef">return</span> (<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span>)<span style="color:#ae81ff">42</span>; }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pthread_t</span> tid;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_create</span>(<span style="color:#f92672">&amp;</span>tid, NULL, thread_func, NULL);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> retval;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_join</span>(tid, <span style="color:#f92672">&amp;</span>retval);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Thread returned: %ld</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, (<span style="color:#66d9ef">long</span>)retval);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>pthread_detach()<span class="hx-absolute -hx-mt-20" id="pthread_detach"></span>
     <a href="#pthread_detach" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Marks a thread as detached so its resources are automatically released on termination</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -403,11 +517,28 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: Error number</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">detached_func</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> arg) { <span style="color:#a6e22e">pthread_exit</span>(NULL); }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pthread_t</span> tid;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_create</span>(<span style="color:#f92672">&amp;</span>tid, NULL, detached_func, NULL);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_detach</span>(tid);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>pthread_exit()<span class="hx-absolute -hx-mt-20" id="pthread_exit"></span>
     <a href="#pthread_exit" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Terminates the calling thread and optionally returns a value to any joining thread</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -422,10 +553,29 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Does not return</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">thread_func</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> arg) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">pthread_exit</span>(<span style="color:#e6db74">&#34;Finished&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pthread_t</span> tid;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_create</span>(<span style="color:#f92672">&amp;</span>tid, NULL, thread_func, NULL);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>pthread_self()<span class="hx-absolute -hx-mt-20" id="pthread_self"></span>
     <a href="#pthread_self" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Returns the thread ID of the calling thread</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -440,15 +590,20 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>The ID of the calling thread</li>
 </ul>
-<h2>pthread_cond_init()<span class="hx-absolute -hx-mt-20" id="pthread_cond_init"></span>
-    <a href="#pthread_cond_init" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Initializes a condition variable used for signaling between threads</p>
+<p><strong>Example:</strong></p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><pre><code>int pthread_cond_init(pthread_cond_t *cond, const pthread_condattr_t *attr);</code></pre></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> <span style="color:#a6e22e">thread_func</span>(<span style="color:#66d9ef">void</span><span style="color:#f92672">*</span> arg) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Thread ID: %lu</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, <span style="color:#a6e22e">pthread_self</span>());
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> NULL;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pthread_t</span> tid;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_create</span>(<span style="color:#f92672">&amp;</span>tid, NULL, thread_func, NULL);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -458,16 +613,11 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
   </button>
 </div>
 </div>
-<p>Return Value:</p>
-<ul>
-<li>Success: 0</li>
-<li>Error: Error number</li>
-</ul>
-<h2>pthread_cond_destroy()<span class="hx-absolute -hx-mt-20" id="pthread_cond_destroy"></span>
-    <a href="#pthread_cond_destroy" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Destroys a condition variable, freeing its resources</p>
+<h2>pthread_attr_init()<span class="hx-absolute -hx-mt-20" id="pthread_attr_init"></span>
+    <a href="#pthread_attr_init" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Initializes a thread attribute object with default values</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
-<div><pre><code>int pthread_cond_destroy(pthread_cond_t *cond);</code></pre></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_init</span>(<span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
   <button
     class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
     title="Copy code"
@@ -477,11 +627,283 @@ Success: 0 Error: Error number pthread_join() Waits for the specified thread to 
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: Error number</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">pthread_attr_t</span> attr;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_init</span>(<span style="color:#f92672">&amp;</span>attr);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h2>pthread_attr_destroy()<span class="hx-absolute -hx-mt-20" id="pthread_attr_destroy"></span>
+    <a href="#pthread_attr_destroy" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Destroys a thread attribute object and frees associated resources</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_destroy</span>(<span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Return Value:</strong></p>
+<ul>
+<li>Success: 0</li>
+<li>Error: Error number</li>
+</ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">pthread_attr_t</span> attr;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_init</span>(<span style="color:#f92672">&amp;</span>attr);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_destroy</span>(<span style="color:#f92672">&amp;</span>attr);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Thread Attr Setter/Getter<span class="hx-absolute -hx-mt-20" id="thread-attr-settergetter"></span>
+    <a href="#thread-attr-settergetter" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>These functions are used to set and get properties of a <code>pthread_attr_t</code> object <strong>before</strong> creating a thread.</p>
+<h3>pthread_attr_setdetachstate / pthread_attr_getdetachstate<span class="hx-absolute -hx-mt-20" id="pthread_attr_setdetachstate--pthread_attr_getdetachstate"></span>
+    <a href="#pthread_attr_setdetachstate--pthread_attr_getdetachstate" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Sets or gets the detach state (joinable or detached).</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_setdetachstate</span>(<span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr, <span style="color:#66d9ef">int</span> detachstate);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_getdetachstate</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>detachstate);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Values:</strong> <code>PTHREAD_CREATE_JOINABLE</code> (default) · <code>PTHREAD_CREATE_DETACHED</code></p>
+<p><strong>Example</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">pthread_attr_t</span> attr;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_init</span>(<span style="color:#f92672">&amp;</span>attr);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_setdetachstate</span>(<span style="color:#f92672">&amp;</span>attr, PTHREAD_CREATE_DETACHED);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> state;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_getdetachstate</span>(<span style="color:#f92672">&amp;</span>attr, <span style="color:#f92672">&amp;</span>state);   <span style="color:#75715e">// state now holds the detach flag
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_destroy</span>(<span style="color:#f92672">&amp;</span>attr);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>pthread_attr_setschedpolicy / pthread_attr_getschedpolicy<span class="hx-absolute -hx-mt-20" id="pthread_attr_setschedpolicy--pthread_attr_getschedpolicy"></span>
+    <a href="#pthread_attr_setschedpolicy--pthread_attr_getschedpolicy" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Sets or gets the scheduling policy.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_setschedpolicy</span>(<span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr, <span style="color:#66d9ef">int</span> policy);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_getschedpolicy</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>policy);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Policies:</strong> <code>SCHED_OTHER</code> (default) · <code>SCHED_FIFO</code> · <code>SCHED_RR</code></p>
+<p><strong>Example</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">pthread_attr_t</span> attr;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_init</span>(<span style="color:#f92672">&amp;</span>attr);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_setschedpolicy</span>(<span style="color:#f92672">&amp;</span>attr, SCHED_FIFO);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> policy;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_getschedpolicy</span>(<span style="color:#f92672">&amp;</span>attr, <span style="color:#f92672">&amp;</span>policy);  <span style="color:#75715e">// policy now SCHED_FIFO
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_destroy</span>(<span style="color:#f92672">&amp;</span>attr);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>pthread_attr_setschedparam / pthread_attr_getschedparam<span class="hx-absolute -hx-mt-20" id="pthread_attr_setschedparam--pthread_attr_getschedparam"></span>
+    <a href="#pthread_attr_setschedparam--pthread_attr_getschedparam" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Sets or gets scheduling parameters (e.g., priority).</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_setschedparam</span>(<span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr,
+</span></span><span style="display:flex;"><span>                               <span style="color:#66d9ef">const</span> <span style="color:#66d9ef">struct</span> sched_param <span style="color:#f92672">*</span>param);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_getschedparam</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr,
+</span></span><span style="display:flex;"><span>                               <span style="color:#66d9ef">struct</span> sched_param <span style="color:#f92672">*</span>param);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Example</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">pthread_attr_t</span> attr;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_init</span>(<span style="color:#f92672">&amp;</span>attr);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> sched_param sp <span style="color:#f92672">=</span> { .sched_priority <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span> };
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_setschedparam</span>(<span style="color:#f92672">&amp;</span>attr, <span style="color:#f92672">&amp;</span>sp);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">struct</span> sched_param out;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_getschedparam</span>(<span style="color:#f92672">&amp;</span>attr, <span style="color:#f92672">&amp;</span>out);      <span style="color:#75715e">// out.sched_priority == 20
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_destroy</span>(<span style="color:#f92672">&amp;</span>attr);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>pthread_attr_setinheritsched / pthread_attr_getinheritsched<span class="hx-absolute -hx-mt-20" id="pthread_attr_setinheritsched--pthread_attr_getinheritsched"></span>
+    <a href="#pthread_attr_setinheritsched--pthread_attr_getinheritsched" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Sets or gets whether the thread inherits or explicitly uses scheduling attributes.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_setinheritsched</span>(<span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr, <span style="color:#66d9ef">int</span> inherit);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_getinheritsched</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr, <span style="color:#66d9ef">int</span> <span style="color:#f92672">*</span>inherit);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Values:</strong> <code>PTHREAD_INHERIT_SCHED</code> · <code>PTHREAD_EXPLICIT_SCHED</code></p>
+<p><strong>Example</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">pthread_attr_t</span> attr;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_init</span>(<span style="color:#f92672">&amp;</span>attr);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_setinheritsched</span>(<span style="color:#f92672">&amp;</span>attr, PTHREAD_EXPLICIT_SCHED);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> inherit;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_getinheritsched</span>(<span style="color:#f92672">&amp;</span>attr, <span style="color:#f92672">&amp;</span>inherit); <span style="color:#75715e">// inherit now explicit
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_destroy</span>(<span style="color:#f92672">&amp;</span>attr);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>pthread_attr_setstacksize / pthread_attr_getstacksize<span class="hx-absolute -hx-mt-20" id="pthread_attr_setstacksize--pthread_attr_getstacksize"></span>
+    <a href="#pthread_attr_setstacksize--pthread_attr_getstacksize" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Sets or gets the thread stack size.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_setstacksize</span>(<span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr, <span style="color:#66d9ef">size_t</span> stacksize);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_getstacksize</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr, <span style="color:#66d9ef">size_t</span> <span style="color:#f92672">*</span>stacksize);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Example</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">pthread_attr_t</span> attr;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_init</span>(<span style="color:#f92672">&amp;</span>attr);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_setstacksize</span>(<span style="color:#f92672">&amp;</span>attr, <span style="color:#ae81ff">1024</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1024</span>);  <span style="color:#75715e">// 1 MB
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">size_t</span> sz;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_getstacksize</span>(<span style="color:#f92672">&amp;</span>attr, <span style="color:#f92672">&amp;</span>sz);          <span style="color:#75715e">// sz == 1048576
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_destroy</span>(<span style="color:#f92672">&amp;</span>attr);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>pthread_attr_setstack / pthread_attr_getstack<span class="hx-absolute -hx-mt-20" id="pthread_attr_setstack--pthread_attr_getstack"></span>
+    <a href="#pthread_attr_setstack--pthread_attr_getstack" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Sets or gets both stack address and size.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_setstack</span>(<span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr,
+</span></span><span style="display:flex;"><span>                          <span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>stackaddr, <span style="color:#66d9ef">size_t</span> stacksize);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> <span style="color:#a6e22e">pthread_attr_getstack</span>(<span style="color:#66d9ef">const</span> <span style="color:#66d9ef">pthread_attr_t</span> <span style="color:#f92672">*</span>attr,
+</span></span><span style="display:flex;"><span>                          <span style="color:#66d9ef">void</span> <span style="color:#f92672">**</span>stackaddr, <span style="color:#66d9ef">size_t</span> <span style="color:#f92672">*</span>stacksize);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p><strong>Example</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> stack_area[<span style="color:#ae81ff">64</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">1024</span>];                     <span style="color:#75715e">// 64 KB buffer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">pthread_attr_t</span> attr;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_init</span>(<span style="color:#f92672">&amp;</span>attr);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_setstack</span>(<span style="color:#f92672">&amp;</span>attr, stack_area, <span style="color:#66d9ef">sizeof</span> stack_area);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">void</span> <span style="color:#f92672">*</span>addr;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">size_t</span> sz;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_getstack</span>(<span style="color:#f92672">&amp;</span>attr, <span style="color:#f92672">&amp;</span>addr, <span style="color:#f92672">&amp;</span>sz);       <span style="color:#75715e">// addr == stack_area, sz == 65536
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pthread_attr_destroy</span>(<span style="color:#f92672">&amp;</span>attr);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 
         </div>
         <div class="hx-mt-16"></div>

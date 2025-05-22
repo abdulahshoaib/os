@@ -11,25 +11,22 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title></title>
-  <meta name="description" content="pipe() Creates a unidirectional data channel (pipe) using a pair of file descriptors for reading and writing
-int pipe(int pipefd[2]); Return Value:
-Success: 0 Error: -1 mkfifo() Creates a named pipe (FIFO) special file that can be used for inter-process communication" /><link rel="canonical" href="/pipes--fifos/" itemprop="url" />
+  <meta name="description" content="Libraries Used #include &lt;unistd.h&gt; #include &lt;sys/stat.h&gt; pipe() Creates a unidirectional data channel (pipe) using a pair of file descriptors for reading and writing
+int pipe(int pipefd[2]); Return Value:" /><link rel="canonical" href="/pipes--fifos/" itemprop="url" />
 
 <meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/pipes--fifos/" />
 
-  <meta itemprop="description" content="pipe() Creates a unidirectional data channel (pipe) using a pair of file descriptors for reading and writing
-int pipe(int pipefd[2]); Return Value:
-Success: 0 Error: -1 mkfifo() Creates a named pipe (FIFO) special file that can be used for inter-process communication">
+  <meta itemprop="description" content="Libraries Used #include &lt;unistd.h&gt; #include &lt;sys/stat.h&gt; pipe() Creates a unidirectional data channel (pipe) using a pair of file descriptors for reading and writing
+int pipe(int pipefd[2]); Return Value:">
   <meta itemprop="datePublished" content="2025-05-22T05:23:27+05:00">
-  <meta itemprop="dateModified" content="2025-05-22T06:51:43+05:00">
-  <meta itemprop="wordCount" content="53">
+  <meta itemprop="dateModified" content="2025-05-22T14:16:33+05:00">
+  <meta itemprop="wordCount" content="210">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="pipe() Creates a unidirectional data channel (pipe) using a pair of file descriptors for reading and writing
-int pipe(int pipefd[2]); Return Value:
-Success: 0 Error: -1 mkfifo() Creates a named pipe (FIFO) special file that can be used for inter-process communication">
+  <meta name="twitter:description" content="Libraries Used #include &lt;unistd.h&gt; #include &lt;sys/stat.h&gt; pipe() Creates a unidirectional data channel (pipe) using a pair of file descriptors for reading and writing
+int pipe(int pipefd[2]); Return Value:">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -169,6 +166,12 @@ Success: 0 Error: -1 mkfifo() Creates a named pipe (FIFO) special file that can 
   
     <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
               <a
+                href="#libraries-used"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Libraries Used</a>
+            </li>
+          <li>
+              <a
                 href="#pipe"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
               >pipe()</a>
@@ -274,6 +277,10 @@ Success: 0 Error: -1 mkfifo() Creates a named pipe (FIFO) special file that can 
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#libraries-used">Libraries Used
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pipe">pipe()
         </a>
       </li>
@@ -301,7 +308,21 @@ Success: 0 Error: -1 mkfifo() Creates a named pipe (FIFO) special file that can 
 
         <div class="content">
           
-          <h2>pipe()<span class="hx-absolute -hx-mt-20" id="pipe"></span>
+          <h2>Libraries Used<span class="hx-absolute -hx-mt-20" id="libraries-used"></span>
+    <a href="#libraries-used" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/stat.h&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h2>pipe()<span class="hx-absolute -hx-mt-20" id="pipe"></span>
     <a href="#pipe" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Creates a unidirectional data channel (pipe) using a pair of file descriptors for reading and writing</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
@@ -315,11 +336,35 @@ Success: 0 Error: -1 mkfifo() Creates a named pipe (FIFO) special file that can 
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> fd[<span style="color:#ae81ff">2</span>];
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">pipe</span>(fd);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">fork</span>() <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">close</span>(fd[<span style="color:#ae81ff">0</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">write</span>(fd[<span style="color:#ae81ff">1</span>], <span style="color:#e6db74">&#34;Hello&#34;</span>, <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">_exit</span>(<span style="color:#ae81ff">0</span>);
+</span></span><span style="display:flex;"><span>} <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">close</span>(fd[<span style="color:#ae81ff">1</span>]);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">char</span> buf[<span style="color:#ae81ff">6</span>] <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>};
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">read</span>(fd[<span style="color:#ae81ff">0</span>], buf, <span style="color:#ae81ff">5</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">printf</span>(<span style="color:#e6db74">&#34;Parent read: %s</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>, buf);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>mkfifo()<span class="hx-absolute -hx-mt-20" id="mkfifo"></span>
     <a href="#mkfifo" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Creates a named pipe (FIFO) special file that can be used for inter-process communication</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -334,11 +379,104 @@ Success: 0 Error: -1 mkfifo() Creates a named pipe (FIFO) special file that can 
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Modes:</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Octal</th>
+          <th>Symbolic</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>0400</td>
+          <td>r&ndash; &mdash; &mdash;</td>
+          <td>Read by owner</td>
+      </tr>
+      <tr>
+          <td>0200</td>
+          <td>-w- &mdash; &mdash;</td>
+          <td>Write by owner</td>
+      </tr>
+      <tr>
+          <td>0600</td>
+          <td>rw- &mdash; &mdash;</td>
+          <td>Read/Write by owner</td>
+      </tr>
+      <tr>
+          <td>0040</td>
+          <td>&mdash; r&ndash; &mdash;</td>
+          <td>Read by group</td>
+      </tr>
+      <tr>
+          <td>0020</td>
+          <td>&mdash; -w- &mdash;</td>
+          <td>Write by group</td>
+      </tr>
+      <tr>
+          <td>0060</td>
+          <td>&mdash; rw- &mdash;</td>
+          <td>Read/Write by group</td>
+      </tr>
+      <tr>
+          <td>0004</td>
+          <td>&mdash; &mdash; r&ndash;</td>
+          <td>Read by others</td>
+      </tr>
+      <tr>
+          <td>0002</td>
+          <td>&mdash; &mdash; -w-</td>
+          <td>Write by others</td>
+      </tr>
+      <tr>
+          <td>0006</td>
+          <td>&mdash; &mdash; rw-</td>
+          <td>Read/Write by others</td>
+      </tr>
+      <tr>
+          <td>0666</td>
+          <td>rw- rw- rw-</td>
+          <td>Read/Write by all (owner/group/others)</td>
+      </tr>
+      <tr>
+          <td>0644</td>
+          <td>rw- r&ndash; r&ndash;</td>
+          <td>Owner RW, Group R, Others R</td>
+      </tr>
+  </tbody>
+</table>
+<div class="hx-overflow-x-auto hx-mt-6 hx-flex hx-flex-col hx-rounded-lg hx-border hx-py-4 hx-px-4 contrast-more:hx-border-current contrast-more:dark:hx-border-current hx-border-green-200 hx-bg-green-100 hx-text-green-900 dark:hx-border-green-200/30 dark:hx-bg-green-900/30 dark:hx-text-green-200">
+  <p class="hx-flex hx-items-center hx-font-medium"><svg height=16px class="hx-inline-block hx-align-middle hx-mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>Tip</p>
+
+  <div class="hx-w-full hx-min-w-0 hx-leading-7">
+    <div class="hx-mt-6 hx-leading-7 first:hx-mt-0"><ul>
+<li><strong>Owner:</strong> <em>The user who created the file and has primary control over it</em></li>
+<li><strong>Group:</strong> <em>Set of different users</em></li>
+<li><strong>Others:</strong> <em>Users neither owner nor group</em></li>
+</ul></div>
+  </div>
+</div>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">mkfifo</span>(<span style="color:#e6db74">&#34;mypipe&#34;</span>, <span style="color:#ae81ff">0666</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span> fd <span style="color:#f92672">=</span> <span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;mypipe&#34;</span>, O_WRONLY);
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">write</span>(fd, <span style="color:#e6db74">&#34;Hi&#34;</span>, <span style="color:#ae81ff">2</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 
         </div>
         <div class="hx-mt-16"></div>
