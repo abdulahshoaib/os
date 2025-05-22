@@ -2,6 +2,16 @@ module:
   imports:
     - path: github.com/imfing/hextra
 
+enableGitInfo: true
+
+params:
+  navbar:
+    displayTitle: true
+    title:
+      link: /
+      name: "Operating System"
+    displayLogo: false
+
 menu:
   main:
     - name: Search
