@@ -1,9 +1,14 @@
 ---
 date: '2025-05-22T05:24:56+05:00'
 ---
-## Library Used
+## Library Required
 ```c
 #include <sys/wait.h>
+```
+
+## Types
+```c
+pid_t   // stores the Process ID
 ```
 
 ## fork()
