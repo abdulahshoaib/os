@@ -1,8 +1,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title> – Threading</title>
+    <title> – </title>
     <link>//localhost:1313/threading/</link>
-    <description>Recent content in Threading on </description>
+    <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 22 May 2025 05:22:42 +0500</lastBuildDate>
