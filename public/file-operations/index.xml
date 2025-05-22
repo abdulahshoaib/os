@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – </title>
-    <link>/file-operations/</link>
+    <link>//localhost:1313/file-operations/</link>
     <description>Recent content on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 22 May 2025 05:24:21 +0500</lastBuildDate>
     
-	  <atom:link href="/file-operations/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="//localhost:1313/file-operations/index.xml" rel="self" type="application/rss+xml" />
     
     
       
