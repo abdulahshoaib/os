@@ -11,25 +11,19 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title></title>
-  <meta name="description" content="sem_open() Opens or creates a named semaphore and returns a pointer to it.
-sem_t *sem_open(const char *name, int oflag, mode_t mode, unsigned int value); Return Value:
-Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semaphore descriptor without removing the semaphore." /><link rel="canonical" href="/semaphores/" itemprop="url" />
+  <meta name="description" content="Library Required #include &lt;semaphore.h&gt; Types sem_t // unique identifier for a semaphore sem_open() Opens or creates a named semaphore and returns a pointer to it." /><link rel="canonical" href="/semaphores/" itemprop="url" />
 
 <meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/semaphores/" />
 
-  <meta itemprop="description" content="sem_open() Opens or creates a named semaphore and returns a pointer to it.
-sem_t *sem_open(const char *name, int oflag, mode_t mode, unsigned int value); Return Value:
-Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semaphore descriptor without removing the semaphore.">
+  <meta itemprop="description" content="Library Required #include &lt;semaphore.h&gt; Types sem_t // unique identifier for a semaphore sem_open() Opens or creates a named semaphore and returns a pointer to it.">
   <meta itemprop="datePublished" content="2025-05-22T05:22:26+05:00">
-  <meta itemprop="dateModified" content="2025-05-22T06:52:56+05:00">
-  <meta itemprop="wordCount" content="194">
+  <meta itemprop="dateModified" content="2025-05-22T16:19:54+05:00">
+  <meta itemprop="wordCount" content="249">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="sem_open() Opens or creates a named semaphore and returns a pointer to it.
-sem_t *sem_open(const char *name, int oflag, mode_t mode, unsigned int value); Return Value:
-Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semaphore descriptor without removing the semaphore.">
+  <meta name="twitter:description" content="Library Required #include &lt;semaphore.h&gt; Types sem_t // unique identifier for a semaphore sem_open() Opens or creates a named semaphore and returns a pointer to it.">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -183,6 +177,18 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
   
     <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
               <a
+                href="#library-required"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Library Required</a>
+            </li>
+          <li>
+              <a
+                href="#types"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Types</a>
+            </li>
+          <li>
+              <a
                 href="#sem_open"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
               >sem_open()</a>
@@ -316,6 +322,14 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#library-required">Library Required
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#types">Types
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#sem_open">sem_open()
         </a>
       </li>
@@ -371,7 +385,34 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
 
         <div class="content">
           
-          <h2>sem_open()<span class="hx-absolute -hx-mt-20" id="sem_open"></span>
+          <h2>Library Required<span class="hx-absolute -hx-mt-20" id="library-required"></span>
+    <a href="#library-required" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;semaphore.h&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h2>Types<span class="hx-absolute -hx-mt-20" id="types"></span>
+    <a href="#types" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">sem_t</span>       <span style="color:#75715e">// unique identifier for a semaphore
+</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h2>sem_open()<span class="hx-absolute -hx-mt-20" id="sem_open"></span>
     <a href="#sem_open" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Opens or creates a named semaphore and returns a pointer to it.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
@@ -385,11 +426,24 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: Pointer to semaphore</li>
 <li>Error: SEM_FAILED</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">sem_t</span> <span style="color:#f92672">*</span>sem <span style="color:#f92672">=</span> <span style="color:#a6e22e">sem_open</span>(<span style="color:#e6db74">&#34;/mysem&#34;</span>, O_CREAT <span style="color:#f92672">|</span> O_EXCL, <span style="color:#ae81ff">0644</span>, <span style="color:#ae81ff">2</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>sem_close()<span class="hx-absolute -hx-mt-20" id="sem_close"></span>
     <a href="#sem_close" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Closes a named semaphore descriptor without removing the semaphore.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -404,11 +458,24 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">sem_close</span>(sem);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>sem_unlink()<span class="hx-absolute -hx-mt-20" id="sem_unlink"></span>
     <a href="#sem_unlink" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Removes a named semaphore from the system</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -423,11 +490,24 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">sem_unlink</span>(<span style="color:#e6db74">&#34;/mysem&#34;</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>sem_wait()<span class="hx-absolute -hx-mt-20" id="sem_wait"></span>
     <a href="#sem_wait" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Decrements (locks) the semaphore, blocking if its value is zero.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -442,11 +522,24 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">sem_wait</span>(sem);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>sem_trywait()<span class="hx-absolute -hx-mt-20" id="sem_trywait"></span>
     <a href="#sem_trywait" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Tries to decrement the semaphore without blocking; fails if the value is zero.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -461,11 +554,26 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">sem_trywait</span>(sem) <span style="color:#f92672">==</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// handle failure without blocking
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>sem_post()<span class="hx-absolute -hx-mt-20" id="sem_post"></span>
     <a href="#sem_post" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Increments (unlocks) the semaphore, potentially waking a waiting thread.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -480,11 +588,24 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">sem_post</span>(sem);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>sem_getvalue()<span class="hx-absolute -hx-mt-20" id="sem_getvalue"></span>
     <a href="#sem_getvalue" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Retrieves the current value of the semaphore.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -499,11 +620,25 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> val;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sem_getvalue</span>(sem, <span style="color:#f92672">&amp;</span>val);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>sem_init()<span class="hx-absolute -hx-mt-20" id="sem_init"></span>
     <a href="#sem_init" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Initializes an unnamed semaphore for use within a process or between processes.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -518,11 +653,25 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">sem_t</span> sem_local;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">sem_init</span>(<span style="color:#f92672">&amp;</span>sem_local, <span style="color:#ae81ff">0</span>, <span style="color:#ae81ff">1</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>sem_destroy()<span class="hx-absolute -hx-mt-20" id="sem_destroy"></span>
     <a href="#sem_destroy" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Destroys an unnamed semaphore, freeing associated resources.</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -542,6 +691,19 @@ Success: Pointer to semaphore Error: SEM_FAILED sem_close() Closes a named semap
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">sem_destroy</span>(<span style="color:#f92672">&amp;</span>sem_local);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 
         </div>
         <div class="hx-mt-16"></div>

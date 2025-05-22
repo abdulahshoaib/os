@@ -11,25 +11,22 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title></title>
-  <meta name="description" content="shmget() Allocates or accesses a shared memory segment using a key
-int shmget(key_t key, size_t size, int shmflg); Return Value:
-Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory segment to the process’s address space" /><link rel="canonical" href="/shared-memory/" itemprop="url" />
+  <meta name="description" content="Libraries Required #include &lt;sys/ipc.h&gt; #include &lt;sys/shm.h&gt; #include &lt;sys/sem.h&gt; #include &lt;sys/mman.h&gt; #include &lt;fcntl.h&gt; #include &lt;unistd.h&gt; shmget() Allocates or accesses a shared memory segment using a key
+int shmget(key_t key, size_t size, int shmflg); Return Value:" /><link rel="canonical" href="/shared-memory/" itemprop="url" />
 
 <meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="/shared-memory/" />
 
-  <meta itemprop="description" content="shmget() Allocates or accesses a shared memory segment using a key
-int shmget(key_t key, size_t size, int shmflg); Return Value:
-Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory segment to the process’s address space">
+  <meta itemprop="description" content="Libraries Required #include &lt;sys/ipc.h&gt; #include &lt;sys/shm.h&gt; #include &lt;sys/sem.h&gt; #include &lt;sys/mman.h&gt; #include &lt;fcntl.h&gt; #include &lt;unistd.h&gt; shmget() Allocates or accesses a shared memory segment using a key
+int shmget(key_t key, size_t size, int shmflg); Return Value:">
   <meta itemprop="datePublished" content="2025-05-22T05:22:08+05:00">
-  <meta itemprop="dateModified" content="2025-05-22T06:53:17+05:00">
-  <meta itemprop="wordCount" content="211">
+  <meta itemprop="dateModified" content="2025-05-22T16:20:01+05:00">
+  <meta itemprop="wordCount" content="418">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="shmget() Allocates or accesses a shared memory segment using a key
-int shmget(key_t key, size_t size, int shmflg); Return Value:
-Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory segment to the process’s address space">
+  <meta name="twitter:description" content="Libraries Required #include &lt;sys/ipc.h&gt; #include &lt;sys/shm.h&gt; #include &lt;sys/sem.h&gt; #include &lt;sys/mman.h&gt; #include &lt;fcntl.h&gt; #include &lt;unistd.h&gt; shmget() Allocates or accesses a shared memory segment using a key
+int shmget(key_t key, size_t size, int shmflg); Return Value:">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -190,6 +187,12 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
   
     <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
               <a
+                href="#libraries-required"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Libraries Required</a>
+            </li>
+          <li>
+              <a
                 href="#shmget"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
               >shmget()</a>
@@ -304,7 +307,15 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#libraries-required">Libraries Required
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#shmget">shmget()
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#options">Options
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -320,7 +331,15 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#options-1">Options
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#semget">semget()
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#options-2">Options
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -333,6 +352,10 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#mmap">mmap()
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#options-3">Options
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -359,7 +382,25 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
 
         <div class="content">
           
-          <h2>shmget()<span class="hx-absolute -hx-mt-20" id="shmget"></span>
+          <h2>Libraries Required<span class="hx-absolute -hx-mt-20" id="libraries-required"></span>
+    <a href="#libraries-required" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/ipc.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/shm.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/sem.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;sys/mman.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;fcntl.h&gt;</span><span style="color:#75715e">
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;unistd.h&gt;</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h2>shmget()<span class="hx-absolute -hx-mt-20" id="shmget"></span>
     <a href="#shmget" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Allocates or accesses a shared memory segment using a key</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
 
@@ -373,11 +414,47 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: Shared memory segment ID</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> shmid <span style="color:#f92672">=</span> <span style="color:#a6e22e">shmget</span>(IPC_PRIVATE, <span style="color:#ae81ff">1024</span>, IPC_CREAT <span style="color:#f92672">|</span> <span style="color:#ae81ff">0666</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Options<span class="hx-absolute -hx-mt-20" id="options"></span>
+    <a href="#options" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>IPC_CREAT</code></td>
+          <td>Create the segment if it does not exist</td>
+      </tr>
+      <tr>
+          <td><code>IPC_EXCL</code></td>
+          <td>Fail if segment exists (used with <code>IPC_CREAT</code>)</td>
+      </tr>
+      <tr>
+          <td><code>0666</code></td>
+          <td>Read &amp; write permissions for all (standard mode)</td>
+      </tr>
+  </tbody>
+</table>
 <h2>shmat()<span class="hx-absolute -hx-mt-20" id="shmat"></span>
     <a href="#shmat" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Attaches a shared memory segment to the process&rsquo;s address space</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -392,11 +469,24 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: Pointer to shared memory segment</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>data <span style="color:#f92672">=</span> (<span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>)<span style="color:#a6e22e">shmat</span>(shmid, NULL, <span style="color:#ae81ff">0</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>shmdt()<span class="hx-absolute -hx-mt-20" id="shmdt"></span>
     <a href="#shmdt" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Detaches a shared memory segment from the process&rsquo;s address space</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -411,11 +501,24 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
   </button>
 </div>
 </div>
-<p>Return Value:</p>
+<p><strong>Return Value:</strong></p>
 <ul>
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">shmdt</span>(data);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>shmctl()<span class="hx-absolute -hx-mt-20" id="shmctl"></span>
     <a href="#shmctl" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Performs control operations on a shared memory segment (eg., remove, get info).</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -435,6 +538,42 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">shmctl</span>(shmid, IPC_RMID, NULL);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Options<span class="hx-absolute -hx-mt-20" id="options-1"></span>
+    <a href="#options-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Command</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>IPC_STAT</code></td>
+          <td>Get current segment status into <code>shmid_ds</code> struct</td>
+      </tr>
+      <tr>
+          <td><code>IPC_SET</code></td>
+          <td>Set permissions and other fields from <code>shmid_ds</code></td>
+      </tr>
+      <tr>
+          <td><code>IPC_RMID</code></td>
+          <td>Remove the segment</td>
+      </tr>
+  </tbody>
+</table>
 <h2>semget()<span class="hx-absolute -hx-mt-20" id="semget"></span>
     <a href="#semget" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Creates a new semaphore set or accesses an existing one</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -454,6 +593,42 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
 <li>Success: Semaphore set ID</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> semid <span style="color:#f92672">=</span> <span style="color:#a6e22e">semget</span>(IPC_PRIVATE, <span style="color:#ae81ff">1</span>, IPC_CREAT <span style="color:#f92672">|</span> <span style="color:#ae81ff">0666</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Options<span class="hx-absolute -hx-mt-20" id="options-2"></span>
+    <a href="#options-2" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Option</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>IPC_CREAT</code></td>
+          <td>Create the semaphore set if it does not exist</td>
+      </tr>
+      <tr>
+          <td><code>IPC_EXCL</code></td>
+          <td>Fail if it exists (used with <code>IPC_CREAT</code>)</td>
+      </tr>
+      <tr>
+          <td><code>0666</code></td>
+          <td>Read &amp; write permissions</td>
+      </tr>
+  </tbody>
+</table>
 <h2>semop()<span class="hx-absolute -hx-mt-20" id="semop"></span>
     <a href="#semop" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Performs one or more atomic operations on semaphores</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -473,6 +648,22 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span>sops[<span style="color:#ae81ff">0</span>].sem_num <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span>sops[<span style="color:#ae81ff">0</span>].sem_op <span style="color:#f92672">=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>;
+</span></span><span style="display:flex;"><span>sops[<span style="color:#ae81ff">0</span>].sem_flg <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">semop</span>(semid, sops, <span style="color:#ae81ff">1</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 <h2>Memory Mapping<span class="hx-absolute -hx-mt-20" id="memory-mapping"></span>
     <a href="#memory-mapping" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>mmap()<span class="hx-absolute -hx-mt-20" id="mmap"></span>
     <a href="#mmap" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Maps a file or anonymous memory into the process&rsquo;s address space</p>
@@ -493,6 +684,55 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
 <li>Success: Pointer to mapped area</li>
 <li>Error: MAP_FAILED</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> fd <span style="color:#f92672">=</span> <span style="color:#a6e22e">open</span>(<span style="color:#e6db74">&#34;file.txt&#34;</span>, O_RDWR);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">char</span> <span style="color:#f92672">*</span>addr <span style="color:#f92672">=</span> <span style="color:#a6e22e">mmap</span>(NULL, <span style="color:#ae81ff">4096</span>, PROT_READ <span style="color:#f92672">|</span> PROT_WRITE, MAP_SHARED, fd, <span style="color:#ae81ff">0</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h4>Options<span class="hx-absolute -hx-mt-20" id="options-3"></span>
+    <a href="#options-3" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+  <thead>
+      <tr>
+          <th>Flag / Protection</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>PROT_READ</code></td>
+          <td>Pages can be read</td>
+      </tr>
+      <tr>
+          <td><code>PROT_WRITE</code></td>
+          <td>Pages can be written</td>
+      </tr>
+      <tr>
+          <td><code>MAP_SHARED</code></td>
+          <td>Updates visible to other processes mapping same region</td>
+      </tr>
+      <tr>
+          <td><code>MAP_PRIVATE</code></td>
+          <td>Copy-on-write; changes not visible to other processes</td>
+      </tr>
+      <tr>
+          <td><code>MAP_ANONYMOUS</code></td>
+          <td>Mapping is not backed by any file (used with <code>-1</code> as <code>fd</code>)</td>
+      </tr>
+      <tr>
+          <td><code>MAP_FAILED</code></td>
+          <td>Return value on error</td>
+      </tr>
+  </tbody>
+</table>
 <h3>munmap()<span class="hx-absolute -hx-mt-20" id="munmap"></span>
     <a href="#munmap" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Unmaps a previously mapped memory region from the address space</p>
 <div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
@@ -512,6 +752,19 @@ Success: Shared memory segment ID Error: -1 shmat() Attaches a shared memory seg
 <li>Success: 0</li>
 <li>Error: -1</li>
 </ul>
+<p><strong>Example:</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">munmap</span>(addr, <span style="color:#ae81ff">4096</span>);</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
 
         </div>
         <div class="hx-mt-16"></div>
