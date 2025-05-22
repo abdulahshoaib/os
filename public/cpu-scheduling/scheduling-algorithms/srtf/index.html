@@ -11,18 +11,148 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>SRTF – </title>
-  <meta name="description" content="" /><link rel="canonical" href="/cpu-scheduling/scheduling-algorithms/srtf/" itemprop="url" />
+  <meta name="description" content="Shortest Remaining Time First (SRTF) Scheduling Definition: SRTF is the preemptive version of Shortest Job First (SJF), where the process with the least remaining CPU burst time is executed next. If a new process arrives with a shorter remaining time than the currently executing one, preemption occurs.
+Key Features:
+Type: Preemptive Execution Rule: Always run the process with the shortest remaining time. Tie-Breaker: If two processes have the same remaining time, FCFS is used. Preemption: Occurs when a new process has less remaining time than the current process. Drawback: Longer processes may suffer from starvation. Estimation Issue: Requires knowledge or prediction of the remaining CPU time. Gantt Chart Example (SRTF) Given: Process Arrival Time Burst Time P1 0 8 P2 1 4 P3 2 9 P4 3 5 Execution Trace t=0 → P1 arrives → run P1 t=1 → P2 arrives (4 &lt; 7) → preempt P1, run P2 t=2 → P3 arrives (9 &gt; 3) → continue P2 t=3 → P4 arrives (5 &gt; 2) → continue P2 t=5 → P2 finishes → pick shortest: P4 (5), P1 (7), P3 (9) → run P4 t=10 → P4 finishes → pick shortest: P1 (7), P3 (9) → run P1 t=17 → P1 finishes → run P3 t=26 → P3 finishes Gantt Chart gantt title SRTF (Preemptive SJF) Process Scheduling dateFormat X axisFormat %s section Process Execution P1 (start) :p1a, 0, 1 P2 (full) :p2, 1, 5 P4 (full) :p4, 5, 10 P1 (rest) :p1b, 10, 17 P3 (full) :p3, 17, 26 Calculations Process Arrival Time Burst Time Completion Time Turnaround Time Waiting Time P1 0 8 17 17 - 0 = 17 17 - 8 = 9 P2 1 4 5 5 - 1 = 4 0 P3 2 9 26 26 - 2 = 24 15 P4 3 5 10 10 - 3 = 7 2 Averages Average Waiting Time = (9 &#43; 0 &#43; 15 &#43; 2) / 4 = 6.5 Average Turnaround Time = (17 &#43; 4 &#43; 24 &#43; 7) / 4 = 13.0 This example demonstrates how SRTF aggressively preempts longer processes for shorter ones, reducing turnaround for shorter jobs but potentially increasing waiting for longer ones." /><link rel="canonical" href="/cpu-scheduling/scheduling-algorithms/srtf/" itemprop="url" />
 
 <meta property="og:title" content="SRTF" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Shortest Remaining Time First (SRTF) Scheduling
+    Definition:
+SRTF is the preemptive version of Shortest Job First (SJF), where the process with the least remaining CPU burst time is executed next. If a new process arrives with a shorter remaining time than the currently executing one, preemption occurs.
+Key Features:
+
+Type: Preemptive
+Execution Rule: Always run the process with the shortest remaining time.
+Tie-Breaker: If two processes have the same remaining time, FCFS is used.
+Preemption: Occurs when a new process has less remaining time than the current process.
+Drawback: Longer processes may suffer from starvation.
+Estimation Issue: Requires knowledge or prediction of the remaining CPU time.
+
+Gantt Chart Example (SRTF)
+    Given:
+    
+  
+      
+          Process
+          Arrival Time
+          Burst Time
+      
+  
+  
+      
+          P1
+          0
+          8
+      
+      
+          P2
+          1
+          4
+      
+      
+          P3
+          2
+          9
+      
+      
+          P4
+          3
+          5
+      
+  
+
+Execution Trace
+    
+t=0 → P1 arrives → run P1
+t=1 → P2 arrives (4 &lt; 7) → preempt P1, run P2
+t=2 → P3 arrives (9 &gt; 3) → continue P2
+t=3 → P4 arrives (5 &gt; 2) → continue P2
+t=5 → P2 finishes → pick shortest: P4 (5), P1 (7), P3 (9) → run P4
+t=10 → P4 finishes → pick shortest: P1 (7), P3 (9) → run P1
+t=17 → P1 finishes → run P3
+t=26 → P3 finishes
+
+Gantt Chart
+    
+  gantt
+    title SRTF (Preemptive SJF) Process Scheduling
+    dateFormat X
+    axisFormat %s
+
+    section Process Execution
+    P1 (start) :p1a, 0, 1
+    P2 (full)  :p2, 1, 5
+    P4 (full)  :p4, 5, 10
+    P1 (rest)  :p1b, 10, 17
+    P3 (full)  :p3, 17, 26
+Calculations
+    
+  
+      
+          Process
+          Arrival Time
+          Burst Time
+          Completion Time
+          Turnaround Time
+          Waiting Time
+      
+  
+  
+      
+          P1
+          0
+          8
+          17
+          17 - 0 = 17
+          17 - 8 = 9
+      
+      
+          P2
+          1
+          4
+          5
+          5 - 1 = 4
+          0
+      
+      
+          P3
+          2
+          9
+          26
+          26 - 2 = 24
+          15
+      
+      
+          P4
+          3
+          5
+          10
+          10 - 3 = 7
+          2
+      
+  
+
+Averages
+    
+Average Waiting Time = (9 &#43; 0 &#43; 15 &#43; 2) / 4 = 6.5
+Average Turnaround Time = (17 &#43; 4 &#43; 24 &#43; 7) / 4 = 13.0
+
+This example demonstrates how SRTF aggressively preempts longer processes for shorter ones, reducing turnaround for shorter jobs but potentially increasing waiting for longer ones." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/cpu-scheduling/scheduling-algorithms/srtf/" /><meta property="article:section" content="cpu-scheduling" />
 
 
 
   <meta itemprop="name" content="SRTF">
+  <meta itemprop="description" content="Shortest Remaining Time First (SRTF) Scheduling Definition: SRTF is the preemptive version of Shortest Job First (SJF), where the process with the least remaining CPU burst time is executed next. If a new process arrives with a shorter remaining time than the currently executing one, preemption occurs.
+Key Features:
+Type: Preemptive Execution Rule: Always run the process with the shortest remaining time. Tie-Breaker: If two processes have the same remaining time, FCFS is used. Preemption: Occurs when a new process has less remaining time than the current process. Drawback: Longer processes may suffer from starvation. Estimation Issue: Requires knowledge or prediction of the remaining CPU time. Gantt Chart Example (SRTF) Given: Process Arrival Time Burst Time P1 0 8 P2 1 4 P3 2 9 P4 3 5 Execution Trace t=0 → P1 arrives → run P1 t=1 → P2 arrives (4 &lt; 7) → preempt P1, run P2 t=2 → P3 arrives (9 &gt; 3) → continue P2 t=3 → P4 arrives (5 &gt; 2) → continue P2 t=5 → P2 finishes → pick shortest: P4 (5), P1 (7), P3 (9) → run P4 t=10 → P4 finishes → pick shortest: P1 (7), P3 (9) → run P1 t=17 → P1 finishes → run P3 t=26 → P3 finishes Gantt Chart gantt title SRTF (Preemptive SJF) Process Scheduling dateFormat X axisFormat %s section Process Execution P1 (start) :p1a, 0, 1 P2 (full) :p2, 1, 5 P4 (full) :p4, 5, 10 P1 (rest) :p1b, 10, 17 P3 (full) :p3, 17, 26 Calculations Process Arrival Time Burst Time Completion Time Turnaround Time Waiting Time P1 0 8 17 17 - 0 = 17 17 - 8 = 9 P2 1 4 5 5 - 1 = 4 0 P3 2 9 26 26 - 2 = 24 15 P4 3 5 10 10 - 3 = 7 2 Averages Average Waiting Time = (9 &#43; 0 &#43; 15 &#43; 2) / 4 = 6.5 Average Turnaround Time = (17 &#43; 4 &#43; 24 &#43; 7) / 4 = 13.0 This example demonstrates how SRTF aggressively preempts longer processes for shorter ones, reducing turnaround for shorter jobs but potentially increasing waiting for longer ones.">
+  <meta itemprop="wordCount" content="362">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="SRTF">
+  <meta name="twitter:description" content="Shortest Remaining Time First (SRTF) Scheduling Definition: SRTF is the preemptive version of Shortest Job First (SJF), where the process with the least remaining CPU burst time is executed next. If a new process arrives with a shorter remaining time than the currently executing one, preemption occurs.
+Key Features:
+Type: Preemptive Execution Rule: Always run the process with the shortest remaining time. Tie-Breaker: If two processes have the same remaining time, FCFS is used. Preemption: Occurs when a new process has less remaining time than the current process. Drawback: Longer processes may suffer from starvation. Estimation Issue: Requires knowledge or prediction of the remaining CPU time. Gantt Chart Example (SRTF) Given: Process Arrival Time Burst Time P1 0 8 P2 1 4 P3 2 9 P4 3 5 Execution Trace t=0 → P1 arrives → run P1 t=1 → P2 arrives (4 &lt; 7) → preempt P1, run P2 t=2 → P3 arrives (9 &gt; 3) → continue P2 t=3 → P4 arrives (5 &gt; 2) → continue P2 t=5 → P2 finishes → pick shortest: P4 (5), P1 (7), P3 (9) → run P4 t=10 → P4 finishes → pick shortest: P1 (7), P3 (9) → run P1 t=17 → P1 finishes → run P3 t=26 → P3 finishes Gantt Chart gantt title SRTF (Preemptive SJF) Process Scheduling dateFormat X axisFormat %s section Process Execution P1 (start) :p1a, 0, 1 P2 (full) :p2, 1, 5 P4 (full) :p4, 5, 10 P1 (rest) :p1b, 10, 17 P3 (full) :p3, 17, 26 Calculations Process Arrival Time Burst Time Completion Time Turnaround Time Waiting Time P1 0 8 17 17 - 0 = 17 17 - 8 = 9 P2 1 4 5 5 - 1 = 4 0 P3 2 9 26 26 - 2 = 24 15 P4 3 5 10 10 - 3 = 7 2 Averages Average Waiting Time = (9 &#43; 0 &#43; 15 &#43; 2) / 4 = 6.5 Average Turnaround Time = (17 &#43; 4 &#43; 24 &#43; 7) / 4 = 13.0 This example demonstrates how SRTF aggressively preempts longer processes for shorter ones, reducing turnaround for shorter jobs but potentially increasing waiting for longer ones.">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -235,6 +365,20 @@
     
   >SRTF
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#shortest-remaining-time-first-srtf-scheduling"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Shortest Remaining Time First (SRTF) Scheduling</a>
+            </li>
+          <li>
+              <a
+                href="#gantt-chart-example-srtf"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Gantt Chart Example (SRTF)</a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -820,8 +964,36 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#shortest-remaining-time-first-srtf-scheduling">Shortest Remaining Time First (SRTF) Scheduling
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#gantt-chart-example-srtf">Gantt Chart Example (SRTF)
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#given">Given:
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#execution-trace">Execution Trace
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#gantt-chart">Gantt Chart
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#calculations">Calculations
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#averages">Averages
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -847,7 +1019,129 @@
 
         <div class="content">
           <h1>SRTF</h1>
-          
+          <h2>Shortest Remaining Time First (SRTF) Scheduling<span class="hx-absolute -hx-mt-20" id="shortest-remaining-time-first-srtf-scheduling"></span>
+    <a href="#shortest-remaining-time-first-srtf-scheduling" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>Definition</strong>:
+SRTF is the <strong>preemptive</strong> version of Shortest Job First (SJF), where the process with the <strong>least remaining CPU burst time</strong> is executed next. If a <strong>new process arrives</strong> with a <strong>shorter remaining time</strong> than the currently executing one, <strong>preemption</strong> occurs.</p>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li><strong>Type</strong>: <strong>Preemptive</strong></li>
+<li><strong>Execution Rule</strong>: Always run the process with the <strong>shortest remaining time</strong>.</li>
+<li><strong>Tie-Breaker</strong>: If two processes have the same remaining time, <strong>FCFS</strong> is used.</li>
+<li><strong>Preemption</strong>: Occurs when a new process has <strong>less remaining time</strong> than the current process.</li>
+<li><strong>Drawback</strong>: Longer processes may suffer from <strong>starvation</strong>.</li>
+<li><strong>Estimation Issue</strong>: Requires knowledge or prediction of the <strong>remaining CPU time</strong>.</li>
+</ul>
+<h2>Gantt Chart Example (SRTF)<span class="hx-absolute -hx-mt-20" id="gantt-chart-example-srtf"></span>
+    <a href="#gantt-chart-example-srtf" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Given:<span class="hx-absolute -hx-mt-20" id="given"></span>
+    <a href="#given" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Process</th>
+          <th>Arrival Time</th>
+          <th>Burst Time</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>P1</td>
+          <td>0</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>P2</td>
+          <td>1</td>
+          <td>4</td>
+      </tr>
+      <tr>
+          <td>P3</td>
+          <td>2</td>
+          <td>9</td>
+      </tr>
+      <tr>
+          <td>P4</td>
+          <td>3</td>
+          <td>5</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Execution Trace<span class="hx-absolute -hx-mt-20" id="execution-trace"></span>
+    <a href="#execution-trace" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong>t=0</strong> → P1 arrives → run P1</li>
+<li><strong>t=1</strong> → P2 arrives (4 &lt; 7) → preempt P1, run P2</li>
+<li><strong>t=2</strong> → P3 arrives (9 &gt; 3) → continue P2</li>
+<li><strong>t=3</strong> → P4 arrives (5 &gt; 2) → continue P2</li>
+<li><strong>t=5</strong> → P2 finishes → pick shortest: P4 (5), P1 (7), P3 (9) → run P4</li>
+<li><strong>t=10</strong> → P4 finishes → pick shortest: P1 (7), P3 (9) → run P1</li>
+<li><strong>t=17</strong> → P1 finishes → run P3</li>
+<li><strong>t=26</strong> → P3 finishes</li>
+</ul>
+<h3>Gantt Chart<span class="hx-absolute -hx-mt-20" id="gantt-chart"></span>
+    <a href="#gantt-chart" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><pre class="mermaid hx-mt-6">
+  gantt
+    title SRTF (Preemptive SJF) Process Scheduling
+    dateFormat X
+    axisFormat %s
+
+    section Process Execution
+    P1 (start) :p1a, 0, 1
+    P2 (full)  :p2, 1, 5
+    P4 (full)  :p4, 5, 10
+    P1 (rest)  :p1b, 10, 17
+    P3 (full)  :p3, 17, 26
+</pre><h3>Calculations<span class="hx-absolute -hx-mt-20" id="calculations"></span>
+    <a href="#calculations" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Process</th>
+          <th>Arrival Time</th>
+          <th>Burst Time</th>
+          <th>Completion Time</th>
+          <th>Turnaround Time</th>
+          <th>Waiting Time</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>P1</td>
+          <td>0</td>
+          <td>8</td>
+          <td>17</td>
+          <td>17 - 0 = 17</td>
+          <td>17 - 8 = 9</td>
+      </tr>
+      <tr>
+          <td>P2</td>
+          <td>1</td>
+          <td>4</td>
+          <td>5</td>
+          <td>5 - 1 = 4</td>
+          <td>0</td>
+      </tr>
+      <tr>
+          <td>P3</td>
+          <td>2</td>
+          <td>9</td>
+          <td>26</td>
+          <td>26 - 2 = 24</td>
+          <td>15</td>
+      </tr>
+      <tr>
+          <td>P4</td>
+          <td>3</td>
+          <td>5</td>
+          <td>10</td>
+          <td>10 - 3 = 7</td>
+          <td>2</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Averages<span class="hx-absolute -hx-mt-20" id="averages"></span>
+    <a href="#averages" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong>Average Waiting Time</strong> = (9 + 0 + 15 + 2) / 4 = <strong>6.5</strong></li>
+<li><strong>Average Turnaround Time</strong> = (17 + 4 + 24 + 7) / 4 = <strong>13.0</strong></li>
+</ul>
+<p>This example demonstrates how SRTF aggressively preempts longer processes for shorter ones, reducing turnaround for shorter jobs but potentially increasing waiting for longer ones.</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
@@ -876,6 +1170,36 @@
     
     <script defer src="/js/main.min.0942239592f0795dc7213dd1057fd229d7edc19c0ef1a285396eb292d9ca9842.js" integrity="sha256-CUIjlZLweV3HIT3RBX/SKdftwZwO8aKFOW6yktnKmEI="></script>
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script>
+    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script><script defer src="/lib/mermaid/mermaid.min.0d2b6f2361e7e0ce466a6ed458e03daa5584b42ef6926c3beb62eb64670ca261.js" integrity="sha256-DStvI2Hn4M5Gam7UWOA9qlWEtC72kmw762LrZGcMomE="></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelectorAll(".mermaid").forEach(el => {
+      el.dataset.original = el.innerHTML;
+    });
+
+    const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+    mermaid.initialize({ startOnLoad: true, theme: theme });
+
+    let timeout;
+    new MutationObserver(() => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+        document.querySelectorAll(".mermaid").forEach(el => {
+          
+          el.innerHTML = el.dataset.original;
+          el.removeAttribute("data-processed");
+        });
+        mermaid.initialize({ startOnLoad: true, theme: theme });
+        mermaid.init();
+      }, 150);
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  });
+</script>
+
   </body>
 </html>

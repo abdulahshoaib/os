@@ -80,10 +80,10 @@ FCFS is the simplest CPU scheduling algorithm where the process that arrives fir
     axisFormat %s
 
     section Process Execution
-    P1 (Burst: 5)    :p1, 0, 5
-    P2 (Burst: 3)    :p2, 5, 8
-    P3 (Burst: 8)    :p3, 8, 16
-    P4 (Burst: 6)    :p4, 16, 22
+    P1 (5)    :p1, 0, 5
+    P2 (3)    :p2, 5, 8
+    P3 (8)    :p3, 8, 16
+    P4 (6)    :p4, 16, 22
 &lt;/pre&gt;&lt;h3&gt;Calculations&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;calculations&#34;&gt;&lt;/span&gt;
     &lt;a href=&#34;#calculations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
   &lt;thead&gt;
@@ -155,7 +155,125 @@ FCFS is the simplest CPU scheduling algorithm where the process that arrives fir
       <description>
         
         
-        
+        &lt;h2&gt;Shortest Job First (SJF) Scheduling&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;shortest-job-first-sjf-scheduling&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#shortest-job-first-sjf-scheduling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;:
+SJF is a CPU scheduling algorithm where the process with the &lt;strong&gt;smallest CPU burst time&lt;/strong&gt; is scheduled &lt;strong&gt;next&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Features&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Type&lt;/strong&gt;: Can be &lt;strong&gt;Non-preemptive&lt;/strong&gt; or &lt;strong&gt;Preemptive&lt;/strong&gt; (Shortest Remaining Time First - SRTF)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execution Rule&lt;/strong&gt;: CPU is assigned to the process with the &lt;strong&gt;shortest next CPU burst&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tie-Breaker&lt;/strong&gt;: If two processes have the same burst time, &lt;strong&gt;FCFS&lt;/strong&gt; is used.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Difficulty&lt;/strong&gt;: Actual next CPU burst time is &lt;strong&gt;unknown&lt;/strong&gt;, must be predicted (e.g., using exponential averaging).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Drawback&lt;/strong&gt;: Potential for &lt;strong&gt;starvation&lt;/strong&gt; of longer jobs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Gantt Chart Example (Non-Preemptive SJF)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart-example-non-preemptive-sjf&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart-example-non-preemptive-sjf&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Given:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;given&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#given&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;6&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;7&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P4&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Execution Order (Non-Preemptive SJF)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;execution-order-non-preemptive-sjf&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#execution-order-non-preemptive-sjf&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;At time 0 → only P1 is available → run P1
+At time 6 → P2, P3, P4 are available → choose shortest: P4
+At time 9 → P2, P3 are available → choose P3
+At time 16 → run P2&lt;/p&gt;
+&lt;h3&gt;Gantt Chart&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;
+  gantt
+    title Non-Preemptive SJF Process Scheduling
+    dateFormat X
+    axisFormat %s
+
+    section Process Execution
+    P1 (6)    :p1, 0, 6
+    P4 (3)    :p4, 6, 9
+    P3 (7)    :p3, 9, 16
+    P2 (8)    :p2, 16, 24
+&lt;/pre&gt;&lt;h3&gt;Calculations&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;calculations&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#calculations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+          &lt;th&gt;Start Time&lt;/th&gt;
+          &lt;th&gt;Completion Time&lt;/th&gt;
+          &lt;th&gt;Waiting Time&lt;/th&gt;
+          &lt;th&gt;Turnaround Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;6&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;6&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;6&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;24&lt;/td&gt;
+          &lt;td&gt;15&lt;/td&gt;
+          &lt;td&gt;23&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;7&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;16&lt;/td&gt;
+          &lt;td&gt;7&lt;/td&gt;
+          &lt;td&gt;14&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P4&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;6&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;6&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Averages&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;averages&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#averages&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Average Waiting Time&lt;/strong&gt; = (0 + 15 + 7 + 3) / 4 = &lt;strong&gt;6.25&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Turnaround Time&lt;/strong&gt; = (6 + 23 + 14 + 6) / 4 = &lt;strong&gt;12.25&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     
@@ -168,7 +286,129 @@ FCFS is the simplest CPU scheduling algorithm where the process that arrives fir
       <description>
         
         
-        
+        &lt;h2&gt;Shortest Remaining Time First (SRTF) Scheduling&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;shortest-remaining-time-first-srtf-scheduling&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#shortest-remaining-time-first-srtf-scheduling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;:
+SRTF is the &lt;strong&gt;preemptive&lt;/strong&gt; version of Shortest Job First (SJF), where the process with the &lt;strong&gt;least remaining CPU burst time&lt;/strong&gt; is executed next. If a &lt;strong&gt;new process arrives&lt;/strong&gt; with a &lt;strong&gt;shorter remaining time&lt;/strong&gt; than the currently executing one, &lt;strong&gt;preemption&lt;/strong&gt; occurs.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Features&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Type&lt;/strong&gt;: &lt;strong&gt;Preemptive&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execution Rule&lt;/strong&gt;: Always run the process with the &lt;strong&gt;shortest remaining time&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tie-Breaker&lt;/strong&gt;: If two processes have the same remaining time, &lt;strong&gt;FCFS&lt;/strong&gt; is used.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Preemption&lt;/strong&gt;: Occurs when a new process has &lt;strong&gt;less remaining time&lt;/strong&gt; than the current process.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Drawback&lt;/strong&gt;: Longer processes may suffer from &lt;strong&gt;starvation&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Estimation Issue&lt;/strong&gt;: Requires knowledge or prediction of the &lt;strong&gt;remaining CPU time&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Gantt Chart Example (SRTF)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart-example-srtf&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart-example-srtf&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Given:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;given&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#given&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P4&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Execution Trace&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;execution-trace&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#execution-trace&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;t=0&lt;/strong&gt; → P1 arrives → run P1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=1&lt;/strong&gt; → P2 arrives (4 &amp;lt; 7) → preempt P1, run P2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=2&lt;/strong&gt; → P3 arrives (9 &amp;gt; 3) → continue P2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=3&lt;/strong&gt; → P4 arrives (5 &amp;gt; 2) → continue P2&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=5&lt;/strong&gt; → P2 finishes → pick shortest: P4 (5), P1 (7), P3 (9) → run P4&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=10&lt;/strong&gt; → P4 finishes → pick shortest: P1 (7), P3 (9) → run P1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=17&lt;/strong&gt; → P1 finishes → run P3&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=26&lt;/strong&gt; → P3 finishes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Gantt Chart&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;
+  gantt
+    title SRTF (Preemptive SJF) Process Scheduling
+    dateFormat X
+    axisFormat %s
+
+    section Process Execution
+    P1 (start) :p1a, 0, 1
+    P2 (full)  :p2, 1, 5
+    P4 (full)  :p4, 5, 10
+    P1 (rest)  :p1b, 10, 17
+    P3 (full)  :p3, 17, 26
+&lt;/pre&gt;&lt;h3&gt;Calculations&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;calculations&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#calculations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+          &lt;th&gt;Completion Time&lt;/th&gt;
+          &lt;th&gt;Turnaround Time&lt;/th&gt;
+          &lt;th&gt;Waiting Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;17&lt;/td&gt;
+          &lt;td&gt;17 - 0 = 17&lt;/td&gt;
+          &lt;td&gt;17 - 8 = 9&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;5 - 1 = 4&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;26&lt;/td&gt;
+          &lt;td&gt;26 - 2 = 24&lt;/td&gt;
+          &lt;td&gt;15&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P4&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;10 - 3 = 7&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Averages&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;averages&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#averages&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Average Waiting Time&lt;/strong&gt; = (9 + 0 + 15 + 2) / 4 = &lt;strong&gt;6.5&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Turnaround Time&lt;/strong&gt; = (17 + 4 + 24 + 7) / 4 = &lt;strong&gt;13.0&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This example demonstrates how SRTF aggressively preempts longer processes for shorter ones, reducing turnaround for shorter jobs but potentially increasing waiting for longer ones.&lt;/p&gt;
+
       </description>
     </item>
     
@@ -181,7 +421,130 @@ FCFS is the simplest CPU scheduling algorithm where the process that arrives fir
       <description>
         
         
-        
+        &lt;h2&gt;Priority Scheduling&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;priority-scheduling&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#priority-scheduling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;:
+Priority Scheduling assigns the CPU to the process with the &lt;strong&gt;highest priority&lt;/strong&gt; (lowest numerical value, if lower number means higher priority). It can be &lt;strong&gt;preemptive&lt;/strong&gt; or &lt;strong&gt;non-preemptive&lt;/strong&gt; based on the system’s configuration.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Features&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Type&lt;/strong&gt;: &lt;strong&gt;Can be Preemptive or Non-preemptive&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execution Rule&lt;/strong&gt;: CPU is allocated to the process with the &lt;strong&gt;highest priority&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tie-Breaker&lt;/strong&gt;: FCFS is used if two processes have the same priority.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Drawback&lt;/strong&gt;: May lead to &lt;strong&gt;starvation&lt;/strong&gt; for lower-priority processes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Solution to Starvation&lt;/strong&gt;: &lt;strong&gt;Aging&lt;/strong&gt;, which increases priority the longer a process waits.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Gantt Chart Example (Non-Preemptive Priority)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart-example-non-preemptive-priority&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart-example-non-preemptive-priority&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Given:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;given&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#given&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+          &lt;th&gt;Priority&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P2&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P4&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Execution Trace&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;execution-trace&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#execution-trace&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;blockquote&gt;
+  &lt;p&gt;(Lower number = higher priority)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;t=0&lt;/strong&gt; → P1 runs (no other processes yet)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=10&lt;/strong&gt; → P2 runs (priority 1)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=11&lt;/strong&gt; → P4 runs (priority 2)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=12&lt;/strong&gt; → P3 runs (priority 4)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Gantt Chart&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;
+  gantt
+    title Priority Scheduling (Non-Preemptive)
+    dateFormat X
+    axisFormat %s
+
+    section Process Execution
+    P1 (10)   :p1, 0, 10
+    P2 (1)    :p2, 10, 11
+    P4 (1)    :p4, 11, 12
+    P3 (2)    :p3, 12, 14
+&lt;/pre&gt;&lt;h3&gt;Calculations&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;calculations&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#calculations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+          &lt;th&gt;Completion Time&lt;/th&gt;
+          &lt;th&gt;Turnaround Time&lt;/th&gt;
+          &lt;th&gt;Waiting Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;10 - 0 = 10&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P2&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;11&lt;/td&gt;
+          &lt;td&gt;11 - 2 = 9&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;14&lt;/td&gt;
+          &lt;td&gt;14 - 3 = 11&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P4&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+          &lt;td&gt;12 - 4 = 8&lt;/td&gt;
+          &lt;td&gt;7&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Averages&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;averages&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#averages&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Average Waiting Time&lt;/strong&gt; = (0 + 8 + 9 + 7) / 4 = &lt;strong&gt;6.0&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Turnaround Time&lt;/strong&gt; = (10 + 9 + 11 + 8) / 4 = &lt;strong&gt;9.5&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     
@@ -194,7 +557,126 @@ FCFS is the simplest CPU scheduling algorithm where the process that arrives fir
       <description>
         
         
-        
+        &lt;h2&gt;Round Robin (RR) Scheduling&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;round-robin-rr-scheduling&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#round-robin-rr-scheduling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;:
+Round Robin is a &lt;strong&gt;preemptive&lt;/strong&gt; CPU scheduling algorithm where each process is assigned a &lt;strong&gt;fixed time quantum&lt;/strong&gt;. Processes are scheduled in a circular order. If a process’s burst time exceeds the quantum, it is &lt;strong&gt;preempted&lt;/strong&gt; and moved to the end of the ready queue.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Features&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Type&lt;/strong&gt;: &lt;strong&gt;Preemptive&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Execution Rule&lt;/strong&gt;: Each process gets the CPU for &lt;strong&gt;at most one time quantum&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Queue Type&lt;/strong&gt;: Circular &lt;strong&gt;FIFO&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Fairness&lt;/strong&gt;: Every process gets an &lt;strong&gt;equal share&lt;/strong&gt; of the CPU over time.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Preemption&lt;/strong&gt;: Occurs after &lt;strong&gt;quantum expires&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Drawback&lt;/strong&gt;: High context switching overhead if &lt;strong&gt;quantum is too small&lt;/strong&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Gantt Chart Example (Quantum = 4)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart-example-quantum--4&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart-example-quantum--4&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Given:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;given&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#given&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P4&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Execution Trace (Quantum = 4)&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;execution-trace-quantum--4&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#execution-trace-quantum--4&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;t=0&lt;/strong&gt; → P1 runs for 4 → remaining = 1&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=4&lt;/strong&gt; → P2 runs for 4 → finishes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=8&lt;/strong&gt; → P3 runs for 2 → finishes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=10&lt;/strong&gt; → P4 runs for 1 → finishes&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;t=11&lt;/strong&gt; → P1 runs for 1 → finishes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Gantt Chart&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;
+  gantt
+    title Round Robin Scheduling (Quantum = 4)
+    dateFormat X
+    axisFormat %s
+
+    section Process Execution
+    P1 (4)   :p1a, 0, 4
+    P2 (4)   :p2, 4, 8
+    P3 (2)   :p3, 8, 10
+    P4 (1)   :p4, 10, 11
+    P1 (1)   :p1b, 11, 12
+&lt;/pre&gt;&lt;h3&gt;Calculations&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;calculations&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#calculations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+          &lt;th&gt;Completion Time&lt;/th&gt;
+          &lt;th&gt;Turnaround Time&lt;/th&gt;
+          &lt;th&gt;Waiting Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+          &lt;td&gt;12 - 0 = 12&lt;/td&gt;
+          &lt;td&gt;12 - 5 = 7&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+          &lt;td&gt;8 - 1 = 7&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;10 - 2 = 8&lt;/td&gt;
+          &lt;td&gt;6&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P4&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;11&lt;/td&gt;
+          &lt;td&gt;11 - 3 = 8&lt;/td&gt;
+          &lt;td&gt;7&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Averages&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;averages&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#averages&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Average Waiting Time&lt;/strong&gt; = (7 + 3 + 6 + 7) / 4 = &lt;strong&gt;5.75&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Turnaround Time&lt;/strong&gt; = (12 + 7 + 8 + 8) / 4 = &lt;strong&gt;8.75&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This example shows that Round Robin gives each process a fair chance to execute, but context switches and response times can vary depending on the quantum and arrival patterns.&lt;/p&gt;
+
       </description>
     </item>
     
@@ -207,7 +689,158 @@ FCFS is the simplest CPU scheduling algorithm where the process that arrives fir
       <description>
         
         
-        
+        &lt;h2&gt;Multilevel Queue Scheduling&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;multilevel-queue-scheduling&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#multilevel-queue-scheduling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;:
+Multilevel Queue Scheduling divides the ready queue into multiple separate queues, each with its own priority level and scheduling algorithm. A process is permanently assigned to one of these queues based on characteristics like memory size, type (interactive/batch), or priority.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Features&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Queue Structure&lt;/strong&gt;: Multiple distinct queues (e.g., Foreground, Background)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Process Assignment&lt;/strong&gt;: Permanent to one queue&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Scheduling Within Queue&lt;/strong&gt;: Each queue can have a different scheduling algorithm (e.g., RR for Foreground, FCFS for Background)&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Scheduling Among Queues&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fixed Priority Scheduling&lt;/strong&gt;: Always schedule from highest priority queue first&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Time Slicing Among Queues&lt;/strong&gt;: CPU time split across queues (e.g., 80% to Foreground, 20% to Background)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Drawback&lt;/strong&gt;: Processes in lower-priority queues can suffer starvation&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;: Time slicing across queues or &lt;strong&gt;aging&lt;/strong&gt; within queues&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Gantt Chart Example&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart-example&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart-example&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Queue Setup&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;queue-setup&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#queue-setup&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Foreground Queue (Priority 1)&lt;/strong&gt; – Scheduled with Round Robin (Time Quantum = 2)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Background Queue (Priority 2)&lt;/strong&gt; – Scheduled with FCFS&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;CPU Time Split&lt;/strong&gt;: 80% Foreground, 20% Background (in simple alternation)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Given:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;given&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#given&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;h4&gt;Foreground Queue (RR):&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;foreground-queue-rr&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#foreground-queue-rr&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;F1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;F2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h4&gt;Background Queue (FCFS):&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;background-queue-fcfs&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#background-queue-fcfs&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h4&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;B1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Assumptions:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;assumptions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#assumptions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;RR with quantum = 2 for Foreground&lt;/li&gt;
+&lt;li&gt;4 units Foreground execution → 1 unit Background execution&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Execution Order:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;execution-order&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#execution-order&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;t=0–2: F1 (RR quantum)&lt;/li&gt;
+&lt;li&gt;t=2–4: F2 (RR quantum)&lt;/li&gt;
+&lt;li&gt;t=4–5: B1 (1 unit from background)&lt;/li&gt;
+&lt;li&gt;t=5–7: F1 (remaining 2 units)&lt;/li&gt;
+&lt;li&gt;t=7–8: B1 (1 unit)&lt;/li&gt;
+&lt;li&gt;t=8–10: F2 (remaining 1 unit)&lt;/li&gt;
+&lt;li&gt;t=10–14: B1 (remaining 3 units)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Gantt Chart&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;
+  gantt
+    title Multilevel Queue Scheduling
+    dateFormat X
+    axisFormat %s
+
+    section Foreground (RR)
+    F1 (2)     :f1a, 0, 2
+    F2 (2)     :f2a, 2, 4
+    F1 (2)     :f1b, 5, 7
+    F2 (1)     :f2b, 8, 9
+
+    section Background (FCFS)
+    B1 (1)     :b1a, 4, 5
+    B1 (1)     :b1b, 7, 8
+    B1 (3)     :b1c, 9, 12
+&lt;/pre&gt;&lt;h3&gt;Calculations&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;calculations&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#calculations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+          &lt;th&gt;Completion Time&lt;/th&gt;
+          &lt;th&gt;Turnaround Time&lt;/th&gt;
+          &lt;th&gt;Waiting Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;F1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;7&lt;/td&gt;
+          &lt;td&gt;7 - 0 = 7&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;F2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;3&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;9 - 1 = 8&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;B1&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+          &lt;td&gt;12 - 2 = 10&lt;/td&gt;
+          &lt;td&gt;5&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Averages&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;averages&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#averages&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Average Waiting Time&lt;/strong&gt; = (3 + 5 + 5) / 3 = &lt;strong&gt;4.33&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Turnaround Time&lt;/strong&gt; = (7 + 8 + 10) / 3 = &lt;strong&gt;8.33&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     
@@ -220,7 +853,157 @@ FCFS is the simplest CPU scheduling algorithm where the process that arrives fir
       <description>
         
         
-        
+        &lt;h2&gt;Multilevel Feedback Queue Scheduling&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;multilevel-feedback-queue-scheduling&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#multilevel-feedback-queue-scheduling&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Definition&lt;/strong&gt;:
+Multilevel Feedback Queue Scheduling is an advanced version of Multilevel Queue Scheduling where &lt;strong&gt;processes can move between queues&lt;/strong&gt; based on their behavior and requirements. It aims to dynamically adjust priorities to optimize both CPU-bound and I/O-bound processes.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key Features&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Queue Structure&lt;/strong&gt;: Multiple queues, each with its own priority level and scheduling algorithm&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Dynamic Process Movement&lt;/strong&gt;:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Demotion&lt;/strong&gt;: A process that uses too much CPU time is moved to a lower-priority queue.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Promotion&lt;/strong&gt;: A process that waits too long in a low-priority queue is moved up — this is aging, to prevent starvation.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Behavior-Based Scheduling&lt;/strong&gt;:
+&lt;ul&gt;
+&lt;li&gt;&lt;em&gt;CPU-bound processes tend to move down&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;I/O-bound or interactive processes stay at higher priorities&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;Adaptivity: Better response time for interactive jobs while ensuring fairness for all&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Defined By&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Number of Queues&lt;/li&gt;
+&lt;li&gt;Scheduling Algorithm per Queue (e.g., RR for top, FCFS for bottom)&lt;/li&gt;
+&lt;li&gt;Rules for Promotion&lt;/li&gt;
+&lt;li&gt;Rules for Demotion&lt;/li&gt;
+&lt;li&gt;Initial Queue Assignment&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2&gt;Gantt Chart Example&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart-example&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart-example&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3&gt;Queue Setup&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;queue-setup&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#queue-setup&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Q0 (Priority 1) — &lt;strong&gt;Round Robin&lt;/strong&gt;, Quantum = 2&lt;/li&gt;
+&lt;li&gt;Q1 (Priority 2) — &lt;strong&gt;Round Robin&lt;/strong&gt;, Quantum = 4&lt;/li&gt;
+&lt;li&gt;Q2 (Priority 3) — &lt;strong&gt;FCFS&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Rules&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;rules&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#rules&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;New processes enter Q0&lt;/li&gt;
+&lt;li&gt;If a process uses full quantum in Q0 → move to Q1&lt;/li&gt;
+&lt;li&gt;If it uses full quantum in Q1 → move to Q2&lt;/li&gt;
+&lt;li&gt;If it waits too long in Q2 → move up to Q1 (aging)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Given:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;given&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#given&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival Time&lt;/th&gt;
+          &lt;th&gt;Burst Time&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;6&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Assumptions:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;assumptions&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#assumptions&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;All processes enter Q0&lt;/li&gt;
+&lt;li&gt;Apply feedback rules for demotion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Execution Breakdown:&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;execution-breakdown&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#execution-breakdown&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;t=0–2: P1 (Q0) uses full quantum → demote to Q1&lt;/li&gt;
+&lt;li&gt;t=2–4: P2 (Q0) uses full quantum → demote to Q1&lt;/li&gt;
+&lt;li&gt;t=4–6: P3 (Q0) uses full quantum → demote to Q1&lt;/li&gt;
+&lt;li&gt;t=6–10: P1 (Q1, 4 units quantum) → finishes (remaining 4 units)&lt;/li&gt;
+&lt;li&gt;t=10–12: P2 (Q1, remaining 2 units) → finishes&lt;/li&gt;
+&lt;li&gt;t=12–16: P3 (Q1, 4 units) → uses full quantum → demote to Q2&lt;/li&gt;
+&lt;li&gt;t=16–21: P3 (Q2, remaining 3 units) → finishes&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Gantt Chart&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;gantt-chart&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#gantt-chart&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;pre class=&#34;mermaid hx-mt-6&#34;&gt;
+  gantt
+    title Multilevel Feedback Queue Scheduling
+    dateFormat X
+    axisFormat %s
+
+    section Q0 (RR, q=2)
+    P1 (2)     :p1a, 0, 2
+    P2 (2)     :p2a, 2, 4
+    P3 (2)     :p3a, 4, 6
+
+    section Q1 (RR, q=4)
+    P1 (4)     :p1b, 6, 10
+    P2 (2)     :p2b, 10, 12
+    P3 (4)     :p3b, 12, 16
+
+    section Q2 (FCFS)
+    P3 (3)     :p3c, 16, 19
+&lt;/pre&gt;&lt;h3&gt;Calculations&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;calculations&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#calculations&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;Process&lt;/th&gt;
+          &lt;th&gt;Arrival&lt;/th&gt;
+          &lt;th&gt;Burst&lt;/th&gt;
+          &lt;th&gt;Completion&lt;/th&gt;
+          &lt;th&gt;Turnaround&lt;/th&gt;
+          &lt;th&gt;Waiting&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P1&lt;/td&gt;
+          &lt;td&gt;0&lt;/td&gt;
+          &lt;td&gt;6&lt;/td&gt;
+          &lt;td&gt;10&lt;/td&gt;
+          &lt;td&gt;10 - 0 = 10&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P2&lt;/td&gt;
+          &lt;td&gt;1&lt;/td&gt;
+          &lt;td&gt;4&lt;/td&gt;
+          &lt;td&gt;12&lt;/td&gt;
+          &lt;td&gt;12 - 1 = 11&lt;/td&gt;
+          &lt;td&gt;7&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;P3&lt;/td&gt;
+          &lt;td&gt;2&lt;/td&gt;
+          &lt;td&gt;9&lt;/td&gt;
+          &lt;td&gt;19&lt;/td&gt;
+          &lt;td&gt;19 - 2 = 17&lt;/td&gt;
+          &lt;td&gt;8&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3&gt;Averages&lt;span class=&#34;hx-absolute -hx-mt-20&#34; id=&#34;averages&#34;&gt;&lt;/span&gt;
+    &lt;a href=&#34;#averages&#34; class=&#34;subheading-anchor&#34; aria-label=&#34;Permalink for this section&#34;&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Average Waiting Time&lt;/strong&gt; = (4 + 7 + 8) / 3 = &lt;strong&gt;6.33&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Average Turnaround Time&lt;/strong&gt; = (10 + 11 + 17) / 3 = &lt;strong&gt;12.67&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
       </description>
     </item>
     
