@@ -11,18 +11,145 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>FCFS – </title>
-  <meta name="description" content="" /><link rel="canonical" href="/cpu-scheduling/scheduling-algorithms/fcfs/" itemprop="url" />
+  <meta name="description" content="First-Come, First-Served (FCFS) Scheduling Definition: FCFS is the simplest CPU scheduling algorithm where the process that arrives first in the ready queue is scheduled first.
+Key Features:
+Queue Type: FIFO (First In, First Out) Type: Non-preemptive Execution Rule: The CPU is assigned to the process at the head of the queue. Drawback: Convoy effect — short processes may wait long times behind longer ones, causing low CPU and device utilization. Waiting Time: Can be high and varies if burst times differ significantly. Gantt Chart Example Given: Process Arrival Time Burst Time P1 0 5 P2 1 3 P3 2 8 P4 3 6 Assumption All arrive in order: P1 → P2 → P3 → P4 FCFS ignores arrival time if they’re queued. Gantt Chart gantt title FCFS Process Scheduling dateFormat X axisFormat %s section Process Execution P1 (Burst: 5) :p1, 0, 5 P2 (Burst: 3) :p2, 5, 8 P3 (Burst: 8) :p3, 8, 16 P4 (Burst: 6) :p4, 16, 22 Calculations Process Arrival Time Burst Time Start Time Completion Time Waiting Time Turnaround Time P1 0 5 0 5 0 5 P2 1 3 5 8 4 7 P3 2 8 8 16 6 14 P4 3 6 16 22 13 19 Averages Average Waiting Time = (0 &#43; 4 &#43; 6 &#43; 13) / 4 = 5.75 Average Turnaround Time = (5 &#43; 7 &#43; 14 &#43; 19) / 4 = 11.25 This demonstrates how FCFS can lead to high waiting times especially when short processes follow long ones." /><link rel="canonical" href="/cpu-scheduling/scheduling-algorithms/fcfs/" itemprop="url" />
 
 <meta property="og:title" content="FCFS" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="First-Come, First-Served (FCFS) Scheduling
+    Definition:
+FCFS is the simplest CPU scheduling algorithm where the process that arrives first in the ready queue is scheduled first.
+Key Features:
+
+Queue Type: FIFO (First In, First Out)
+Type: Non-preemptive
+Execution Rule: The CPU is assigned to the process at the head of the queue.
+Drawback: Convoy effect — short processes may wait long times behind longer ones, causing low CPU and device utilization.
+Waiting Time: Can be high and varies if burst times differ significantly.
+
+Gantt Chart Example
+    Given:
+    
+  
+      
+          Process
+          Arrival Time
+          Burst Time
+      
+  
+  
+      
+          P1
+          0
+          5
+      
+      
+          P2
+          1
+          3
+      
+      
+          P3
+          2
+          8
+      
+      
+          P4
+          3
+          6
+      
+  
+
+Assumption
+    
+All arrive in order: P1 → P2 → P3 → P4
+FCFS ignores arrival time if they’re queued.
+
+Gantt Chart
+    
+  gantt
+    title FCFS Process Scheduling
+    dateFormat X
+    axisFormat %s
+
+    section Process Execution
+    P1 (Burst: 5)    :p1, 0, 5
+    P2 (Burst: 3)    :p2, 5, 8
+    P3 (Burst: 8)    :p3, 8, 16
+    P4 (Burst: 6)    :p4, 16, 22
+Calculations
+    
+  
+      
+          Process
+          Arrival Time
+          Burst Time
+          Start Time
+          Completion Time
+          Waiting Time
+          Turnaround Time
+      
+  
+  
+      
+          P1
+          0
+          5
+          0
+          5
+          0
+          5
+      
+      
+          P2
+          1
+          3
+          5
+          8
+          4
+          7
+      
+      
+          P3
+          2
+          8
+          8
+          16
+          6
+          14
+      
+      
+          P4
+          3
+          6
+          16
+          22
+          13
+          19
+      
+  
+
+Averages
+    
+Average Waiting Time = (0 &#43; 4 &#43; 6 &#43; 13) / 4 = 5.75
+Average Turnaround Time = (5 &#43; 7 &#43; 14 &#43; 19) / 4 = 11.25
+
+This demonstrates how FCFS can lead to high waiting times especially when short processes follow long ones." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/cpu-scheduling/scheduling-algorithms/fcfs/" /><meta property="article:section" content="cpu-scheduling" />
 
 
 
   <meta itemprop="name" content="FCFS">
+  <meta itemprop="description" content="First-Come, First-Served (FCFS) Scheduling Definition: FCFS is the simplest CPU scheduling algorithm where the process that arrives first in the ready queue is scheduled first.
+Key Features:
+Queue Type: FIFO (First In, First Out) Type: Non-preemptive Execution Rule: The CPU is assigned to the process at the head of the queue. Drawback: Convoy effect — short processes may wait long times behind longer ones, causing low CPU and device utilization. Waiting Time: Can be high and varies if burst times differ significantly. Gantt Chart Example Given: Process Arrival Time Burst Time P1 0 5 P2 1 3 P3 2 8 P4 3 6 Assumption All arrive in order: P1 → P2 → P3 → P4 FCFS ignores arrival time if they’re queued. Gantt Chart gantt title FCFS Process Scheduling dateFormat X axisFormat %s section Process Execution P1 (Burst: 5) :p1, 0, 5 P2 (Burst: 3) :p2, 5, 8 P3 (Burst: 8) :p3, 8, 16 P4 (Burst: 6) :p4, 16, 22 Calculations Process Arrival Time Burst Time Start Time Completion Time Waiting Time Turnaround Time P1 0 5 0 5 0 5 P2 1 3 5 8 4 7 P3 2 8 8 16 6 14 P4 3 6 16 22 13 19 Averages Average Waiting Time = (0 &#43; 4 &#43; 6 &#43; 13) / 4 = 5.75 Average Turnaround Time = (5 &#43; 7 &#43; 14 &#43; 19) / 4 = 11.25 This demonstrates how FCFS can lead to high waiting times especially when short processes follow long ones.">
+  <meta itemprop="wordCount" content="250">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="FCFS">
+  <meta name="twitter:description" content="First-Come, First-Served (FCFS) Scheduling Definition: FCFS is the simplest CPU scheduling algorithm where the process that arrives first in the ready queue is scheduled first.
+Key Features:
+Queue Type: FIFO (First In, First Out) Type: Non-preemptive Execution Rule: The CPU is assigned to the process at the head of the queue. Drawback: Convoy effect — short processes may wait long times behind longer ones, causing low CPU and device utilization. Waiting Time: Can be high and varies if burst times differ significantly. Gantt Chart Example Given: Process Arrival Time Burst Time P1 0 5 P2 1 3 P3 2 8 P4 3 6 Assumption All arrive in order: P1 → P2 → P3 → P4 FCFS ignores arrival time if they’re queued. Gantt Chart gantt title FCFS Process Scheduling dateFormat X axisFormat %s section Process Execution P1 (Burst: 5) :p1, 0, 5 P2 (Burst: 3) :p2, 5, 8 P3 (Burst: 8) :p3, 8, 16 P4 (Burst: 6) :p4, 16, 22 Calculations Process Arrival Time Burst Time Start Time Completion Time Waiting Time Turnaround Time P1 0 5 0 5 0 5 P2 1 3 5 8 4 7 P3 2 8 8 16 6 14 P4 3 6 16 22 13 19 Averages Average Waiting Time = (0 &#43; 4 &#43; 6 &#43; 13) / 4 = 5.75 Average Turnaround Time = (5 &#43; 7 &#43; 14 &#43; 19) / 4 = 11.25 This demonstrates how FCFS can lead to high waiting times especially when short processes follow long ones.">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -219,6 +346,20 @@
     
   >FCFS
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#first-come-first-served-fcfs-scheduling"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >First-Come, First-Served (FCFS) Scheduling</a>
+            </li>
+          <li>
+              <a
+                href="#gantt-chart-example"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Gantt Chart Example</a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -820,8 +961,36 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#first-come-first-served-fcfs-scheduling">First-Come, First-Served (FCFS) Scheduling
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#gantt-chart-example">Gantt Chart Example
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#given">Given:
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#assumption">Assumption
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#gantt-chart">Gantt Chart
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#calculations">Calculations
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#averages">Averages
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -847,7 +1016,126 @@
 
         <div class="content">
           <h1>FCFS</h1>
-          
+          <h2>First-Come, First-Served (FCFS) Scheduling<span class="hx-absolute -hx-mt-20" id="first-come-first-served-fcfs-scheduling"></span>
+    <a href="#first-come-first-served-fcfs-scheduling" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>Definition</strong>:
+FCFS is the simplest CPU scheduling algorithm where the process that arrives first in the ready queue is scheduled first.</p>
+<p><strong>Key Features</strong>:</p>
+<ul>
+<li><strong>Queue Type</strong>: FIFO (First In, First Out)</li>
+<li><strong>Type</strong>: Non-preemptive</li>
+<li><strong>Execution Rule</strong>: The CPU is assigned to the process at the <strong>head</strong> of the queue.</li>
+<li><strong>Drawback</strong>: <strong>Convoy effect</strong> — short processes may wait long times behind longer ones, causing low CPU and device utilization.</li>
+<li><strong>Waiting Time</strong>: Can be high and varies if burst times differ significantly.</li>
+</ul>
+<h2>Gantt Chart Example<span class="hx-absolute -hx-mt-20" id="gantt-chart-example"></span>
+    <a href="#gantt-chart-example" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Given:<span class="hx-absolute -hx-mt-20" id="given"></span>
+    <a href="#given" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Process</th>
+          <th>Arrival Time</th>
+          <th>Burst Time</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>P1</td>
+          <td>0</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>P2</td>
+          <td>1</td>
+          <td>3</td>
+      </tr>
+      <tr>
+          <td>P3</td>
+          <td>2</td>
+          <td>8</td>
+      </tr>
+      <tr>
+          <td>P4</td>
+          <td>3</td>
+          <td>6</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Assumption<span class="hx-absolute -hx-mt-20" id="assumption"></span>
+    <a href="#assumption" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>All arrive in order: P1 → P2 → P3 → P4</li>
+<li>FCFS ignores arrival time if they’re queued.</li>
+</ul>
+<h3>Gantt Chart<span class="hx-absolute -hx-mt-20" id="gantt-chart"></span>
+    <a href="#gantt-chart" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><pre class="mermaid hx-mt-6">
+  gantt
+    title FCFS Process Scheduling
+    dateFormat X
+    axisFormat %s
+
+    section Process Execution
+    P1 (Burst: 5)    :p1, 0, 5
+    P2 (Burst: 3)    :p2, 5, 8
+    P3 (Burst: 8)    :p3, 8, 16
+    P4 (Burst: 6)    :p4, 16, 22
+</pre><h3>Calculations<span class="hx-absolute -hx-mt-20" id="calculations"></span>
+    <a href="#calculations" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Process</th>
+          <th>Arrival Time</th>
+          <th>Burst Time</th>
+          <th>Start Time</th>
+          <th>Completion Time</th>
+          <th>Waiting Time</th>
+          <th>Turnaround Time</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>P1</td>
+          <td>0</td>
+          <td>5</td>
+          <td>0</td>
+          <td>5</td>
+          <td>0</td>
+          <td>5</td>
+      </tr>
+      <tr>
+          <td>P2</td>
+          <td>1</td>
+          <td>3</td>
+          <td>5</td>
+          <td>8</td>
+          <td>4</td>
+          <td>7</td>
+      </tr>
+      <tr>
+          <td>P3</td>
+          <td>2</td>
+          <td>8</td>
+          <td>8</td>
+          <td>16</td>
+          <td>6</td>
+          <td>14</td>
+      </tr>
+      <tr>
+          <td>P4</td>
+          <td>3</td>
+          <td>6</td>
+          <td>16</td>
+          <td>22</td>
+          <td>13</td>
+          <td>19</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Averages<span class="hx-absolute -hx-mt-20" id="averages"></span>
+    <a href="#averages" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong>Average Waiting Time</strong> = (0 + 4 + 6 + 13) / 4 = <strong>5.75</strong></li>
+<li><strong>Average Turnaround Time</strong> = (5 + 7 + 14 + 19) / 4 = <strong>11.25</strong></li>
+</ul>
+<p>This demonstrates how FCFS can lead to high waiting times especially when short processes follow long ones.</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
@@ -876,6 +1164,36 @@
     
     <script defer src="/js/main.min.0942239592f0795dc7213dd1057fd229d7edc19c0ef1a285396eb292d9ca9842.js" integrity="sha256-CUIjlZLweV3HIT3RBX/SKdftwZwO8aKFOW6yktnKmEI="></script>
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script>
+    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script><script defer src="/lib/mermaid/mermaid.min.0d2b6f2361e7e0ce466a6ed458e03daa5584b42ef6926c3beb62eb64670ca261.js" integrity="sha256-DStvI2Hn4M5Gam7UWOA9qlWEtC72kmw762LrZGcMomE="></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelectorAll(".mermaid").forEach(el => {
+      el.dataset.original = el.innerHTML;
+    });
+
+    const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+    mermaid.initialize({ startOnLoad: true, theme: theme });
+
+    let timeout;
+    new MutationObserver(() => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+        document.querySelectorAll(".mermaid").forEach(el => {
+          
+          el.innerHTML = el.dataset.original;
+          el.removeAttribute("data-processed");
+        });
+        mermaid.initialize({ startOnLoad: true, theme: theme });
+        mermaid.init();
+      }, 150);
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  });
+</script>
+
   </body>
 </html>
