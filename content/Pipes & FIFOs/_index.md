@@ -1,6 +1,12 @@
 ---
 date: '2025-05-22T05:23:27+05:00'
 ---
+## Libraries Used
+```c
+#include <unistd.h>
+#include <sys/stat.h>
+```
+
 ## pipe()
 Creates a unidirectional data channel (pipe) using a pair of file descriptors for reading and writing
 ```c
