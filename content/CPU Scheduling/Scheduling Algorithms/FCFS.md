@@ -42,10 +42,10 @@ gantt
     axisFormat %s
 
     section Process Execution
-    P1 (Burst: 5)    :p1, 0, 5
-    P2 (Burst: 3)    :p2, 5, 8
-    P3 (Burst: 8)    :p3, 8, 16
-    P4 (Burst: 6)    :p4, 16, 22
+    P1 (5)    :p1, 0, 5
+    P2 (3)    :p2, 5, 8
+    P3 (8)    :p3, 8, 16
+    P4 (6)    :p4, 16, 22
 ```
 ### Calculations
 
