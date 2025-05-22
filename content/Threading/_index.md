@@ -1,9 +1,9 @@
 ---
 date: '2025-05-22T05:22:42+05:00'
 ---
-## Library Used
+## Library Required
 ```c
-#include <pthread>
+#include <pthread.h>
 ```
 ## Types
 ```c
