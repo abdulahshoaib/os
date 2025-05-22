@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en"><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
@@ -12,7 +12,7 @@
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Shared Memory – </title>
   <meta name="description" content="Concept Shared memory is an inter-process communication (IPC) mechanism where multiple processes share a region of memory. This region is created by one process using shmget() and then mapped into the address space of other processes via shmat().
-The OS typically isolates memory between processes. However, shared memory explicitly bypasses this restriction by mutual agreement between processes. Once attached, processes can directly read from and write to the shared region. This memory is not controlled or interpreted by the OS—the processes using it define the format, meaning, and structure of the data. Synchronization is critical: the OS does not prevent race conditions. It’s up to the processes to ensure safe access—typically by using semaphores or mutexes. This makes shared memory very fast for IPC, since there’s no copying of data between processes, but it also requires careful coordination." /><link rel="canonical" href="//localhost:1313/process-synchronization/shared-memory/" itemprop="url" />
+The OS typically isolates memory between processes. However, shared memory explicitly bypasses this restriction by mutual agreement between processes. Once attached, processes can directly read from and write to the shared region. This memory is not controlled or interpreted by the OS—the processes using it define the format, meaning, and structure of the data. Synchronization is critical: the OS does not prevent race conditions. It’s up to the processes to ensure safe access—typically by using semaphores or mutexes. This makes shared memory very fast for IPC, since there’s no copying of data between processes, but it also requires careful coordination." /><link rel="canonical" href="/process-synchronization/shared-memory/" itemprop="url" />
 
 <meta property="og:title" content="Shared Memory" />
 <meta property="og:description" content="Concept
@@ -25,7 +25,7 @@ Synchronization is critical: the OS does not prevent race conditions. It’s up 
 
 This makes shared memory very fast for IPC, since there&rsquo;s no copying of data between processes, but it also requires careful coordination." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="//localhost:1313/process-synchronization/shared-memory/" /><meta property="article:section" content="process-synchronization" />
+<meta property="og:url" content="/process-synchronization/shared-memory/" /><meta property="article:section" content="process-synchronization" />
 
 
 
@@ -38,11 +38,12 @@ The OS typically isolates memory between processes. However, shared memory expli
   <meta name="twitter:description" content="Concept Shared memory is an inter-process communication (IPC) mechanism where multiple processes share a region of memory. This region is created by one process using shmget() and then mapped into the address space of other processes via shmat().
 The OS typically isolates memory between processes. However, shared memory explicitly bypasses this restriction by mutual agreement between processes. Once attached, processes can directly read from and write to the shared region. This memory is not controlled or interpreted by the OS—the processes using it define the format, meaning, and structure of the data. Synchronization is critical: the OS does not prevent race conditions. It’s up to the processes to ensure safe access—typically by using semaphores or mutexes. This makes shared memory very fast for IPC, since there’s no copying of data between processes, but it also requires careful coordination.">
 
-    <link href="/css/compiled/main.css" rel="stylesheet" />
+    <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
+    <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
 
 
 
-  <link href="/css/custom.css" rel="stylesheet" />
+  <link href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" rel="stylesheet" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU=" />
 
 
   <script>
@@ -948,9 +949,9 @@ The OS typically isolates memory between processes. However, shared memory expli
   </a></div></div>
       </div></footer>
     
-    <script defer src="/js/main.js" integrity=""></script>
+    <script defer src="/js/main.min.0942239592f0795dc7213dd1057fd229d7edc19c0ef1a285396eb292d9ca9842.js" integrity="sha256-CUIjlZLweV3HIT3RBX/SKdftwZwO8aKFOW6yktnKmEI="></script>
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.js" integrity=""></script><script defer src="/lib/mermaid/mermaid.min.0d2b6f2361e7e0ce466a6ed458e03daa5584b42ef6926c3beb62eb64670ca261.js" integrity="sha256-DStvI2Hn4M5Gam7UWOA9qlWEtC72kmw762LrZGcMomE="></script>
+    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script><script defer src="/lib/mermaid/mermaid.min.0d2b6f2361e7e0ce466a6ed458e03daa5584b42ef6926c3beb62eb64670ca261.js" integrity="sha256-DStvI2Hn4M5Gam7UWOA9qlWEtC72kmw762LrZGcMomE="></script>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     

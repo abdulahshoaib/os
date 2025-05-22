@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Scheduling Algorithms</title>
-    <link>//localhost:1313/cpu-scheduling/scheduling-algorithms/</link>
+    <link>/cpu-scheduling/scheduling-algorithms/</link>
     <description>Recent content in Scheduling Algorithms on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/cpu-scheduling/scheduling-algorithms/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/cpu-scheduling/scheduling-algorithms/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>FCFS</title>
-      <link>//localhost:1313/cpu-scheduling/scheduling-algorithms/fcfs/</link>
+      <link>/cpu-scheduling/scheduling-algorithms/fcfs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/cpu-scheduling/scheduling-algorithms/fcfs/</guid>
+      <guid>/cpu-scheduling/scheduling-algorithms/fcfs/</guid>
       <description>
         
         
@@ -29,10 +29,10 @@
     
     <item>
       <title>SJF</title>
-      <link>//localhost:1313/cpu-scheduling/scheduling-algorithms/sjf/</link>
+      <link>/cpu-scheduling/scheduling-algorithms/sjf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/cpu-scheduling/scheduling-algorithms/sjf/</guid>
+      <guid>/cpu-scheduling/scheduling-algorithms/sjf/</guid>
       <description>
         
         
@@ -42,10 +42,10 @@
     
     <item>
       <title>SRTF</title>
-      <link>//localhost:1313/cpu-scheduling/scheduling-algorithms/srtf/</link>
+      <link>/cpu-scheduling/scheduling-algorithms/srtf/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/cpu-scheduling/scheduling-algorithms/srtf/</guid>
+      <guid>/cpu-scheduling/scheduling-algorithms/srtf/</guid>
       <description>
         
         
@@ -55,10 +55,10 @@
     
     <item>
       <title>PS</title>
-      <link>//localhost:1313/cpu-scheduling/scheduling-algorithms/ps/</link>
+      <link>/cpu-scheduling/scheduling-algorithms/ps/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/cpu-scheduling/scheduling-algorithms/ps/</guid>
+      <guid>/cpu-scheduling/scheduling-algorithms/ps/</guid>
       <description>
         
         
@@ -68,10 +68,10 @@
     
     <item>
       <title>RR</title>
-      <link>//localhost:1313/cpu-scheduling/scheduling-algorithms/rr/</link>
+      <link>/cpu-scheduling/scheduling-algorithms/rr/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/cpu-scheduling/scheduling-algorithms/rr/</guid>
+      <guid>/cpu-scheduling/scheduling-algorithms/rr/</guid>
       <description>
         
         
@@ -81,10 +81,10 @@
     
     <item>
       <title>Multilevel Queues Scheduling</title>
-      <link>//localhost:1313/cpu-scheduling/scheduling-algorithms/multilevel-queues-scheduling/</link>
+      <link>/cpu-scheduling/scheduling-algorithms/multilevel-queues-scheduling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/cpu-scheduling/scheduling-algorithms/multilevel-queues-scheduling/</guid>
+      <guid>/cpu-scheduling/scheduling-algorithms/multilevel-queues-scheduling/</guid>
       <description>
         
         
@@ -94,10 +94,10 @@
     
     <item>
       <title>Multilevel Feedback Queues Scheduling</title>
-      <link>//localhost:1313/cpu-scheduling/scheduling-algorithms/multilevel-feedback-queues-scheduling/</link>
+      <link>/cpu-scheduling/scheduling-algorithms/multilevel-feedback-queues-scheduling/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/cpu-scheduling/scheduling-algorithms/multilevel-feedback-queues-scheduling/</guid>
+      <guid>/cpu-scheduling/scheduling-algorithms/multilevel-feedback-queues-scheduling/</guid>
       <description>
         
         

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+<html lang="en"><head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="robots" content="index, follow" />
   <link rel="icon shortcut" href="/favicon.ico" sizes="32x32" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="icon" href="/favicon-dark.svg" type="image/svg+xml" media="(prefers-color-scheme: dark)" />
@@ -11,24 +11,29 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Scheduling – </title>
-  <meta name="description" content="" /><link rel="canonical" href="//localhost:1313/cpu-scheduling/scheduling/" itemprop="url" />
+  <meta name="description" content="CPU Scheduler When the CPU becomes idle, the operating system must select one of the processes in the ready queue to execute next. This selection is done by the short-term scheduler, also called the CPU scheduler. It picks a process from memory that is ready to run and calls the dispatcher to allocate the CPU to that process. The ready queue may be implemented using different data structures like FIFO queues, trees, or unordered linked lists. Each entry in the ready queue is usually a process control block (PCB) representing a process." /><link rel="canonical" href="/cpu-scheduling/scheduling/" itemprop="url" />
 
 <meta property="og:title" content="Scheduling" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="CPU Scheduler
+    When the CPU becomes idle, the operating system must select one of the processes in the ready queue to execute next. This selection is done by the short-term scheduler, also called the CPU scheduler. It picks a process from memory that is ready to run and calls the dispatcher to allocate the CPU to that process. The ready queue may be implemented using different data structures like FIFO queues, trees, or unordered linked lists. Each entry in the ready queue is usually a process control block (PCB) representing a process." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="//localhost:1313/cpu-scheduling/scheduling/" /><meta property="article:section" content="cpu-scheduling" />
+<meta property="og:url" content="/cpu-scheduling/scheduling/" /><meta property="article:section" content="cpu-scheduling" />
 
 
 
   <meta itemprop="name" content="Scheduling">
+  <meta itemprop="description" content="CPU Scheduler When the CPU becomes idle, the operating system must select one of the processes in the ready queue to execute next. This selection is done by the short-term scheduler, also called the CPU scheduler. It picks a process from memory that is ready to run and calls the dispatcher to allocate the CPU to that process. The ready queue may be implemented using different data structures like FIFO queues, trees, or unordered linked lists. Each entry in the ready queue is usually a process control block (PCB) representing a process.">
+  <meta itemprop="wordCount" content="477">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Scheduling">
+  <meta name="twitter:description" content="CPU Scheduler When the CPU becomes idle, the operating system must select one of the processes in the ready queue to execute next. This selection is done by the short-term scheduler, also called the CPU scheduler. It picks a process from memory that is ready to run and calls the dispatcher to allocate the CPU to that process. The ready queue may be implemented using different data structures like FIFO queues, trees, or unordered linked lists. Each entry in the ready queue is usually a process control block (PCB) representing a process.">
 
-    <link href="/css/compiled/main.css" rel="stylesheet" />
+    <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
+    <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
 
 
 
-  <link href="/css/custom.css" rel="stylesheet" />
+  <link href="/css/custom.min.e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css" rel="stylesheet" integrity="sha256-47DEQpj8HBSa&#43;/TImW&#43;5JCeuQeRkm5NMpJWZG3hSuFU=" />
 
 
   <script>
@@ -201,6 +206,32 @@
     
   >Scheduling
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#cpu-scheduler"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >CPU Scheduler</a>
+            </li>
+          <li>
+              <a
+                href="#dispatcher"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Dispatcher</a>
+            </li>
+          <li>
+              <a
+                href="#preemptive-and-non-preemptive-scheduling"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Preemptive and Non-Preemptive Scheduling</a>
+            </li>
+          <li>
+              <a
+                href="#scheduling-criteria"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Scheduling Criteria</a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -819,8 +850,24 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#cpu-scheduler">CPU Scheduler
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#dispatcher">Dispatcher
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#preemptive-and-non-preemptive-scheduling">Preemptive and Non-Preemptive Scheduling
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#scheduling-criteria">Scheduling Criteria
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -843,7 +890,40 @@
 
         <div class="content">
           <h1>Scheduling</h1>
-          
+          <h2>CPU Scheduler<span class="hx-absolute -hx-mt-20" id="cpu-scheduler"></span>
+    <a href="#cpu-scheduler" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>When the CPU becomes idle, the operating system must select one of the processes in the ready queue to execute next. This selection is done by the short-term scheduler, also called the CPU scheduler. It picks a process from memory that is ready to run and calls the dispatcher to allocate the CPU to that process. The ready queue may be implemented using different data structures like FIFO queues, trees, or unordered linked lists. Each entry in the ready queue is usually a process control block (PCB) representing a process.</p>
+<h2>Dispatcher<span class="hx-absolute -hx-mt-20" id="dispatcher"></span>
+    <a href="#dispatcher" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The dispatcher is a part of the kernel responsible for switching the CPU from the currently running process to the one chosen by the CPU scheduler. This involves three key tasks:</p>
+<ol>
+<li>Saving the context of the current process and restoring the context of the new process</li>
+<li>Switching from kernel mode to user mode</li>
+<li>Jumping to the appropriate instruction in the new process to resume execution</li>
+</ol>
+<p>The total time required to perform this switch is known as dispatch latency.</p>
+<pre class="mermaid hx-mt-6">
+  sequenceDiagram
+    participant CPU
+    participant Process A
+    participant Scheduler
+    participant Process B
+
+    Process A-&gt;&gt;CPU: Currently running
+    CPU-&gt;&gt;Scheduler: Becomes idle or interrupted
+    Scheduler-&gt;&gt;Process B: Selects next process
+    Scheduler-&gt;&gt;CPU: Calls dispatcher
+    CPU-&gt;&gt;Process A: Saves context
+    CPU-&gt;&gt;Process B: Restores context and runs
+</pre><h2>Preemptive and Non-Preemptive Scheduling<span class="hx-absolute -hx-mt-20" id="preemptive-and-non-preemptive-scheduling"></span>
+    <a href="#preemptive-and-non-preemptive-scheduling" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Scheduling can be either preemptive or non-preemptive depending on when the CPU is taken away from a process.</p>
+<p>If a process moves from running to waiting (for example, during an I/O request) or terminates, the scheduler makes a decision without forcing an interruption. This is non-preemptive scheduling.</p>
+<p>If a process moves from running to ready (due to an interrupt) or from waiting to ready (for example, I/O completion), then the currently running process may be interrupted to allow another to run. This is preemptive scheduling.</p>
+<h2>Scheduling Criteria<span class="hx-absolute -hx-mt-20" id="scheduling-criteria"></span>
+    <a href="#scheduling-criteria" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>CPU utilization measures how effectively the CPU is being used. The goal is to keep it busy as much as possible. In real systems, CPU utilization ranges from 40% on lightly loaded systems to 90% in heavily used environments.</p>
+<p>Throughput refers to the number of processes completed per unit of time. A higher throughput indicates more work is being done, and is desirable.</p>
+<p>Turnaround time is the total time from when a process is submitted to when it is completed. It includes time spent in memory allocation, waiting in the ready queue, executing on the CPU, and performing I/O. Minimizing turnaround time improves system responsiveness.</p>
+<p>Waiting time is the amount of time a process spends waiting in the ready queue before execution. Reducing waiting time increases CPU efficiency and ensures quicker processing of tasks.</p>
+<p>Response time is the interval between the submission of a request and the system’s first response. It does not include the time taken to complete the request, only the time to begin processing. Lower response time makes the system appear faster to users</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
@@ -870,8 +950,38 @@
   </a></div></div>
       </div></footer>
     
-    <script defer src="/js/main.js" integrity=""></script>
+    <script defer src="/js/main.min.0942239592f0795dc7213dd1057fd229d7edc19c0ef1a285396eb292d9ca9842.js" integrity="sha256-CUIjlZLweV3HIT3RBX/SKdftwZwO8aKFOW6yktnKmEI="></script>
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.js" integrity=""></script>
+    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script><script defer src="/lib/mermaid/mermaid.min.0d2b6f2361e7e0ce466a6ed458e03daa5584b42ef6926c3beb62eb64670ca261.js" integrity="sha256-DStvI2Hn4M5Gam7UWOA9qlWEtC72kmw762LrZGcMomE="></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelectorAll(".mermaid").forEach(el => {
+      el.dataset.original = el.innerHTML;
+    });
+
+    const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+    mermaid.initialize({ startOnLoad: true, theme: theme });
+
+    let timeout;
+    new MutationObserver(() => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+        document.querySelectorAll(".mermaid").forEach(el => {
+          
+          el.innerHTML = el.dataset.original;
+          el.removeAttribute("data-processed");
+        });
+        mermaid.initialize({ startOnLoad: true, theme: theme });
+        mermaid.init();
+      }, 150);
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  });
+</script>
+
   </body>
 </html>

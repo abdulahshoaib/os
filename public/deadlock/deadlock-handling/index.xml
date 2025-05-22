@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Deadlock Handling</title>
-    <link>//localhost:1313/deadlock/deadlock-handling/</link>
+    <link>/deadlock/deadlock-handling/</link>
     <description>Recent content in Deadlock Handling on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/deadlock/deadlock-handling/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/deadlock/deadlock-handling/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>Deadlock Prevention</title>
-      <link>//localhost:1313/deadlock/deadlock-handling/deadlock-prevention/</link>
+      <link>/deadlock/deadlock-handling/deadlock-prevention/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/deadlock/deadlock-handling/deadlock-prevention/</guid>
+      <guid>/deadlock/deadlock-handling/deadlock-prevention/</guid>
       <description>
         
         
@@ -29,10 +29,10 @@
     
     <item>
       <title>Deadlock Avoidance</title>
-      <link>//localhost:1313/deadlock/deadlock-handling/deadlock-avoidance/</link>
+      <link>/deadlock/deadlock-handling/deadlock-avoidance/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/deadlock/deadlock-handling/deadlock-avoidance/</guid>
+      <guid>/deadlock/deadlock-handling/deadlock-avoidance/</guid>
       <description>
         
         
@@ -42,10 +42,10 @@
     
     <item>
       <title>Deadlock Detection</title>
-      <link>//localhost:1313/deadlock/deadlock-handling/deadlock-detection/</link>
+      <link>/deadlock/deadlock-handling/deadlock-detection/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/deadlock/deadlock-handling/deadlock-detection/</guid>
+      <guid>/deadlock/deadlock-handling/deadlock-detection/</guid>
       <description>
         
         
@@ -55,10 +55,10 @@
     
     <item>
       <title>Deadlock Recovery</title>
-      <link>//localhost:1313/deadlock/deadlock-handling/deadlock-recovery/</link>
+      <link>/deadlock/deadlock-handling/deadlock-recovery/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/deadlock/deadlock-handling/deadlock-recovery/</guid>
+      <guid>/deadlock/deadlock-handling/deadlock-recovery/</guid>
       <description>
         
         

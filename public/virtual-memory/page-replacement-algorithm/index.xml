@@ -1,12 +1,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title> – Page Repalcement Algorithm</title>
-    <link>//localhost:1313/virtual-memory/page-replacement-algorithm/</link>
+    <link>/virtual-memory/page-replacement-algorithm/</link>
     <description>Recent content in Page Repalcement Algorithm on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     
-	  <atom:link href="//localhost:1313/virtual-memory/page-replacement-algorithm/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/virtual-memory/page-replacement-algorithm/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -16,10 +16,10 @@
     
     <item>
       <title>FIFO</title>
-      <link>//localhost:1313/virtual-memory/page-replacement-algorithm/fif0/</link>
+      <link>/virtual-memory/page-replacement-algorithm/fif0/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/virtual-memory/page-replacement-algorithm/fif0/</guid>
+      <guid>/virtual-memory/page-replacement-algorithm/fif0/</guid>
       <description>
         
         
@@ -29,10 +29,10 @@
     
     <item>
       <title>OPT</title>
-      <link>//localhost:1313/virtual-memory/page-replacement-algorithm/opt/</link>
+      <link>/virtual-memory/page-replacement-algorithm/opt/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/virtual-memory/page-replacement-algorithm/opt/</guid>
+      <guid>/virtual-memory/page-replacement-algorithm/opt/</guid>
       <description>
         
         
@@ -42,10 +42,10 @@
     
     <item>
       <title>LRU</title>
-      <link>//localhost:1313/virtual-memory/page-replacement-algorithm/lru/</link>
+      <link>/virtual-memory/page-replacement-algorithm/lru/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/virtual-memory/page-replacement-algorithm/lru/</guid>
+      <guid>/virtual-memory/page-replacement-algorithm/lru/</guid>
       <description>
         
         
@@ -55,10 +55,10 @@
     
     <item>
       <title>Clock</title>
-      <link>//localhost:1313/virtual-memory/page-replacement-algorithm/clock/</link>
+      <link>/virtual-memory/page-replacement-algorithm/clock/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>//localhost:1313/virtual-memory/page-replacement-algorithm/clock/</guid>
+      <guid>/virtual-memory/page-replacement-algorithm/clock/</guid>
       <description>
         
         
