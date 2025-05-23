@@ -3,7 +3,7 @@ breadcrumbs: true
 title: Critical Section Problem
 weight: 3
 ---
-## Critical Section Problem
+## Problem Statement
 
 When several cooperating processes access the **same shared data**, any segment of code that touches that data is called a **critical section**.
 A correct solution must ensure:

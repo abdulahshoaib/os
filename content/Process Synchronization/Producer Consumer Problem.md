@@ -3,9 +3,8 @@ breadcrumbs: true
 title: Producer Consumer Problem
 weight: 2
 ---
-## Producer–Consumer Problem
+## Problem Statement
 
-**Definition**
 Two cooperating processes—**Producer** and **Consumer**—share a buffer:
 
 * **Producer** generates items and inserts them into the buffer.

@@ -3,7 +3,7 @@ breadcrumbs: true
 title: Semaphores
 weight: 4
 ---
-### Semaphore — Concept
+## Concept
 
 A **semaphore** is a kernel-managed integer variable used to coordinate access to shared resources among concurrent processes or threads.
 Two indivisible operations manipulate its value:
