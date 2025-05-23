@@ -11,18 +11,46 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Semaphores – </title>
-  <meta name="description" content="" /><link rel="canonical" href="/process-synchronization/semaphores/" itemprop="url" />
+  <meta name="description" content="Semaphore — Concept A semaphore is a kernel-managed integer variable used to coordinate access to shared resources among concurrent processes or threads. Two indivisible operations manipulate its value:
+Operation Conceptual Action wait (P) Decrease the semaphore value. If it becomes negative, the caller is suspended. signal (V) Increase the semaphore value. If the new value is non-positive, one suspended caller is resumed. Atomicity of each operation prevents race conditions on the semaphore itself." /><link rel="canonical" href="/process-synchronization/semaphores/" itemprop="url" />
 
 <meta property="og:title" content="Semaphores" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Semaphore — Concept
+    A semaphore is a kernel-managed integer variable used to coordinate access to shared resources among concurrent processes or threads.
+Two indivisible operations manipulate its value:
+
+  
+      
+          Operation
+          Conceptual Action
+      
+  
+  
+      
+          wait (P)
+          Decrease the semaphore value. If it becomes negative, the caller is suspended.
+      
+      
+          signal (V)
+          Increase the semaphore value. If the new value is non-positive, one suspended caller is resumed.
+      
+  
+
+
+  Atomicity of each operation prevents race conditions on the semaphore itself." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/process-synchronization/semaphores/" /><meta property="article:section" content="process-synchronization" />
 
 
 
   <meta itemprop="name" content="Semaphores">
+  <meta itemprop="description" content="Semaphore — Concept A semaphore is a kernel-managed integer variable used to coordinate access to shared resources among concurrent processes or threads. Two indivisible operations manipulate its value:
+Operation Conceptual Action wait (P) Decrease the semaphore value. If it becomes negative, the caller is suspended. signal (V) Increase the semaphore value. If the new value is non-positive, one suspended caller is resumed. Atomicity of each operation prevents race conditions on the semaphore itself.">
+  <meta itemprop="wordCount" content="386">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Semaphores">
+  <meta name="twitter:description" content="Semaphore — Concept A semaphore is a kernel-managed integer variable used to coordinate access to shared resources among concurrent processes or threads. Two indivisible operations manipulate its value:
+Operation Conceptual Action wait (P) Decrease the semaphore value. If it becomes negative, the caller is suspended. signal (V) Increase the semaphore value. If the new value is non-positive, one suspended caller is resumed. Atomicity of each operation prevents race conditions on the semaphore itself.">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -311,6 +339,32 @@
     
   >Semaphores
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              ></a>
+            </li>
+          <li>
+              <a
+                href="#implementation-styles"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Implementation Styles</a>
+            </li>
+          <li>
+              <a
+                href="#binary-vs-counting-semaphores"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Binary vs Counting Semaphores</a>
+            </li>
+          <li>
+              <a
+                href="#functional-roles"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Functional Roles</a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -820,8 +874,32 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#semaphore--concept">Semaphore — Concept
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#implementation-styles">Implementation Styles
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#binary-vs-counting-semaphores">Binary vs Counting Semaphores
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#binary-semaphore-characteristics">Binary Semaphore Characteristics
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#counting-semaphore-characteristics">Counting Semaphore Characteristics
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#functional-roles">Functional Roles
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -844,7 +922,128 @@
 
         <div class="content">
           <h1>Semaphores</h1>
-          
+          <h3>Semaphore — Concept<span class="hx-absolute -hx-mt-20" id="semaphore--concept"></span>
+    <a href="#semaphore--concept" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>A <strong>semaphore</strong> is a kernel-managed integer variable used to coordinate access to shared resources among concurrent processes or threads.
+Two indivisible operations manipulate its value:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Operation</th>
+          <th>Conceptual Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>wait (P)</strong></td>
+          <td>Decrease the semaphore value. If it becomes negative, the caller is suspended.</td>
+      </tr>
+      <tr>
+          <td><strong>signal (V)</strong></td>
+          <td>Increase the semaphore value. If the new value is non-positive, one suspended caller is resumed.</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+  <p>Atomicity of each operation prevents race conditions on the semaphore itself.</p>
+</blockquote>
+<h2>Implementation Styles<span class="hx-absolute -hx-mt-20" id="implementation-styles"></span>
+    <a href="#implementation-styles" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>Style</th>
+          <th>Core Idea</th>
+          <th>When a Process Must Wait</th>
+          <th>CPU Cost While Waiting</th>
+          <th>Typical Use Case</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Spinlock (busy-waiting)</strong></td>
+          <td>Caller repeatedly tests the semaphore in a tight loop.</td>
+          <td>Spins inside user code or a short kernel loop.</td>
+          <td>Consumes CPU cycles.</td>
+          <td>Ultra-short critical sections on multiprocessors where a context-switch would cost more than the spin.</td>
+      </tr>
+      <tr>
+          <td><strong>Blocking (queue-based)</strong></td>
+          <td>Caller is placed on a kernel queue linked to the semaphore.</td>
+          <td>Kernel deschedules the caller (<code>WAITING</code> state).</td>
+          <td>No CPU cycles consumed; context switch cost instead.</td>
+          <td>Longer critical sections or uniprocessor systems where CPU time must be preserved.</td>
+      </tr>
+  </tbody>
+</table>
+<blockquote>
+  <p><em>Spinlocks favor latency; blocking semaphores favor overall CPU efficiency.</em></p>
+</blockquote>
+<h2>Binary vs Counting Semaphores<span class="hx-absolute -hx-mt-20" id="binary-vs-counting-semaphores"></span>
+    <a href="#binary-vs-counting-semaphores" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>Type</th>
+          <th>Initial Range</th>
+          <th>Meaning of Value</th>
+          <th>Main Purpose</th>
+          <th>Analogy</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Binary Semaphore</strong></td>
+          <td><code>0</code> or <code>1</code></td>
+          <td><code>1</code> ⇒ resource free, <code>0</code> ⇒ resource busy</td>
+          <td>Acts like a <strong>mutex lock</strong> for a single shared resource or critical section.</td>
+          <td>Light switch: on or off.</td>
+      </tr>
+      <tr>
+          <td><strong>Counting Semaphore</strong></td>
+          <td>Any non-negative integer</td>
+          <td>Value = number of identical resource units available</td>
+          <td>Controls access to a pool of interchangeable resources (buffer slots, database connections, etc.).</td>
+          <td>Parking lot counter: slots left.</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Binary Semaphore Characteristics<span class="hx-absolute -hx-mt-20" id="binary-semaphore-characteristics"></span>
+    <a href="#binary-semaphore-characteristics" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>Ensures mutual exclusion for one resource.</li>
+<li>Only the first caller after a <code>signal</code> proceeds; others must wait.</li>
+</ul>
+<h3>Counting Semaphore Characteristics<span class="hx-absolute -hx-mt-20" id="counting-semaphore-characteristics"></span>
+    <a href="#counting-semaphore-characteristics" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>Allows up to <strong>N</strong> concurrent accesses where <strong>N</strong> is the initial value.</li>
+<li>Becomes binary when initialized to <strong>1</strong>.</li>
+</ul>
+<h2>Functional Roles<span class="hx-absolute -hx-mt-20" id="functional-roles"></span>
+    <a href="#functional-roles" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>Responsibility</th>
+          <th>How a Semaphore Fulfills It</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Mutual Exclusion</strong></td>
+          <td>A binary semaphore guards entry and exit of a critical section.</td>
+      </tr>
+      <tr>
+          <td><strong>Resource Counting</strong></td>
+          <td>A counting semaphore tracks how many identical resources remain; callers wait when none are free.</td>
+      </tr>
+      <tr>
+          <td><strong>Producer–Consumer Synchronization</strong></td>
+          <td>Two counting semaphores (<code>empty</code>, <code>full</code>) plus one binary semaphore (<code>mutex</code>) coordinate buffer space and mutual exclusion.</td>
+      </tr>
+      <tr>
+          <td><strong>Ordering / Signaling</strong></td>
+          <td>A semaphore initialized to <code>0</code> can force one thread to pause until another issues a <code>signal</code>, establishing sequence constraints.</td>
+      </tr>
+  </tbody>
+</table>
+<p>Semaphores thus provide a foundational, hardware-independent mechanism for coordinating concurrent activities in operating systems and multithreaded programs.</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a

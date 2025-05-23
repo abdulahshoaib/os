@@ -42,7 +42,7 @@ Key Features:
 Queue Structure: Multiple distinct queues (e.g., Foreground, Background)
 Process Assignment: Permanent to one queue
 Scheduling Within Queue: Each queue can have a different scheduling algorithm (e.g., RR for Foreground, FCFS for Background)">
-  <meta itemprop="wordCount" content="359">
+  <meta itemprop="wordCount" content="124">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Multilevel Queues Scheduling">
   <meta name="twitter:description" content="Multilevel Queue Scheduling Definition: Multilevel Queue Scheduling divides the ready queue into multiple separate queues, each with its own priority level and scheduling algorithm. A process is permanently assigned to one of these queues based on characteristics like memory size, type (interactive/batch), or priority.
@@ -292,12 +292,6 @@ Scheduling Within Queue: Each queue can have a different scheduling algorithm (e
                 href="#multilevel-queue-scheduling"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
               >Multilevel Queue Scheduling</a>
-            </li>
-          <li>
-              <a
-                href="#gantt-chart-example"
-                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Gantt Chart Example</a>
             </li>
           </ul>
   
@@ -865,46 +859,6 @@ Scheduling Within Queue: Each queue can have a different scheduling algorithm (e
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
         <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#multilevel-queue-scheduling">Multilevel Queue Scheduling
         </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#gantt-chart-example">Gantt Chart Example
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#queue-setup">Queue Setup
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#given">Given:
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#foreground-queue-rr">Foreground Queue (RR):
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#background-queue-fcfs">Background Queue (FCFS):
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#assumptions">Assumptions:
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#execution-order">Execution Order:
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#gantt-chart">Gantt Chart
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#calculations">Calculations
-        </a>
-      </li>
-      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#averages">Averages
-        </a>
       </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
@@ -960,129 +914,6 @@ Multilevel Queue Scheduling divides the ready queue into multiple separate queue
 <p><strong>Solution</strong>: Time slicing across queues or <strong>aging</strong> within queues</p>
 </li>
 </ul>
-<h2>Gantt Chart Example<span class="hx-absolute -hx-mt-20" id="gantt-chart-example"></span>
-    <a href="#gantt-chart-example" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Queue Setup<span class="hx-absolute -hx-mt-20" id="queue-setup"></span>
-    <a href="#queue-setup" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li><strong>Foreground Queue (Priority 1)</strong> – Scheduled with Round Robin (Time Quantum = 2)</li>
-<li><strong>Background Queue (Priority 2)</strong> – Scheduled with FCFS</li>
-<li><strong>CPU Time Split</strong>: 80% Foreground, 20% Background (in simple alternation)</li>
-</ul>
-<h3>Given:<span class="hx-absolute -hx-mt-20" id="given"></span>
-    <a href="#given" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>Foreground Queue (RR):<span class="hx-absolute -hx-mt-20" id="foreground-queue-rr"></span>
-    <a href="#foreground-queue-rr" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
-  <thead>
-      <tr>
-          <th>Process</th>
-          <th>Arrival Time</th>
-          <th>Burst Time</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>F1</td>
-          <td>0</td>
-          <td>4</td>
-      </tr>
-      <tr>
-          <td>F2</td>
-          <td>1</td>
-          <td>3</td>
-      </tr>
-  </tbody>
-</table>
-<h4>Background Queue (FCFS):<span class="hx-absolute -hx-mt-20" id="background-queue-fcfs"></span>
-    <a href="#background-queue-fcfs" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
-  <thead>
-      <tr>
-          <th>Process</th>
-          <th>Arrival Time</th>
-          <th>Burst Time</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>B1</td>
-          <td>2</td>
-          <td>5</td>
-      </tr>
-  </tbody>
-</table>
-<h3>Assumptions:<span class="hx-absolute -hx-mt-20" id="assumptions"></span>
-    <a href="#assumptions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li>RR with quantum = 2 for Foreground</li>
-<li>4 units Foreground execution → 1 unit Background execution</li>
-</ul>
-<h3>Execution Order:<span class="hx-absolute -hx-mt-20" id="execution-order"></span>
-    <a href="#execution-order" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li>t=0–2: F1 (RR quantum)</li>
-<li>t=2–4: F2 (RR quantum)</li>
-<li>t=4–5: B1 (1 unit from background)</li>
-<li>t=5–7: F1 (remaining 2 units)</li>
-<li>t=7–8: B1 (1 unit)</li>
-<li>t=8–10: F2 (remaining 1 unit)</li>
-<li>t=10–14: B1 (remaining 3 units)</li>
-</ul>
-<h3>Gantt Chart<span class="hx-absolute -hx-mt-20" id="gantt-chart"></span>
-    <a href="#gantt-chart" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><pre class="mermaid hx-mt-6">
-  gantt
-    title Multilevel Queue Scheduling
-    dateFormat X
-    axisFormat %s
-
-    section Foreground (RR)
-    F1 (2)     :f1a, 0, 2
-    F2 (2)     :f2a, 2, 4
-    F1 (2)     :f1b, 5, 7
-    F2 (1)     :f2b, 8, 9
-
-    section Background (FCFS)
-    B1 (1)     :b1a, 4, 5
-    B1 (1)     :b1b, 7, 8
-    B1 (3)     :b1c, 9, 12
-</pre><h3>Calculations<span class="hx-absolute -hx-mt-20" id="calculations"></span>
-    <a href="#calculations" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
-  <thead>
-      <tr>
-          <th>Process</th>
-          <th>Arrival Time</th>
-          <th>Burst Time</th>
-          <th>Completion Time</th>
-          <th>Turnaround Time</th>
-          <th>Waiting Time</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td>F1</td>
-          <td>0</td>
-          <td>4</td>
-          <td>7</td>
-          <td>7 - 0 = 7</td>
-          <td>3</td>
-      </tr>
-      <tr>
-          <td>F2</td>
-          <td>1</td>
-          <td>3</td>
-          <td>9</td>
-          <td>9 - 1 = 8</td>
-          <td>5</td>
-      </tr>
-      <tr>
-          <td>B1</td>
-          <td>2</td>
-          <td>5</td>
-          <td>12</td>
-          <td>12 - 2 = 10</td>
-          <td>5</td>
-      </tr>
-  </tbody>
-</table>
-<h3>Averages<span class="hx-absolute -hx-mt-20" id="averages"></span>
-    <a href="#averages" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
-<li><strong>Average Waiting Time</strong> = (3 + 5 + 5) / 3 = <strong>4.33</strong></li>
-<li><strong>Average Turnaround Time</strong> = (7 + 8 + 10) / 3 = <strong>8.33</strong></li>
-</ul>
 
         </div>
         <div class="hx-mt-16"></div>
@@ -1112,36 +943,6 @@ Multilevel Queue Scheduling divides the ready queue into multiple separate queue
     
     <script defer src="/js/main.min.0942239592f0795dc7213dd1057fd229d7edc19c0ef1a285396eb292d9ca9842.js" integrity="sha256-CUIjlZLweV3HIT3RBX/SKdftwZwO8aKFOW6yktnKmEI="></script>
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script><script defer src="/lib/mermaid/mermaid.min.0d2b6f2361e7e0ce466a6ed458e03daa5584b42ef6926c3beb62eb64670ca261.js" integrity="sha256-DStvI2Hn4M5Gam7UWOA9qlWEtC72kmw762LrZGcMomE="></script>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    
-    document.querySelectorAll(".mermaid").forEach(el => {
-      el.dataset.original = el.innerHTML;
-    });
-
-    const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
-    mermaid.initialize({ startOnLoad: true, theme: theme });
-
-    let timeout;
-    new MutationObserver(() => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => {
-        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
-        document.querySelectorAll(".mermaid").forEach(el => {
-          
-          el.innerHTML = el.dataset.original;
-          el.removeAttribute("data-processed");
-        });
-        mermaid.initialize({ startOnLoad: true, theme: theme });
-        mermaid.init();
-      }, 150);
-    }).observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class"]
-    });
-  });
-</script>
-
+    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script>
   </body>
 </html>
