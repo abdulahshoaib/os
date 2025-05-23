@@ -11,18 +11,76 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Bounded Buffer Problem – </title>
-  <meta name="description" content="" /><link rel="canonical" href="/process-synchronization/bounded-buffer-problem/" itemprop="url" />
+  <meta name="description" content="Problem Statement Two concurrent processes share a fixed-size circular buffer:
+Role Action Producer Generates items and places them into the buffer. Consumer Removes items from the buffer for use. Because the buffer is bounded, the producer must wait when it is full, and the consumer must wait when it is empty. Correctness requires mutual exclusion while either process accesses the shared indices or buffer slots.
+Solution Synchronization Primitives Semaphore Initial Value Meaning mutex 1 Binary semaphore ensuring mutual exclusion for buffer access. empty N Counting semaphore tracking free slots (N = buffer size). full 0 Counting semaphore tracking filled slots. All semaphore operations (wait, signal) are atomic." /><link rel="canonical" href="/process-synchronization/bounded-buffer-problem/" itemprop="url" />
 
 <meta property="og:title" content="Bounded Buffer Problem" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Problem Statement
+    Two concurrent processes share a fixed-size circular buffer:
+
+  
+      
+          Role
+          Action
+      
+  
+  
+      
+          Producer
+          Generates items and places them into the buffer.
+      
+      
+          Consumer
+          Removes items from the buffer for use.
+      
+  
+
+Because the buffer is bounded, the producer must wait when it is full, and the consumer must wait when it is empty. Correctness requires mutual exclusion while either process accesses the shared indices or buffer slots.
+Solution
+    Synchronization Primitives
+    
+  
+      
+          Semaphore
+          Initial Value
+          Meaning
+      
+  
+  
+      
+          mutex
+          1
+          Binary semaphore ensuring mutual exclusion for buffer access.
+      
+      
+          empty
+          N
+          Counting semaphore tracking free slots (N = buffer size).
+      
+      
+          full
+          0
+          Counting semaphore tracking filled slots.
+      
+  
+
+All semaphore operations (wait, signal) are atomic." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/process-synchronization/bounded-buffer-problem/" /><meta property="article:section" content="process-synchronization" />
 
 
 
   <meta itemprop="name" content="Bounded Buffer Problem">
+  <meta itemprop="description" content="Problem Statement Two concurrent processes share a fixed-size circular buffer:
+Role Action Producer Generates items and places them into the buffer. Consumer Removes items from the buffer for use. Because the buffer is bounded, the producer must wait when it is full, and the consumer must wait when it is empty. Correctness requires mutual exclusion while either process accesses the shared indices or buffer slots.
+Solution Synchronization Primitives Semaphore Initial Value Meaning mutex 1 Binary semaphore ensuring mutual exclusion for buffer access. empty N Counting semaphore tracking free slots (N = buffer size). full 0 Counting semaphore tracking filled slots. All semaphore operations (wait, signal) are atomic.">
+  <meta itemprop="wordCount" content="414">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Bounded Buffer Problem">
+  <meta name="twitter:description" content="Problem Statement Two concurrent processes share a fixed-size circular buffer:
+Role Action Producer Generates items and places them into the buffer. Consumer Removes items from the buffer for use. Because the buffer is bounded, the producer must wait when it is full, and the consumer must wait when it is empty. Correctness requires mutual exclusion while either process accesses the shared indices or buffer slots.
+Solution Synchronization Primitives Semaphore Initial Value Meaning mutex 1 Binary semaphore ensuring mutual exclusion for buffer access. empty N Counting semaphore tracking free slots (N = buffer size). full 0 Counting semaphore tracking filled slots. All semaphore operations (wait, signal) are atomic.">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -320,13 +378,39 @@
   >Bounded Buffer Problem
     </a>
   
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#problem-statement"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Problem Statement</a>
+            </li>
+          <li>
+              <a
+                href="#solution"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Solution</a>
+            </li>
+          <li>
+              <a
+                href="#how-the-semaphores-coordinate-the-processes"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >How the Semaphores Coordinate the Processes</a>
+            </li>
+          <li>
+              <a
+                href="#correctness-achieved"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Correctness Achieved</a>
+            </li>
+          </ul>
+  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/process-synchronization/reader-writer-problem/"
     
-  >Reader Writer Problem
+  >Readers Writers Problem
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -660,7 +744,7 @@
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/process-synchronization/reader-writer-problem/"
     
-  >Reader Writer Problem
+  >Readers Writers Problem
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -820,8 +904,40 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#problem-statement">Problem Statement
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#solution">Solution
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#synchronization-primitives">Synchronization Primitives
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#shared-data">Shared Data
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#producer">Producer
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#consumer">Consumer
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#how-the-semaphores-coordinate-the-processes">How the Semaphores Coordinate the Processes
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#correctness-achieved">Correctness Achieved
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -844,7 +960,195 @@
 
         <div class="content">
           <h1>Bounded Buffer Problem</h1>
-          
+          <h2>Problem Statement<span class="hx-absolute -hx-mt-20" id="problem-statement"></span>
+    <a href="#problem-statement" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Two concurrent processes share a fixed-size circular buffer:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Role</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Producer</strong></td>
+          <td>Generates items and places them into the buffer.</td>
+      </tr>
+      <tr>
+          <td><strong>Consumer</strong></td>
+          <td>Removes items from the buffer for use.</td>
+      </tr>
+  </tbody>
+</table>
+<p>Because the buffer is <strong>bounded</strong>, the producer must wait when it is <strong>full</strong>, and the consumer must wait when it is <strong>empty</strong>. Correctness requires mutual exclusion while either process accesses the shared indices or buffer slots.</p>
+<h2>Solution<span class="hx-absolute -hx-mt-20" id="solution"></span>
+    <a href="#solution" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Synchronization Primitives<span class="hx-absolute -hx-mt-20" id="synchronization-primitives"></span>
+    <a href="#synchronization-primitives" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Semaphore</th>
+          <th>Initial Value</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>mutex</code></td>
+          <td><code>1</code></td>
+          <td>Binary semaphore ensuring <strong>mutual exclusion</strong> for buffer access.</td>
+      </tr>
+      <tr>
+          <td><code>empty</code></td>
+          <td><code>N</code></td>
+          <td>Counting semaphore tracking <strong>free slots</strong> (<code>N</code> = buffer size).</td>
+      </tr>
+      <tr>
+          <td><code>full</code></td>
+          <td><code>0</code></td>
+          <td>Counting semaphore tracking <strong>filled slots</strong>.</td>
+      </tr>
+  </tbody>
+</table>
+<p>All semaphore operations (<code>wait</code>, <code>signal</code>) are atomic.</p>
+<h3>Shared Data<span class="hx-absolute -hx-mt-20" id="shared-data"></span>
+    <a href="#shared-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#define N 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>item buffer[N];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span>  in  <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;      <span style="color:#75715e">// next free position
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span>  out <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;      <span style="color:#75715e">// next filled position
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>semaphore mutex <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;   <span style="color:#75715e">// mutual exclusion
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>semaphore empty <span style="color:#f92672">=</span> N;   <span style="color:#75715e">// initially N slots are empty
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>semaphore full  <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;   <span style="color:#75715e">// initially 0 items are full
+</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Producer<span class="hx-absolute -hx-mt-20" id="producer"></span>
+    <a href="#producer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>    item x <span style="color:#f92672">=</span> <span style="color:#a6e22e">produce_item</span>();      <span style="color:#75715e">// generate item
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(empty);                  <span style="color:#75715e">// decrement empty count (block if 0)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">wait</span>(mutex);                  <span style="color:#75715e">// enter critical section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        buffer[in] <span style="color:#f92672">=</span> x;           <span style="color:#75715e">// insert item
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        in <span style="color:#f92672">=</span> (in <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> N;        <span style="color:#75715e">// advance index circularly
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(mutex);                <span style="color:#75715e">// leave critical section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">signal</span>(full);                 <span style="color:#75715e">// increment full count
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Consumer<span class="hx-absolute -hx-mt-20" id="consumer"></span>
+    <a href="#consumer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(full);                   <span style="color:#75715e">// decrement full count (block if 0)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">wait</span>(mutex);                  <span style="color:#75715e">// enter critical section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        item y <span style="color:#f92672">=</span> buffer[out];     <span style="color:#75715e">// remove item
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        out <span style="color:#f92672">=</span> (out <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> N;      <span style="color:#75715e">// advance index circularly
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(mutex);                <span style="color:#75715e">// leave critical section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">signal</span>(empty);                <span style="color:#75715e">// increment empty count
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">consume_item</span>(y);              <span style="color:#75715e">// use item
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h2>How the Semaphores Coordinate the Processes<span class="hx-absolute -hx-mt-20" id="how-the-semaphores-coordinate-the-processes"></span>
+    <a href="#how-the-semaphores-coordinate-the-processes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>Step</th>
+          <th>Semaphore Action</th>
+          <th>Effect</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Space check</strong></td>
+          <td><code>wait(empty)</code> (Producer)</td>
+          <td>Blocks if buffer is full; otherwise reserves one slot.</td>
+      </tr>
+      <tr>
+          <td><strong>Data check</strong></td>
+          <td><code>wait(full)</code> (Consumer)</td>
+          <td>Blocks if buffer is empty; otherwise reserves one item.</td>
+      </tr>
+      <tr>
+          <td><strong>Mutual exclusion</strong></td>
+          <td><code>wait(mutex)</code> / <code>signal(mutex)</code></td>
+          <td>Only one process at a time can modify <code>buffer</code>, <code>in</code>, or <code>out</code>.</td>
+      </tr>
+      <tr>
+          <td><strong>Post-operation signal</strong></td>
+          <td><code>signal(full)</code> (Producer)</td>
+          <td>Announces a new item is available.</td>
+      </tr>
+      <tr>
+          <td></td>
+          <td><code>signal(empty)</code> (Consumer)</td>
+          <td>Announces a slot has been freed.</td>
+      </tr>
+  </tbody>
+</table>
+<h2>Correctness Achieved<span class="hx-absolute -hx-mt-20" id="correctness-achieved"></span>
+    <a href="#correctness-achieved" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>Requirement</th>
+          <th>Mechanism</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Mutual Exclusion</strong></td>
+          <td><code>mutex</code> protects critical sections.</td>
+      </tr>
+      <tr>
+          <td><strong>No Overflow</strong></td>
+          <td>Producer proceeds only when <code>empty &gt; 0</code>.</td>
+      </tr>
+      <tr>
+          <td><strong>No Underflow</strong></td>
+          <td>Consumer proceeds only when <code>full  &gt; 0</code>.</td>
+      </tr>
+      <tr>
+          <td><strong>Progress</strong></td>
+          <td>Atomic semaphore operations prevent deadlock; whichever process has its condition satisfied will continue.</td>
+      </tr>
+      <tr>
+          <td><strong>Bounded Waiting</strong></td>
+          <td>Each <code>wait</code> queues callers FIFO; each <code>signal</code> awakens one, ensuring finite wait time relative to buffer capacity.</td>
+      </tr>
+  </tbody>
+</table>
+<p>This semaphore-based solution allows the producer and consumer to run concurrently without race conditions, while respecting the bounded size of the shared buffer.</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
@@ -853,9 +1157,9 @@
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
       ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Semaphores</a><a
         href="/process-synchronization/reader-writer-problem/"
-        title="Reader Writer Problem"
+        title="Readers Writers Problem"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >Reader Writer Problem<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Readers Writers Problem<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>

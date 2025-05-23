@@ -10,20 +10,78 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title></title>
-  <meta name="description" content="Readers Writers Problem" /><link rel="canonical" href="/process-synchronization/reader-writer-problem/" itemprop="url" />
+<title>Readers Writers Problem – </title>
+  <meta name="description" content="Readers Writers 1 Problem Statement Two kinds of concurrent processes share a common data set:
+Role Action Reader Needs read-only access; many readers may read simultaneously. Writer Needs exclusive access; no other reader or writer may access the data while a writer is active. Constraints:
+Any number of readers may read concurrently. A writer must have exclusive access—no reader or other writer can access the data during a write. Solution (Readers-Preference) Synchronization Primitives Semaphore Initial Value Meaning mutex 1 Binary semaphore protecting the shared variable readCount. wrt 1 Binary semaphore granting writers exclusive access to the data; first reader also waits on it. readCount (integer) counts active readers. All semaphore operations are atomic." /><link rel="canonical" href="/process-synchronization/reader-writer-problem/" itemprop="url" />
 
-<meta property="og:title" content="" />
-<meta property="og:description" content="Readers Writers Problem" />
+<meta property="og:title" content="Readers Writers Problem" />
+<meta property="og:description" content="Readers Writers 1
+    Problem Statement
+    Two kinds of concurrent processes share a common data set:
+
+  
+      
+          Role
+          Action
+      
+  
+  
+      
+          Reader
+          Needs read-only access; many readers may read simultaneously.
+      
+      
+          Writer
+          Needs exclusive access; no other reader or writer may access the data while a writer is active.
+      
+  
+
+Constraints:
+
+Any number of readers may read concurrently.
+A writer must have exclusive access—no reader or other writer can access the data during a write.
+
+Solution (Readers-Preference)
+    Synchronization Primitives
+    
+  
+      
+          Semaphore
+          Initial Value
+          Meaning
+      
+  
+  
+      
+          mutex
+          1
+          Binary semaphore protecting the shared variable readCount.
+      
+      
+          wrt
+          1
+          Binary semaphore granting writers exclusive access to the data; first reader also waits on it.
+      
+  
+
+readCount (integer) counts active readers.
+All semaphore operations are atomic." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/process-synchronization/reader-writer-problem/" /><meta property="article:section" content="process-synchronization" />
 
 
 
-  <meta itemprop="description" content="Readers Writers Problem">
-  <meta itemprop="wordCount" content="3">
+  <meta itemprop="name" content="Readers Writers Problem">
+  <meta itemprop="description" content="Readers Writers 1 Problem Statement Two kinds of concurrent processes share a common data set:
+Role Action Reader Needs read-only access; many readers may read simultaneously. Writer Needs exclusive access; no other reader or writer may access the data while a writer is active. Constraints:
+Any number of readers may read concurrently. A writer must have exclusive access—no reader or other writer can access the data during a write. Solution (Readers-Preference) Synchronization Primitives Semaphore Initial Value Meaning mutex 1 Binary semaphore protecting the shared variable readCount. wrt 1 Binary semaphore granting writers exclusive access to the data; first reader also waits on it. readCount (integer) counts active readers. All semaphore operations are atomic.">
+  <meta itemprop="wordCount" content="866">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:description" content="Readers Writers Problem">
+  <meta name="twitter:title" content="Readers Writers Problem">
+  <meta name="twitter:description" content="Readers Writers 1 Problem Statement Two kinds of concurrent processes share a common data set:
+Role Action Reader Needs read-only access; many readers may read simultaneously. Writer Needs exclusive access; no other reader or writer may access the data while a writer is active. Constraints:
+Any number of readers may read concurrently. A writer must have exclusive access—no reader or other writer can access the data during a write. Solution (Readers-Preference) Synchronization Primitives Semaphore Initial Value Meaning mutex 1 Binary semaphore protecting the shared variable readCount. wrt 1 Binary semaphore granting writers exclusive access to the data; first reader also waits on it. readCount (integer) counts active readers. All semaphore operations are atomic.">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -326,10 +384,22 @@
       sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/process-synchronization/reader-writer-problem/"
     
-  >Reader Writer Problem
+  >Readers Writers Problem
     </a>
   
-    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'></ul>
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#readers-writers-1"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Readers Writers 1</a>
+            </li>
+          <li>
+              <a
+                href="#readers-writers-2"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Readers Writers 2</a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -663,7 +733,7 @@
       sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
     href="/process-synchronization/reader-writer-problem/"
     
-  >Reader Writer Problem
+  >Readers Writers Problem
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -823,7 +893,79 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul></ul>
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#readers-writers-1">Readers Writers 1
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#problem-statement">Problem Statement
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#solution-readers-preference">Solution (Readers-Preference)
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#synchronization-primitives">Synchronization Primitives
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#shared-data">Shared Data
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#reader">Reader
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#writer">Writer
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#how-the-semaphores-coordinate-the-processes">How the Semaphores Coordinate the Processes
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#correctness-achieved">Correctness Achieved
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#readers-writers-2">Readers Writers 2
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#problem-statement-1">Problem Statement
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#solution-writers-preference">Solution (Writers-Preference)
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#synchronization-primitives-1">Synchronization Primitives
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#shared-data-1">Shared Data
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#reader-process">Reader Process
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#writer-process">Writer Process
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#how-the-semaphores-coordinate-the-processes-1">How the Semaphores Coordinate the Processes
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#correctness-achieved-1">Correctness Achieved
+        </a>
+      </li></ul>
       <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
@@ -842,12 +984,409 @@
   <div class="hx-mt-1.5 hx-flex hx-items-center hx-gap-1 hx-overflow-hidden hx-text-sm hx-text-gray-500 dark:hx-text-gray-400 contrast-more:hx-text-current">
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
           <a href="/process-synchronization/">Process Synchronization</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Reader Writer Problem</div>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Readers Writers Problem</div>
   </div>
 
         <div class="content">
-          
           <h1>Readers Writers Problem</h1>
+          <h2>Readers Writers 1<span class="hx-absolute -hx-mt-20" id="readers-writers-1"></span>
+    <a href="#readers-writers-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Problem Statement<span class="hx-absolute -hx-mt-20" id="problem-statement"></span>
+    <a href="#problem-statement" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Two kinds of concurrent processes share a common data set:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Role</th>
+          <th>Action</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Reader</strong></td>
+          <td>Needs <strong>read-only</strong> access; many readers may read simultaneously.</td>
+      </tr>
+      <tr>
+          <td><strong>Writer</strong></td>
+          <td>Needs <strong>exclusive</strong> access; no other reader or writer may access the data while a writer is active.</td>
+      </tr>
+  </tbody>
+</table>
+<p>Constraints:</p>
+<ul>
+<li>Any number of <strong>readers</strong> may read <strong>concurrently</strong>.</li>
+<li>A <strong>writer</strong> must have <strong>exclusive</strong> access—no reader or other writer can access the data during a write.</li>
+</ul>
+<h3>Solution (Readers-Preference)<span class="hx-absolute -hx-mt-20" id="solution-readers-preference"></span>
+    <a href="#solution-readers-preference" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>Synchronization Primitives<span class="hx-absolute -hx-mt-20" id="synchronization-primitives"></span>
+    <a href="#synchronization-primitives" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+  <thead>
+      <tr>
+          <th>Semaphore</th>
+          <th>Initial Value</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>mutex</code></td>
+          <td><code>1</code></td>
+          <td>Binary semaphore protecting the shared variable <code>readCount</code>.</td>
+      </tr>
+      <tr>
+          <td><code>wrt</code></td>
+          <td><code>1</code></td>
+          <td>Binary semaphore granting <strong>writers exclusive access</strong> to the data; first reader also waits on it.</td>
+      </tr>
+  </tbody>
+</table>
+<p><code>readCount</code> (integer) counts active readers.
+All semaphore operations are atomic.</p>
+<h4>Shared Data<span class="hx-absolute -hx-mt-20" id="shared-data"></span>
+    <a href="#shared-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span>  readCount <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;    <span style="color:#75715e">// number of active readers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>semaphore mutex <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;   <span style="color:#75715e">// guards readCount
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>semaphore wrt   <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;   <span style="color:#75715e">// writers (and first/last reader) lock
+</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h4>Reader<span class="hx-absolute -hx-mt-20" id="reader"></span>
+    <a href="#reader" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(mutex);               <span style="color:#75715e">// protect readCount
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        readCount<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (readCount <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)    <span style="color:#75715e">// first reader locks writers out
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">wait</span>(wrt);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(mutex);             <span style="color:#75715e">// release readCount lock
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* ----- critical section (read) ----- */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">read_data</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* ----------------------------------- */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(mutex);               <span style="color:#75715e">// protect readCount
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        readCount<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (readCount <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)    <span style="color:#75715e">// last reader lets writers in
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">signal</span>(wrt);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(mutex);             <span style="color:#75715e">// release readCount lock
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">remainder_section</span>();
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h4>Writer<span class="hx-absolute -hx-mt-20" id="writer"></span>
+    <a href="#writer" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(wrt);          <span style="color:#75715e">// request exclusive access
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* ----- critical section (write) ----- */</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">write_data</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* ------------------------------------ */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(wrt);        <span style="color:#75715e">// release exclusive access
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">remainder_section</span>();
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>How the Semaphores Coordinate the Processes<span class="hx-absolute -hx-mt-20" id="how-the-semaphores-coordinate-the-processes"></span>
+    <a href="#how-the-semaphores-coordinate-the-processes" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Step</th>
+          <th>Semaphore Action</th>
+          <th>Effect</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>First reader entry</strong></td>
+          <td><code>wait(mutex)</code> → <code>readCount++</code> → <code>wait(wrt)</code></td>
+          <td>Locks out writers; subsequent readers proceed without waiting on <code>wrt</code>.</td>
+      </tr>
+      <tr>
+          <td><strong>Additional readers</strong></td>
+          <td><code>wait(mutex)</code> / <code>signal(mutex)</code></td>
+          <td>Only update <code>readCount</code>; no writer exclusion needed if <code>readCount &gt; 0</code>.</td>
+      </tr>
+      <tr>
+          <td><strong>Last reader exit</strong></td>
+          <td><code>wait(mutex)</code> → <code>readCount--</code> → <code>signal(wrt)</code></td>
+          <td>Re-enables writers when no reader remains.</td>
+      </tr>
+      <tr>
+          <td><strong>Writer entry / exit</strong></td>
+          <td><code>wait(wrt)</code> / <code>signal(wrt)</code></td>
+          <td>Provides writers with exclusive access; blocks readers when held.</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Correctness Achieved<span class="hx-absolute -hx-mt-20" id="correctness-achieved"></span>
+    <a href="#correctness-achieved" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Requirement</th>
+          <th>Mechanism</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Mutual Exclusion</strong></td>
+          <td><code>wrt</code> held by <strong>either</strong> a writer <strong>or</strong> the reader group (via first reader) ensures no overlap.</td>
+      </tr>
+      <tr>
+          <td><strong>No Read–Write Conflict</strong></td>
+          <td>Writers cannot enter while <code>wrt</code> is held by readers; readers cannot start if a writer holds <code>wrt</code>.</td>
+      </tr>
+      <tr>
+          <td><strong>Reader Concurrency</strong></td>
+          <td>Multiple readers skip <code>wrt</code> once the first reader has locked it, allowing parallel reads.</td>
+      </tr>
+      <tr>
+          <td><strong>Progress</strong></td>
+          <td>If the data is free, whichever process (reader or writer) obtains the relevant semaphore first proceeds.</td>
+      </tr>
+      <tr>
+          <td><strong>Bounded Waiting</strong></td>
+          <td>Readers waiting only contend for <code>mutex</code>; writers wait at most until current readers finish.</td>
+      </tr>
+  </tbody>
+</table>
+<p>This semaphore arrangement (readers-preference variant) maximizes reader concurrency while still guaranteeing writers exclusive access when required.</p>
+<h2>Readers Writers 2<span class="hx-absolute -hx-mt-20" id="readers-writers-2"></span>
+    <a href="#readers-writers-2" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>This is the <strong>second</strong> classical formulation of the Readers-Writers problem — known as the <strong>Writers-Preference</strong> solution.</p>
+<h3>Problem Statement<span class="hx-absolute -hx-mt-20" id="problem-statement-1"></span>
+    <a href="#problem-statement-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Two types of concurrent processes — <strong>readers</strong> and <strong>writers</strong> — share a <strong>common resource</strong> (usually a database or file):</p>
+<table>
+  <thead>
+      <tr>
+          <th>Role</th>
+          <th>Goal</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Readers</strong></td>
+          <td>May access the resource <strong>simultaneously</strong> with other readers.</td>
+      </tr>
+      <tr>
+          <td><strong>Writers</strong></td>
+          <td>Must have <strong>exclusive access</strong> — no other readers or writers allowed.</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Solution (Writers-Preference)<span class="hx-absolute -hx-mt-20" id="solution-writers-preference"></span>
+    <a href="#solution-writers-preference" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h4>Synchronization Primitives<span class="hx-absolute -hx-mt-20" id="synchronization-primitives-1"></span>
+    <a href="#synchronization-primitives-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><table>
+  <thead>
+      <tr>
+          <th>Semaphore</th>
+          <th>Initial Value</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>mutex1</code></td>
+          <td><code>1</code></td>
+          <td>Ensures mutual exclusion for <code>readCount</code>.</td>
+      </tr>
+      <tr>
+          <td><code>mutex2</code></td>
+          <td><code>1</code></td>
+          <td>Ensures mutual exclusion for <code>writeCount</code>.</td>
+      </tr>
+      <tr>
+          <td><code>readTry</code></td>
+          <td><code>1</code></td>
+          <td>Allows writers to block new readers when they are waiting.</td>
+      </tr>
+      <tr>
+          <td><code>wrt</code></td>
+          <td><code>1</code></td>
+          <td>Actual access control to the <strong>shared resource</strong> (held exclusively).</td>
+      </tr>
+  </tbody>
+</table>
+<h4>Shared Data<span class="hx-absolute -hx-mt-20" id="shared-data-1"></span>
+    <a href="#shared-data-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> readCount <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;      <span style="color:#75715e">// number of active readers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> writeCount <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;     <span style="color:#75715e">// number of waiting writers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>semaphore mutex1 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;   <span style="color:#75715e">// protects readCount
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>semaphore mutex2 <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;   <span style="color:#75715e">// protects writeCount
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>semaphore readTry <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;  <span style="color:#75715e">// blocks readers if writer is waiting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>semaphore wrt <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;      <span style="color:#75715e">// resource access
+</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h4>Reader Process<span class="hx-absolute -hx-mt-20" id="reader-process"></span>
+    <a href="#reader-process" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(readTry);           <span style="color:#75715e">// Check if writers are waiting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">wait</span>(mutex1);
+</span></span><span style="display:flex;"><span>        readCount<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (readCount <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)  <span style="color:#75715e">// First reader locks the resource
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">wait</span>(wrt);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(mutex1);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(readTry);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ----------- Critical Section (Read) -----------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">read_data</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// -----------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(mutex1);
+</span></span><span style="display:flex;"><span>        readCount<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (readCount <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)  <span style="color:#75715e">// Last reader releases the resource
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">signal</span>(wrt);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(mutex1);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">remainder_section</span>();
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h4>Writer Process<span class="hx-absolute -hx-mt-20" id="writer-process"></span>
+    <a href="#writer-process" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(mutex2);
+</span></span><span style="display:flex;"><span>        writeCount<span style="color:#f92672">++</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (writeCount <span style="color:#f92672">==</span> <span style="color:#ae81ff">1</span>)   <span style="color:#75715e">// First writer blocks new readers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">wait</span>(readTry);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(mutex2);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(wrt);                <span style="color:#75715e">// Lock the resource
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// ----------- Critical Section (Write) ----------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">write_data</span>();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// -----------------------------------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(wrt);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(mutex2);
+</span></span><span style="display:flex;"><span>        writeCount<span style="color:#f92672">--</span>;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (writeCount <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>)   <span style="color:#75715e">// Last writer allows readers again
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>            <span style="color:#a6e22e">signal</span>(readTry);
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">signal</span>(mutex2);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">remainder_section</span>();
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>How the Semaphores Coordinate the Processes<span class="hx-absolute -hx-mt-20" id="how-the-semaphores-coordinate-the-processes-1"></span>
+    <a href="#how-the-semaphores-coordinate-the-processes-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Step</th>
+          <th>Semaphore Mechanism</th>
+          <th>Effect</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Writers signal intent</strong></td>
+          <td>First writer locks <code>readTry</code></td>
+          <td>Prevents <strong>new readers</strong> from entering if any writer is waiting.</td>
+      </tr>
+      <tr>
+          <td><strong>Multiple writers wait</strong></td>
+          <td>All writers still wait on <code>wrt</code></td>
+          <td>Still enforces one-writer-at-a-time.</td>
+      </tr>
+      <tr>
+          <td><strong>First reader waits</strong></td>
+          <td>Blocks on <code>readTry</code> if writer is pending</td>
+          <td>Enforces <strong>writer preference</strong>.</td>
+      </tr>
+      <tr>
+          <td><strong>Last reader unlocks</strong></td>
+          <td><code>readCount == 0</code> → <code>signal(wrt)</code></td>
+          <td>Allows writers to proceed once all readers finish.</td>
+      </tr>
+      <tr>
+          <td><strong>Last writer unlocks readers</strong></td>
+          <td><code>writeCount == 0</code> → <code>signal(readTry)</code></td>
+          <td>New readers are now allowed to proceed.</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Correctness Achieved<span class="hx-absolute -hx-mt-20" id="correctness-achieved-1"></span>
+    <a href="#correctness-achieved-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Requirement</th>
+          <th>Mechanism</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Mutual Exclusion</strong></td>
+          <td><code>wrt</code> guarantees only one writer or many readers access the resource at any one time.</td>
+      </tr>
+      <tr>
+          <td><strong>Reader Concurrency</strong></td>
+          <td>Multiple readers are allowed when no writer is waiting or active.</td>
+      </tr>
+      <tr>
+          <td><strong>Writer Preference</strong></td>
+          <td><code>readTry</code> blocks new readers once a writer is waiting, giving writers priority.</td>
+      </tr>
+      <tr>
+          <td><strong>No Starvation</strong></td>
+          <td>Writers get access once all active readers finish and new ones are blocked.</td>
+      </tr>
+      <tr>
+          <td><strong>Bounded Waiting</strong></td>
+          <td>Writers waiting first will proceed first (FIFO on <code>wrt</code>), and readers are blocked until done.</td>
+      </tr>
+  </tbody>
+</table>
+<p>This version <strong>avoids starvation of writers</strong> by preventing new readers from entering the critical section once a writer has requested access. It ensures <strong>fairness toward writers</strong> even in a heavily read-oriented system.</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a

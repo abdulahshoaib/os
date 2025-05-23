@@ -58,9 +58,9 @@
   </url><url>
     <loc>/threading/</loc>
   </url><url>
-    <loc>/process-synchronization/reader-writer-problem/</loc>
-  </url><url>
     <loc>/cpu-scheduling/scheduling-algorithms/multilevel-queues-scheduling/</loc>
+  </url><url>
+    <loc>/process-synchronization/reader-writer-problem/</loc>
   </url><url>
     <loc>/semaphores/</loc>
   </url><url>

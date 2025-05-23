@@ -11,14 +11,13 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Producer Consumer Problem – </title>
-  <meta name="description" content="Producer–Consumer Problem Definition Two cooperating processes—Producer and Consumer—share a buffer:
+  <meta name="description" content="Problem Statement Two cooperating processes—Producer and Consumer—share a buffer:
 Producer generates items and inserts them into the buffer. Consumer removes and uses those items. Race Condition Without proper synchronization, concurrent updates to shared variables (e.g., counter) can interleave, producing incorrect results. The system must guarantee mutually exclusive access to the buffer and accurate tracking of its current occupancy.
 Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounded Fixed N Buffer full Buffer empty Unbounded Unlimited (practically) ― (can always insert) Buffer empty In practice, most implementations use a bounded circular buffer because physical memory is finite." /><link rel="canonical" href="/process-synchronization/producer-consumer-problem/" itemprop="url" />
 
 <meta property="og:title" content="Producer Consumer Problem" />
-<meta property="og:description" content="Producer–Consumer Problem
-    Definition
-Two cooperating processes—Producer and Consumer—share a buffer:
+<meta property="og:description" content="Problem Statement
+    Two cooperating processes—Producer and Consumer—share a buffer:
 
 Producer generates items and inserts them into the buffer.
 Consumer removes and uses those items.
@@ -57,13 +56,13 @@ In practice, most implementations use a bounded circular buffer because physical
 
 
   <meta itemprop="name" content="Producer Consumer Problem">
-  <meta itemprop="description" content="Producer–Consumer Problem Definition Two cooperating processes—Producer and Consumer—share a buffer:
+  <meta itemprop="description" content="Problem Statement Two cooperating processes—Producer and Consumer—share a buffer:
 Producer generates items and inserts them into the buffer. Consumer removes and uses those items. Race Condition Without proper synchronization, concurrent updates to shared variables (e.g., counter) can interleave, producing incorrect results. The system must guarantee mutually exclusive access to the buffer and accurate tracking of its current occupancy.
 Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounded Fixed N Buffer full Buffer empty Unbounded Unlimited (practically) ― (can always insert) Buffer empty In practice, most implementations use a bounded circular buffer because physical memory is finite.">
-  <meta itemprop="wordCount" content="394">
+  <meta itemprop="wordCount" content="393">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Producer Consumer Problem">
-  <meta name="twitter:description" content="Producer–Consumer Problem Definition Two cooperating processes—Producer and Consumer—share a buffer:
+  <meta name="twitter:description" content="Problem Statement Two cooperating processes—Producer and Consumer—share a buffer:
 Producer generates items and inserts them into the buffer. Consumer removes and uses those items. Race Condition Without proper synchronization, concurrent updates to shared variables (e.g., counter) can interleave, producing incorrect results. The system must guarantee mutually exclusive access to the buffer and accurate tracking of its current occupancy.
 Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounded Fixed N Buffer full Buffer empty Unbounded Unlimited (practically) ― (can always insert) Buffer empty In practice, most implementations use a bounded circular buffer because physical memory is finite.">
 
@@ -341,9 +340,9 @@ Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounde
   
     <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
               <a
-                href="#producerconsumer-problem"
+                href="#problem-statement"
                 class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
-              >Producer–Consumer Problem</a>
+              >Problem Statement</a>
             </li>
           <li>
               <a
@@ -395,7 +394,7 @@ Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounde
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/process-synchronization/reader-writer-problem/"
     
-  >Reader Writer Problem
+  >Readers Writers Problem
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -729,7 +728,7 @@ Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounde
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
     href="/process-synchronization/reader-writer-problem/"
     
-  >Reader Writer Problem
+  >Readers Writers Problem
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -891,7 +890,7 @@ Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounde
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
     <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
-        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#producerconsumer-problem">Producer–Consumer Problem
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#problem-statement">Problem Statement
         </a>
       </li>
       <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
@@ -945,9 +944,8 @@ Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounde
 
         <div class="content">
           <h1>Producer Consumer Problem</h1>
-          <h2>Producer–Consumer Problem<span class="hx-absolute -hx-mt-20" id="producerconsumer-problem"></span>
-    <a href="#producerconsumer-problem" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>Definition</strong>
-Two cooperating processes—<strong>Producer</strong> and <strong>Consumer</strong>—share a buffer:</p>
+          <h2>Problem Statement<span class="hx-absolute -hx-mt-20" id="problem-statement"></span>
+    <a href="#problem-statement" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Two cooperating processes—<strong>Producer</strong> and <strong>Consumer</strong>—share a buffer:</p>
 <ul>
 <li><strong>Producer</strong> generates items and inserts them into the buffer.</li>
 <li><strong>Consumer</strong> removes and uses those items.</li>
