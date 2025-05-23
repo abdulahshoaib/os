@@ -11,18 +11,52 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Sleeping Barber Problem – </title>
-  <meta name="description" content="" /><link rel="canonical" href="/process-synchronization/the-sleeping-barber-problem/" itemprop="url" />
+  <meta name="description" content="Problem Statement The Sleeping Barber Problem is a classic inter-process communication and synchronization problem. It models a barbershop with the following characteristics:
+Element Description Barber Sleeps when there are no customers. Wakes up and serves a customer if there is one. Customers Either get a haircut or leave if the waiting room is full. Waiting Room Has a limited number of chairs. Key Conditions Solution If there are no customers, the barber sleeps." /><link rel="canonical" href="/process-synchronization/the-sleeping-barber-problem/" itemprop="url" />
 
 <meta property="og:title" content="Sleeping Barber Problem" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Problem Statement
+    The Sleeping Barber Problem is a classic inter-process communication and synchronization problem. It models a barbershop with the following characteristics:
+
+  
+      
+          Element
+          Description
+      
+  
+  
+      
+          Barber
+          Sleeps when there are no customers. Wakes up and serves a customer if there is one.
+      
+      
+          Customers
+          Either get a haircut or leave if the waiting room is full.
+      
+      
+          Waiting Room
+          Has a limited number of chairs.
+      
+  
+
+Key Conditions
+    Solution
+    
+
+If there are no customers, the barber sleeps." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/process-synchronization/the-sleeping-barber-problem/" /><meta property="article:section" content="process-synchronization" />
 
 
 
   <meta itemprop="name" content="Sleeping Barber Problem">
+  <meta itemprop="description" content="Problem Statement The Sleeping Barber Problem is a classic inter-process communication and synchronization problem. It models a barbershop with the following characteristics:
+Element Description Barber Sleeps when there are no customers. Wakes up and serves a customer if there is one. Customers Either get a haircut or leave if the waiting room is full. Waiting Room Has a limited number of chairs. Key Conditions Solution If there are no customers, the barber sleeps.">
+  <meta itemprop="wordCount" content="414">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Sleeping Barber Problem">
+  <meta name="twitter:description" content="Problem Statement The Sleeping Barber Problem is a classic inter-process communication and synchronization problem. It models a barbershop with the following characteristics:
+Element Description Barber Sleeps when there are no customers. Wakes up and serves a customer if there is one. Customers Either get a haircut or leave if the waiting room is full. Waiting Room Has a limited number of chairs. Key Conditions Solution If there are no customers, the barber sleeps.">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -343,6 +377,32 @@
     
   >Sleeping Barber Problem
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#problem-statement"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Problem Statement</a>
+            </li>
+          <li>
+              <a
+                href="#solution"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Solution</a>
+            </li>
+          <li>
+              <a
+                href="#how-the-semaphores-coordinate-the-processes"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >How the Semaphores Coordinate the Processes</a>
+            </li>
+          <li>
+              <a
+                href="#correctness-achieved"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Correctness Achieved</a>
+            </li>
+          </ul>
   
               
             </li></ul>
@@ -820,8 +880,44 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#problem-statement">Problem Statement
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#key-conditions">Key Conditions
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#solution">Solution
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#synchronization-primitives">Synchronization Primitives
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#shared-variables">Shared Variables
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#customer-process">Customer Process
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#barber-process">Barber Process
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#how-the-semaphores-coordinate-the-processes">How the Semaphores Coordinate the Processes
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#correctness-achieved">Correctness Achieved
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -844,7 +940,218 @@
 
         <div class="content">
           <h1>Sleeping Barber Problem</h1>
-          
+          <h2>Problem Statement<span class="hx-absolute -hx-mt-20" id="problem-statement"></span>
+    <a href="#problem-statement" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>The <strong>Sleeping Barber Problem</strong> is a classic <strong>inter-process communication and synchronization</strong> problem. It models a barbershop with the following characteristics:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Element</th>
+          <th>Description</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Barber</strong></td>
+          <td>Sleeps when there are no customers. Wakes up and serves a customer if there is one.</td>
+      </tr>
+      <tr>
+          <td><strong>Customers</strong></td>
+          <td>Either get a haircut or leave if the waiting room is full.</td>
+      </tr>
+      <tr>
+          <td><strong>Waiting Room</strong></td>
+          <td>Has a limited number of chairs.</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Key Conditions<span class="hx-absolute -hx-mt-20" id="key-conditions"></span>
+    <a href="#key-conditions" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><h2>Solution<span class="hx-absolute -hx-mt-20" id="solution"></span>
+    <a href="#solution" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ol>
+<li>
+<p>If there are no customers, the <strong>barber sleeps</strong>.</p>
+</li>
+<li>
+<p>When a customer arrives:</p>
+<ul>
+<li>If all chairs are <strong>occupied</strong>, the customer <strong>leaves</strong>.</li>
+<li>If there is a <strong>free chair</strong>, the customer sits and <strong>waits</strong>.</li>
+</ul>
+</li>
+<li>
+<p>When the barber finishes a haircut:</p>
+<ul>
+<li>He checks for waiting customers.</li>
+<li>If no one is waiting, he <strong>sleeps again</strong>.</li>
+</ul>
+</li>
+</ol>
+<h3>Synchronization Primitives<span class="hx-absolute -hx-mt-20" id="synchronization-primitives"></span>
+    <a href="#synchronization-primitives" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Semaphore</th>
+          <th>Initial Value</th>
+          <th>Purpose</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>customers</code></td>
+          <td>0</td>
+          <td>Counts waiting customers (to wake up barber).</td>
+      </tr>
+      <tr>
+          <td><code>barbers</code></td>
+          <td>0</td>
+          <td>Number of barbers ready to cut hair.</td>
+      </tr>
+      <tr>
+          <td><code>mutex</code></td>
+          <td>1</td>
+          <td>Ensures <strong>mutual exclusion</strong> for access to <code>waiting</code>.</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Shared Variables<span class="hx-absolute -hx-mt-20" id="shared-variables"></span>
+    <a href="#shared-variables" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">int</span> waiting <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;           <span style="color:#75715e">// number of customers waiting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> CHAIRS <span style="color:#f92672">=</span> N;            <span style="color:#75715e">// total number of chairs
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>semaphore customers <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;   <span style="color:#75715e">// customers waiting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>semaphore barbers <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;     <span style="color:#75715e">// barbers ready
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>semaphore mutex <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;       <span style="color:#75715e">// for mutual exclusion
+</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Customer Process<span class="hx-absolute -hx-mt-20" id="customer-process"></span>
+    <a href="#customer-process" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">Customer</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">wait</span>(mutex);                  <span style="color:#75715e">// enter critical section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (waiting <span style="color:#f92672">&lt;</span> CHAIRS) {
+</span></span><span style="display:flex;"><span>        waiting<span style="color:#f92672">++</span>;                <span style="color:#75715e">// sit in a waiting chair
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">signal</span>(customers);        <span style="color:#75715e">// notify barber
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">signal</span>(mutex);            <span style="color:#75715e">// leave critical section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">wait</span>(barbers);            <span style="color:#75715e">// wait to be called by barber
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">get_haircut</span>();
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">else</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">signal</span>(mutex);            <span style="color:#75715e">// leave (no chair available)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">leave_shop</span>();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Barber Process<span class="hx-absolute -hx-mt-20" id="barber-process"></span>
+    <a href="#barber-process" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#a6e22e">Barber</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">wait</span>(customers);          <span style="color:#75715e">// sleep if no customers
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">wait</span>(mutex);              <span style="color:#75715e">// enter critical section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        waiting<span style="color:#f92672">--</span>;                <span style="color:#75715e">// take a customer out of waiting
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">signal</span>(barbers);          <span style="color:#75715e">// call customer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">signal</span>(mutex);            <span style="color:#75715e">// leave critical section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">cut_hair</span>();               <span style="color:#75715e">// perform haircut
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h2>How the Semaphores Coordinate the Processes<span class="hx-absolute -hx-mt-20" id="how-the-semaphores-coordinate-the-processes"></span>
+    <a href="#how-the-semaphores-coordinate-the-processes" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>Step</th>
+          <th>Semaphore Used</th>
+          <th>Effect</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Customer arrives</td>
+          <td><code>wait(mutex)</code></td>
+          <td>Enters critical section to check space in waiting room</td>
+      </tr>
+      <tr>
+          <td>Free chair available</td>
+          <td><code>waiting++</code></td>
+          <td>Sits and waits</td>
+      </tr>
+      <tr>
+          <td>Notify barber</td>
+          <td><code>signal(customers)</code></td>
+          <td>Increments count of waiting customers</td>
+      </tr>
+      <tr>
+          <td>Barber sleeps</td>
+          <td><code>wait(customers)</code></td>
+          <td>Waits for a customer to arrive</td>
+      </tr>
+      <tr>
+          <td>Barber wakes up</td>
+          <td><code>signal(barbers)</code></td>
+          <td>Wakes up and allows customer to get haircut</td>
+      </tr>
+      <tr>
+          <td>Protect waiting counter</td>
+          <td><code>mutex</code></td>
+          <td>Ensures <code>waiting</code> is updated atomically</td>
+      </tr>
+  </tbody>
+</table>
+<h2>Correctness Achieved<span class="hx-absolute -hx-mt-20" id="correctness-achieved"></span>
+    <a href="#correctness-achieved" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>Requirement</th>
+          <th>Mechanism</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Mutual Exclusion</strong></td>
+          <td><code>mutex</code> protects access to <code>waiting</code> variable.</td>
+      </tr>
+      <tr>
+          <td><strong>Deadlock-Free</strong></td>
+          <td>Semaphores coordinate process entry without circular waits.</td>
+      </tr>
+      <tr>
+          <td><strong>No Starvation</strong></td>
+          <td>FIFO nature of semaphore queues ensures fair access.</td>
+      </tr>
+      <tr>
+          <td><strong>Efficiency</strong></td>
+          <td>Barber only sleeps when no customers; customers only wait if space is available.</td>
+      </tr>
+  </tbody>
+</table>
+<p>This model ensures that both customers and barbers behave correctly and efficiently with respect to the limited resources in the barbershop.</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a

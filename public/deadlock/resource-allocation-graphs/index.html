@@ -11,18 +11,64 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Resource Allocation Graphs – </title>
-  <meta name="description" content="" /><link rel="canonical" href="/deadlock/resource-allocation-graphs/" itemprop="url" />
+  <meta name="description" content="Concept A Resource Allocation Graph models the state of resource usage in a system.
+The graph consists of:
+Processes (P1, P2, …, Pn) Resource Types (R1, R2, …, Rm) There are two types of edges:
+Request edge: From a process to a resource (e.g., P1 --&gt; R1) Assignment edge: From a resource to a process (e.g., R1 --&gt; P1) Case 1: No Cycle graph LR P1((P1)) --&gt; R1((R1)) R1 --&gt; P2((P2)) P2 --&gt; R2((R2)) R2 --&gt; P3((P3)) Explanation P1 is requesting R1 R1 is assigned to P2 P2 is requesting R2 R2 is assigned to P3 There is no cycle in the graph — hence, no deadlock" /><link rel="canonical" href="/deadlock/resource-allocation-graphs/" itemprop="url" />
 
 <meta property="og:title" content="Resource Allocation Graphs" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Concept
+    
+
+A Resource Allocation Graph models the state of resource usage in a system.
+
+
+The graph consists of:
+
+Processes (P1, P2, &hellip;, Pn)
+Resource Types (R1, R2, &hellip;, Rm)
+
+
+
+There are two types of edges:
+
+Request edge: From a process to a resource (e.g., P1 --&gt; R1)
+Assignment edge: From a resource to a process (e.g., R1 --&gt; P1)
+
+
+
+Case 1: No Cycle
+    
+  graph LR
+    P1((P1)) --&gt; R1((R1))
+    R1 --&gt; P2((P2))
+    P2 --&gt; R2((R2))
+    R2 --&gt; P3((P3))
+Explanation
+    
+P1 is requesting R1
+R1 is assigned to P2
+P2 is requesting R2
+R2 is assigned to P3
+
+There is no cycle in the graph — hence, no deadlock" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/deadlock/resource-allocation-graphs/" /><meta property="article:section" content="deadlock" />
 
 
 
   <meta itemprop="name" content="Resource Allocation Graphs">
+  <meta itemprop="description" content="Concept A Resource Allocation Graph models the state of resource usage in a system.
+The graph consists of:
+Processes (P1, P2, …, Pn) Resource Types (R1, R2, …, Rm) There are two types of edges:
+Request edge: From a process to a resource (e.g., P1 --&gt; R1) Assignment edge: From a resource to a process (e.g., R1 --&gt; P1) Case 1: No Cycle graph LR P1((P1)) --&gt; R1((R1)) R1 --&gt; P2((P2)) P2 --&gt; R2((R2)) R2 --&gt; P3((P3)) Explanation P1 is requesting R1 R1 is assigned to P2 P2 is requesting R2 R2 is assigned to P3 There is no cycle in the graph — hence, no deadlock">
+  <meta itemprop="wordCount" content="244">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Resource Allocation Graphs">
+  <meta name="twitter:description" content="Concept A Resource Allocation Graph models the state of resource usage in a system.
+The graph consists of:
+Processes (P1, P2, …, Pn) Resource Types (R1, R2, …, Rm) There are two types of edges:
+Request edge: From a process to a resource (e.g., P1 --&gt; R1) Assignment edge: From a resource to a process (e.g., R1 --&gt; P1) Case 1: No Cycle graph LR P1((P1)) --&gt; R1((R1)) R1 --&gt; P2((P2)) P2 --&gt; R2((R2)) R2 --&gt; P3((P3)) Explanation P1 is requesting R1 R1 is assigned to P2 P2 is requesting R2 R2 is assigned to P3 There is no cycle in the graph — hence, no deadlock">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -369,6 +415,32 @@
     
   >Resource Allocation Graphs
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#concept"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Concept</a>
+            </li>
+          <li>
+              <a
+                href="#case-1-no-cycle"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Case 1: No Cycle</a>
+            </li>
+          <li>
+              <a
+                href="#case-2-cycle-with-1-resource-instance"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Case 2: Cycle with 1 Resource Instance</a>
+            </li>
+          <li>
+              <a
+                href="#case-3-possibility-of-deadlock"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Case 3: Possibility of Deadlock</a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -820,8 +892,36 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#concept">Concept
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#case-1-no-cycle">Case 1: No Cycle
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#explanation">Explanation
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#case-2-cycle-with-1-resource-instance">Case 2: Cycle with 1 Resource Instance
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#explanation-1">Explanation
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#case-3-possibility-of-deadlock">Case 3: Possibility of Deadlock
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#explanation-2">Explanation
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -844,7 +944,72 @@
 
         <div class="content">
           <h1>Resource Allocation Graphs</h1>
-          
+          <h2>Concept<span class="hx-absolute -hx-mt-20" id="concept"></span>
+    <a href="#concept" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><ul>
+<li>
+<p>A <strong>Resource Allocation Graph</strong> models the state of resource usage in a system.</p>
+</li>
+<li>
+<p>The graph consists of:</p>
+<ul>
+<li><strong>Processes</strong> (<code>P1</code>, <code>P2</code>, &hellip;, <code>Pn</code>)</li>
+<li><strong>Resource Types</strong> (<code>R1</code>, <code>R2</code>, &hellip;, <code>Rm</code>)</li>
+</ul>
+</li>
+<li>
+<p>There are <strong>two types of edges</strong>:</p>
+<ul>
+<li><strong>Request edge</strong>: From a process to a resource (e.g., <code>P1 --&gt; R1</code>)</li>
+<li><strong>Assignment edge</strong>: From a resource to a process (e.g., <code>R1 --&gt; P1</code>)</li>
+</ul>
+</li>
+</ul>
+<h2>Case 1: No Cycle<span class="hx-absolute -hx-mt-20" id="case-1-no-cycle"></span>
+    <a href="#case-1-no-cycle" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><pre class="mermaid hx-mt-6">
+  graph LR
+    P1((P1)) --&gt; R1((R1))
+    R1 --&gt; P2((P2))
+    P2 --&gt; R2((R2))
+    R2 --&gt; P3((P3))
+</pre><h3>Explanation<span class="hx-absolute -hx-mt-20" id="explanation"></span>
+    <a href="#explanation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>P1 is requesting R1</li>
+<li>R1 is assigned to P2</li>
+<li>P2 is requesting R2</li>
+<li>R2 is assigned to P3</li>
+</ul>
+<p>There is no cycle in the graph — hence, no deadlock</p>
+<h2>Case 2: Cycle with 1 Resource Instance<span class="hx-absolute -hx-mt-20" id="case-2-cycle-with-1-resource-instance"></span>
+    <a href="#case-2-cycle-with-1-resource-instance" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><pre class="mermaid hx-mt-6">
+  graph LR
+    P1((P1)) --&gt; R1((R1))
+    R1 --&gt; P2((P2))
+    P2 --&gt; R2((R2))
+    R2 --&gt; P1
+</pre><h3>Explanation<span class="hx-absolute -hx-mt-20" id="explanation-1"></span>
+    <a href="#explanation-1" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>P1 requests R1</li>
+<li>R1 is assigned to P2</li>
+<li>P2 requests R2</li>
+<li>R2 is assigned to P1</li>
+</ul>
+<p>There is a cycle: <code>P1 → R1 → P2 → R2 → P1</code></p>
+<p>If each resource type (R1, R2) has only one instance, this cycle implies a deadlock</p>
+<h2>Case 3: Possibility of Deadlock<span class="hx-absolute -hx-mt-20" id="case-3-possibility-of-deadlock"></span>
+    <a href="#case-3-possibility-of-deadlock" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><pre class="mermaid hx-mt-6">
+  graph LR
+    P1((P1)) --&gt; R1((R1))
+    R1 --&gt; P2((P2))
+    P2 --&gt; R1
+    R1 --&gt; P3((P3))
+</pre><h3>Explanation<span class="hx-absolute -hx-mt-20" id="explanation-2"></span>
+    <a href="#explanation-2" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>P1 and P2 both request R1.</li>
+<li>R1 assigns one instance to P2 and one to P3.</li>
+<li>Even though there&rsquo;s a cycle (P2 → R1 → P3 → R1 → P2), since R1 has multiple instances, this is not necessarily a deadlock</li>
+</ul>
+<p>With multiple instances, cycles may or may not indicate deadlock</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
@@ -873,6 +1038,36 @@
     
     <script defer src="/js/main.min.0942239592f0795dc7213dd1057fd229d7edc19c0ef1a285396eb292d9ca9842.js" integrity="sha256-CUIjlZLweV3HIT3RBX/SKdftwZwO8aKFOW6yktnKmEI="></script>
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script>
+    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script><script defer src="/lib/mermaid/mermaid.min.0d2b6f2361e7e0ce466a6ed458e03daa5584b42ef6926c3beb62eb64670ca261.js" integrity="sha256-DStvI2Hn4M5Gam7UWOA9qlWEtC72kmw762LrZGcMomE="></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelectorAll(".mermaid").forEach(el => {
+      el.dataset.original = el.innerHTML;
+    });
+
+    const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+    mermaid.initialize({ startOnLoad: true, theme: theme });
+
+    let timeout;
+    new MutationObserver(() => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+        document.querySelectorAll(".mermaid").forEach(el => {
+          
+          el.innerHTML = el.dataset.original;
+          el.removeAttribute("data-processed");
+        });
+        mermaid.initialize({ startOnLoad: true, theme: theme });
+        mermaid.init();
+      }, 150);
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  });
+</script>
+
   </body>
 </html>
