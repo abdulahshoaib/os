@@ -11,18 +11,49 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Critical Section Problem – </title>
-  <meta name="description" content="" /><link rel="canonical" href="/process-synchronization/critical-section-problem/" itemprop="url" />
+  <meta name="description" content="Critical Section Problem When several cooperating processes access the same shared data, any segment of code that touches that data is called a critical section. A correct solution must ensure:
+Requirement Meaning Mutual Exclusion At most one process can be inside its critical section at any instant. Progress If no one is in a critical section, the decision of which process enters next cannot be postponed by processes that are only executing in their remainder sections. Bounded Waiting After a process requests entry, there is a finite bound on how many times others may enter before it gets its turn. Assumptions for classic software proofs: each process executes at a non-zero but unpredictable speed, and single‐word load/store instructions are atomic." /><link rel="canonical" href="/process-synchronization/critical-section-problem/" itemprop="url" />
 
 <meta property="og:title" content="Critical Section Problem" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Critical Section Problem
+    When several cooperating processes access the same shared data, any segment of code that touches that data is called a critical section.
+A correct solution must ensure:
+
+  
+      
+          Requirement
+          Meaning
+      
+  
+  
+      
+          Mutual Exclusion
+          At most one process can be inside its critical section at any instant.
+      
+      
+          Progress
+          If no one is in a critical section, the decision of which process enters next cannot be postponed by processes that are only executing in their remainder sections.
+      
+      
+          Bounded Waiting
+          After a process requests entry, there is a finite bound on how many times others may enter before it gets its turn.
+      
+  
+
+Assumptions for classic software proofs: each process executes at a non-zero but unpredictable speed, and single‐word load/store instructions are atomic." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/process-synchronization/critical-section-problem/" /><meta property="article:section" content="process-synchronization" />
 
 
 
   <meta itemprop="name" content="Critical Section Problem">
+  <meta itemprop="description" content="Critical Section Problem When several cooperating processes access the same shared data, any segment of code that touches that data is called a critical section. A correct solution must ensure:
+Requirement Meaning Mutual Exclusion At most one process can be inside its critical section at any instant. Progress If no one is in a critical section, the decision of which process enters next cannot be postponed by processes that are only executing in their remainder sections. Bounded Waiting After a process requests entry, there is a finite bound on how many times others may enter before it gets its turn. Assumptions for classic software proofs: each process executes at a non-zero but unpredictable speed, and single‐word load/store instructions are atomic.">
+  <meta itemprop="wordCount" content="893">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Critical Section Problem">
+  <meta name="twitter:description" content="Critical Section Problem When several cooperating processes access the same shared data, any segment of code that touches that data is called a critical section. A correct solution must ensure:
+Requirement Meaning Mutual Exclusion At most one process can be inside its critical section at any instant. Progress If no one is in a critical section, the decision of which process enters next cannot be postponed by processes that are only executing in their remainder sections. Bounded Waiting After a process requests entry, there is a finite bound on how many times others may enter before it gets its turn. Assumptions for classic software proofs: each process executes at a non-zero but unpredictable speed, and single‐word load/store instructions are atomic.">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -303,6 +334,26 @@
     
   >Critical Section Problem
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#critical-section-problem"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Critical Section Problem</a>
+            </li>
+          <li>
+              <a
+                href="#two-process-software-algorithms"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Two-Process Software Algorithms</a>
+            </li>
+          <li>
+              <a
+                href="#n-process-solution--bakery-algorithm"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >N-Process Solution – Bakery Algorithm</a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -820,8 +871,48 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#critical-section-problem">Critical Section Problem
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#two-process-software-algorithms">Two-Process Software Algorithms
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#algorithm-1--strict-alternation">Algorithm 1 – Strict Alternation
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#algorithm-2--individual-flags">Algorithm 2 – Individual Flags
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#algorithm-3--petersons-algorithm">Algorithm 3 – Peterson’s Algorithm
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#n-process-solution--bakery-algorithm">N-Process Solution – Bakery Algorithm
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#shared-variables">Shared Variables
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#pis-code">Pi’s Code
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#why-it-works">Why It Works
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#example-problem">Example Problem:
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -844,7 +935,327 @@
 
         <div class="content">
           <h1>Critical Section Problem</h1>
-          
+          <h2>Critical Section Problem<span class="hx-absolute -hx-mt-20" id="critical-section-problem"></span>
+    <a href="#critical-section-problem" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>When several cooperating processes access the <strong>same shared data</strong>, any segment of code that touches that data is called a <strong>critical section</strong>.
+A correct solution must ensure:</p>
+<table>
+  <thead>
+      <tr>
+          <th>Requirement</th>
+          <th>Meaning</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Mutual Exclusion</strong></td>
+          <td>At most <strong>one</strong> process can be inside its critical section at any instant.</td>
+      </tr>
+      <tr>
+          <td><strong>Progress</strong></td>
+          <td>If no one is in a critical section, the decision of which process enters next cannot be postponed by processes that are only executing in their remainder sections.</td>
+      </tr>
+      <tr>
+          <td><strong>Bounded Waiting</strong></td>
+          <td>After a process requests entry, there is a <strong>finite bound</strong> on how many times others may enter before it gets its turn.</td>
+      </tr>
+  </tbody>
+</table>
+<p>Assumptions for classic software proofs: each process executes at a non-zero but unpredictable speed, and single‐word load/store instructions are <strong>atomic</strong>.</p>
+<hr>
+<h2>Two-Process Software Algorithms<span class="hx-absolute -hx-mt-20" id="two-process-software-algorithms"></span>
+    <a href="#two-process-software-algorithms" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Let the processes be <strong>P1</strong> and <strong>P1</strong>.
+<code>turn</code> is an integer (<code>0</code> or <code>1</code>); <code>flag[2]</code> is a Boolean array.</p>
+<h3>Algorithm 1 – Strict Alternation<span class="hx-absolute -hx-mt-20" id="algorithm-1--strict-alternation"></span>
+    <a href="#algorithm-1--strict-alternation" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// shared: int turn = 0;
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">// 0 → P1’s turn, 1 → P1’s turn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (turn <span style="color:#f92672">!=</span> i) ;         <span style="color:#75715e">// entry section (busy-wait)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">/* critical section */</span>
+</span></span><span style="display:flex;"><span>    turn <span style="color:#f92672">=</span> j;                   <span style="color:#75715e">// give turn to the other process
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">/* remainder section */</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<table>
+  <thead>
+      <tr>
+          <th>Property</th>
+          <th>Result</th>
+          <th>Why?</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Mutual Exclusion</td>
+          <td>✅</td>
+          <td>Only one <code>turn</code> value exists.</td>
+      </tr>
+      <tr>
+          <td>Progress</td>
+          <td>❌</td>
+          <td>If <code>turn == 0</code> and <strong>P1</strong> is ready while <strong>P1</strong> is in its remainder section, <strong>P1</strong> still spins.</td>
+      </tr>
+      <tr>
+          <td>Bounded Waiting</td>
+          <td>✅</td>
+          <td>Processes alternate strictly.</td>
+      </tr>
+  </tbody>
+</table>
+<h3>Algorithm 2 – Individual Flags<span class="hx-absolute -hx-mt-20" id="algorithm-2--individual-flags"></span>
+    <a href="#algorithm-2--individual-flags" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// shared: bool flag[2] = {false,false};
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// code for Pi (j = 1 - i)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>    flag[i] <span style="color:#f92672">=</span> true;          <span style="color:#75715e">// I want to enter
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (flag[j]) ;        <span style="color:#75715e">// wait while the other is ready
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">/* critical section */</span>
+</span></span><span style="display:flex;"><span>    flag[i] <span style="color:#f92672">=</span> false;         <span style="color:#75715e">// I’m done
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">/* remainder section */</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<table>
+  <thead>
+      <tr>
+          <th>Property</th>
+          <th>Result</th>
+          <th>Why?</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Mutual Exclusion</td>
+          <td>✅</td>
+          <td>A process enters only if <code>flag[j] == false</code>.</td>
+      </tr>
+      <tr>
+          <td>Progress</td>
+          <td>❌</td>
+          <td>If <strong>P1</strong> sets <code>flag[0]=true</code> and, immediately after, <strong>P1</strong> sets <code>flag[1]=true</code>, both spin forever.</td>
+      </tr>
+      <tr>
+          <td>Bounded Waiting</td>
+          <td>❌</td>
+          <td>Same scenario causes indefinite waiting.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h3>Algorithm 3 – <strong>Peterson’s Algorithm</strong><span class="hx-absolute -hx-mt-20" id="algorithm-3--petersons-algorithm"></span>
+    <a href="#algorithm-3--petersons-algorithm" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">// shared: bool flag[2] = {false,false};
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          <span style="color:#66d9ef">int</span>  turn     <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;        <span style="color:#75715e">// whose turn if conflict
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// code for Pi (j = 1 - i)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>    flag[i] <span style="color:#f92672">=</span> true;                 <span style="color:#75715e">// I want to enter
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    turn    <span style="color:#f92672">=</span> j;                    <span style="color:#75715e">// let the other go first
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">while</span> (flag[j] <span style="color:#f92672">&amp;&amp;</span> turn <span style="color:#f92672">==</span> j) ;  <span style="color:#75715e">// wait if j also wants in
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">/* critical section */</span>
+</span></span><span style="display:flex;"><span>    flag[i] <span style="color:#f92672">=</span> false;                <span style="color:#75715e">// I’m done
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">/* remainder section */</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<table>
+  <thead>
+      <tr>
+          <th>Property</th>
+          <th>Result</th>
+          <th>Reasoning (sketch)</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Mutual Exclusion</td>
+          <td>✅</td>
+          <td>Both <code>flag[j]</code> <strong>and</strong> <code>turn==j</code> can’t be true for both processes simultaneously.</td>
+      </tr>
+      <tr>
+          <td>Progress</td>
+          <td>✅</td>
+          <td>At most one process waits if both want to enter.</td>
+      </tr>
+      <tr>
+          <td>Bounded Waiting</td>
+          <td>✅</td>
+          <td>A waiting process can be bypassed only once before entering.</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2>N-Process Solution – <strong>Bakery Algorithm</strong><span class="hx-absolute -hx-mt-20" id="n-process-solution--bakery-algorithm"></span>
+    <a href="#n-process-solution--bakery-algorithm" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Every process takes a “ticket” like customers at a bakery.</p>
+<h3>Shared Variables<span class="hx-absolute -hx-mt-20" id="shared-variables"></span>
+    <a href="#shared-variables" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> choosing[n] <span style="color:#f92672">=</span> {false};   <span style="color:#75715e">// true while Pi is picking a number
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span>  number[n]   <span style="color:#f92672">=</span> {<span style="color:#ae81ff">0</span>};       <span style="color:#75715e">// ticket numbers (0 ⇒ not competing)
+</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Pi’s Code<span class="hx-absolute -hx-mt-20" id="pis-code"></span>
+    <a href="#pis-code" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (true) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// entry section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    choosing[i] <span style="color:#f92672">=</span> true;                     <span style="color:#75715e">// announce intention
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    number[i]   <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">max</span>(number[<span style="color:#ae81ff">0.</span>.n<span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>]);  <span style="color:#75715e">// take next ticket
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    choosing[i] <span style="color:#f92672">=</span> false;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    fo<span style="color:#f92672">*</span><span style="color:#a6e22e">r</span> (<span style="color:#66d9ef">int</span> j <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>; j <span style="color:#f92672">&lt;</span> n; j<span style="color:#f92672">++</span>) {           <span style="color:#75715e">// wait for turn
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> (choosing[j]) ;               <span style="color:#75715e">// wait if Pj choosing
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">while</span> (number[j] <span style="color:#f92672">!=</span> <span style="color:#ae81ff">0</span> <span style="color:#f92672">&amp;&amp;</span>
+</span></span><span style="display:flex;"><span>              (number[j] <span style="color:#f92672">&lt;</span>  number[i] <span style="color:#f92672">||</span>
+</span></span><span style="display:flex;"><span>              (number[j] <span style="color:#f92672">==</span> number[i] <span style="color:#f92672">&amp;&amp;</span> j <span style="color:#f92672">&lt;</span> i))) ;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">/* critical section */</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    number[i] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;                          <span style="color:#75715e">// exit section
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">/* remainder section */</span>
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Why It Works<span class="hx-absolute -hx-mt-20" id="why-it-works"></span>
+    <a href="#why-it-works" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Requirement</th>
+          <th>Satisfied?</th>
+          <th>Explanation</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Mutual Exclusion</td>
+          <td>✅</td>
+          <td>Two processes cannot both see themselves “smaller” in the same lexicographic <code>(number, id)</code> ordering.</td>
+      </tr>
+      <tr>
+          <td>Progress</td>
+          <td>✅</td>
+          <td>Tickets strictly increase; comparison uses only currently contending processes.</td>
+      </tr>
+      <tr>
+          <td>Bounded Waiting</td>
+          <td>✅</td>
+          <td>Each process waits behind a <strong>finite</strong> set of smaller ticket numbers. New tickets are always larger.</td>
+      </tr>
+  </tbody>
+</table>
+<p>The Bakery Algorithm generalizes Peterson’s idea to any number of processes without special hardware, guaranteeing a fair, starvation-free ordering of critical-section access.</p>
+<p>Here&rsquo;s an <strong>example problem</strong> based on the <strong>Bakery Algorithm</strong> and the execution sequence you&rsquo;ve described:</p>
+<h3>Example Problem:<span class="hx-absolute -hx-mt-20" id="example-problem"></span>
+    <a href="#example-problem" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><p>Five processes <code>P1</code> through <code>P4</code> are competing for entry into their critical sections using <strong>Lamport’s Bakery Algorithm</strong>.</p>
+<p>At a particular moment, the following occurs:</p>
+<ol>
+<li>
+<p>All five processes begin executing their <strong>entry sections</strong> at approximately the same time.</p>
+</li>
+<li>
+<p><code>P1</code> does <strong>not</strong> intend to enter its critical section, and therefore <strong>skips</strong> taking a ticket (<code>number[1] = 0</code>).</p>
+</li>
+<li>
+<p>All other processes (i.e., <code>P1</code>, <code>P2</code>, <code>P3</code>, <code>P4</code>) enter the entry section and begin executing the <code>choosing[i]</code> and <code>number[i]</code> assignment part.</p>
+</li>
+<li>
+<p>The resulting ticket numbers are:</p>
+<ul>
+<li><code>P1</code> gets ticket <strong>1</strong></li>
+<li><code>P2</code> gets ticket <strong>3</strong></li>
+<li><code>P3</code> gets ticket <strong>2</strong></li>
+<li><code>P4</code> gets ticket <strong>4</strong></li>
+</ul>
+</li>
+</ol>
+<p>All processes now enter the second <code>for</code> loop of the Bakery Algorithm and start comparing their ticket numbers to others.</p>
+<p><strong>Part A: Waiting Table (simplified version)</strong></p>
+<table>
+  <thead>
+      <tr>
+          <th>Process</th>
+          <th>Waiting for</th>
+          <th>Reason</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>P1</td>
+          <td>None</td>
+          <td>Has lowest ticket number (1)</td>
+      </tr>
+      <tr>
+          <td>P2</td>
+          <td>P1, P3</td>
+          <td>P1 has lower ticket (1), P3 has lower ticket (2)</td>
+      </tr>
+      <tr>
+          <td>P3</td>
+          <td>P1</td>
+          <td>P1 has lower ticket (1)</td>
+      </tr>
+      <tr>
+          <td>P4</td>
+          <td>P1, P3, P2</td>
+          <td>All have lower ticket numbers (1, 2, 3)</td>
+      </tr>
+  </tbody>
+</table>
+<p><strong>Part B: Execution Sequence</strong></p>
+<ol>
+<li><code>P1</code> enters critical section first.</li>
+<li><code>P1</code> exits CS and sets <code>number[0] = 0</code>.</li>
+<li>Now <code>P3</code> has the smallest active number (2) → enters CS.</li>
+<li><code>P3</code> exits and resets <code>number[3] = 0</code>.</li>
+<li>Now <code>P2</code> has the next smallest ticket (3) → enters CS.</li>
+<li><code>P2</code> exits and resets <code>number[2] = 0</code>.</li>
+<li><code>P4</code> now has the smallest active ticket (4) → enters CS.</li>
+</ol>
+<p>Execution Order: &lt;P1, P3, P2, P4&gt;</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a

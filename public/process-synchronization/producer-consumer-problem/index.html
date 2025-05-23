@@ -11,18 +11,61 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Producer Consumer Problem – </title>
-  <meta name="description" content="" /><link rel="canonical" href="/process-synchronization/producer-consumer-problem/" itemprop="url" />
+  <meta name="description" content="Producer–Consumer Problem Definition Two cooperating processes—Producer and Consumer—share a buffer:
+Producer generates items and inserts them into the buffer. Consumer removes and uses those items. Race Condition Without proper synchronization, concurrent updates to shared variables (e.g., counter) can interleave, producing incorrect results. The system must guarantee mutually exclusive access to the buffer and accurate tracking of its current occupancy.
+Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounded Fixed N Buffer full Buffer empty Unbounded Unlimited (practically) ― (can always insert) Buffer empty In practice, most implementations use a bounded circular buffer because physical memory is finite." /><link rel="canonical" href="/process-synchronization/producer-consumer-problem/" itemprop="url" />
 
 <meta property="og:title" content="Producer Consumer Problem" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Producer–Consumer Problem
+    Definition
+Two cooperating processes—Producer and Consumer—share a buffer:
+
+Producer generates items and inserts them into the buffer.
+Consumer removes and uses those items.
+
+Race Condition
+    Without proper synchronization, concurrent updates to shared variables (e.g., counter) can interleave, producing incorrect results. The system must guarantee mutually exclusive access to the buffer and accurate tracking of its current occupancy.
+Buffer Types
+    
+  
+      
+          Buffer Type
+          Capacity
+          Producer Waits When
+          Consumer Waits When
+      
+  
+  
+      
+          Bounded
+          Fixed N
+          Buffer full
+          Buffer empty
+      
+      
+          Unbounded
+          Unlimited (practically)
+          ― (can always insert)
+          Buffer empty
+      
+  
+
+In practice, most implementations use a bounded circular buffer because physical memory is finite." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/process-synchronization/producer-consumer-problem/" /><meta property="article:section" content="process-synchronization" />
 
 
 
   <meta itemprop="name" content="Producer Consumer Problem">
+  <meta itemprop="description" content="Producer–Consumer Problem Definition Two cooperating processes—Producer and Consumer—share a buffer:
+Producer generates items and inserts them into the buffer. Consumer removes and uses those items. Race Condition Without proper synchronization, concurrent updates to shared variables (e.g., counter) can interleave, producing incorrect results. The system must guarantee mutually exclusive access to the buffer and accurate tracking of its current occupancy.
+Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounded Fixed N Buffer full Buffer empty Unbounded Unlimited (practically) ― (can always insert) Buffer empty In practice, most implementations use a bounded circular buffer because physical memory is finite.">
+  <meta itemprop="wordCount" content="394">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Producer Consumer Problem">
+  <meta name="twitter:description" content="Producer–Consumer Problem Definition Two cooperating processes—Producer and Consumer—share a buffer:
+Producer generates items and inserts them into the buffer. Consumer removes and uses those items. Race Condition Without proper synchronization, concurrent updates to shared variables (e.g., counter) can interleave, producing incorrect results. The system must guarantee mutually exclusive access to the buffer and accurate tracking of its current occupancy.
+Buffer Types Buffer Type Capacity Producer Waits When Consumer Waits When Bounded Fixed N Buffer full Buffer empty Unbounded Unlimited (practically) ― (can always insert) Buffer empty In practice, most implementations use a bounded circular buffer because physical memory is finite.">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -295,6 +338,32 @@
     
   >Producer Consumer Problem
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#producerconsumer-problem"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Producer–Consumer Problem</a>
+            </li>
+          <li>
+              <a
+                href="#race-condition"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Race Condition</a>
+            </li>
+          <li>
+              <a
+                href="#buffer-types"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Buffer Types</a>
+            </li>
+          <li>
+              <a
+                href="#busy-waiting-implementation"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              >Busy-Waiting Implementation</a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -820,8 +889,40 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#producerconsumer-problem">Producer–Consumer Problem
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#race-condition">Race Condition
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#buffer-types">Buffer Types
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="hx-font-semibold hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#busy-waiting-implementation">Busy-Waiting Implementation
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#shared-data">Shared Data
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#producer">Producer
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#consumer">Consumer
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#summary">Summary
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -844,7 +945,123 @@
 
         <div class="content">
           <h1>Producer Consumer Problem</h1>
-          
+          <h2>Producer–Consumer Problem<span class="hx-absolute -hx-mt-20" id="producerconsumer-problem"></span>
+    <a href="#producerconsumer-problem" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p><strong>Definition</strong>
+Two cooperating processes—<strong>Producer</strong> and <strong>Consumer</strong>—share a buffer:</p>
+<ul>
+<li><strong>Producer</strong> generates items and inserts them into the buffer.</li>
+<li><strong>Consumer</strong> removes and uses those items.</li>
+</ul>
+<h2>Race Condition<span class="hx-absolute -hx-mt-20" id="race-condition"></span>
+    <a href="#race-condition" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><p>Without proper synchronization, concurrent updates to shared variables (e.g., <code>counter</code>) can interleave, producing incorrect results. The system must guarantee mutually exclusive access to the buffer and accurate tracking of its current occupancy.</p>
+<h2>Buffer Types<span class="hx-absolute -hx-mt-20" id="buffer-types"></span>
+    <a href="#buffer-types" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><table>
+  <thead>
+      <tr>
+          <th>Buffer Type</th>
+          <th>Capacity</th>
+          <th>Producer Waits When</th>
+          <th>Consumer Waits When</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Bounded</strong></td>
+          <td>Fixed N</td>
+          <td>Buffer full</td>
+          <td>Buffer empty</td>
+      </tr>
+      <tr>
+          <td><strong>Unbounded</strong></td>
+          <td>Unlimited (practically)</td>
+          <td>― (can always insert)</td>
+          <td>Buffer empty</td>
+      </tr>
+  </tbody>
+</table>
+<p>In practice, most implementations use a bounded circular buffer because physical memory is finite.</p>
+<p>Certainly.</p>
+<h2>Busy-Waiting Implementation<span class="hx-absolute -hx-mt-20" id="busy-waiting-implementation"></span>
+    <a href="#busy-waiting-implementation" class="subheading-anchor" aria-label="Permalink for this section"></a></h2><h3>Shared Data<span class="hx-absolute -hx-mt-20" id="shared-data"></span>
+    <a href="#shared-data" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#75715e">#define BUFFER_SIZE 10
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>item buffer[BUFFER_SIZE];
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">int</span>  in  <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, out <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>, counter <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<ul>
+<li><code>buffer[BUFFER_SIZE]</code>: The circular buffer that holds items produced by the producer and consumed by the consumer.</li>
+<li><code>in</code>: Index where the next item will be placed by the producer.</li>
+<li><code>out</code>: Index where the next item will be removed by the consumer.</li>
+<li><code>counter</code>: Tracks the number of items currently in the buffer.</li>
+</ul>
+<h3>Producer<span class="hx-absolute -hx-mt-20" id="producer"></span>
+    <a href="#producer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>    item nextProduced <span style="color:#f92672">=</span> <span style="color:#a6e22e">produce_item</span>();          <span style="color:#75715e">// create data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (counter <span style="color:#f92672">==</span> BUFFER_SIZE);              <span style="color:#75715e">// wait if buffer is full
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    buffer[in] <span style="color:#f92672">=</span> nextProduced;                   <span style="color:#75715e">// place item in buffer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    in <span style="color:#f92672">=</span> (in <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> BUFFER_SIZE;                 <span style="color:#75715e">// move to next index
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    counter<span style="color:#f92672">++</span>;                                   <span style="color:#75715e">// increment item count
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<ul>
+<li><code>produce_item()</code>: Generates an item.</li>
+<li>The <code>while(counter == BUFFER_SIZE);</code> loop ensures the producer waits if the buffer is full.</li>
+<li>Once space is available, the item is inserted at the <code>in</code> index, <code>in</code> is updated modulo <code>BUFFER_SIZE</code> to wrap around circularly, and the <code>counter</code> is incremented.</li>
+</ul>
+<h3>Consumer<span class="hx-absolute -hx-mt-20" id="consumer"></span>
+    <a href="#consumer" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c" data-lang="c"><span style="display:flex;"><span><span style="color:#66d9ef">while</span> (<span style="color:#ae81ff">1</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> (counter <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span>);                        <span style="color:#75715e">// wait if buffer is empty
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    item nextConsumed <span style="color:#f92672">=</span> buffer[out];             <span style="color:#75715e">// take item from buffer
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    out <span style="color:#f92672">=</span> (out <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) <span style="color:#f92672">%</span> BUFFER_SIZE;               <span style="color:#75715e">// move to next index
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    counter<span style="color:#f92672">--</span>;                                   <span style="color:#75715e">// decrement item count
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">consume_item</span>(nextConsumed);                  <span style="color:#75715e">// use data
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<ul>
+<li>The <code>while(counter == 0);</code> loop causes the consumer to wait if the buffer is empty.</li>
+<li>Once an item is available, it&rsquo;s taken from the <code>out</code> index, <code>out</code> is updated in a circular fashion, and <code>counter</code> is decremented.</li>
+<li><code>consume_item()</code> consumes the retrieved item.</li>
+</ul>
+<h3>Summary<span class="hx-absolute -hx-mt-20" id="summary"></span>
+    <a href="#summary" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>This implementation relies on a <strong>shared circular buffer</strong> and <strong>busy-wait loops</strong> for synchronization.</li>
+<li>It assumes the producer and consumer will not interfere with each other&rsquo;s updates to <code>counter</code>, <code>in</code>, and <code>out</code>.</li>
+<li>In practice, accessing shared variables like <code>counter</code> without proper synchronization leads to race conditions.</li>
+</ul>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
