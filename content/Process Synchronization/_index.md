@@ -12,6 +12,6 @@ weight: 9
     {{< card icon="lock-closed" link="/process-synchronization/semaphores/" title="Semaphores" >}}
     {{< card icon="exclamation" link="/process-synchronization/bounded-buffer-problem/" title="Bounded Buffer Problem" >}}
     {{< card icon="exclamation" link="/process-synchronization/reader-writer-problem/" title="Reader Writer Problem" >}}
-    {{< card icon="exclamation" link="/process-synchronization/dining-philosiphers-problem/" title="Dining Philosipher Problem" >}}
+    {{< card icon="exclamation" link="/process-synchronization/dining-philosipher-problem/" title="Dining Philosipher Problem" >}}
     {{< card icon="exclamation" link="/process-synchronization/the-sleeping-barber-problem/" title="Sleeping Barber Problem" >}}
 {{< /cards >}}
