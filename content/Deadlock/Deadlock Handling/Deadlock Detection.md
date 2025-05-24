@@ -4,7 +4,7 @@ weight: 3
 ---
 Deadlock detection allows the operating system to let deadlocks occur and then recognize and recover from them.
 
-### 1. Single Instance of Every Resource Type
+## 1. Single Instance of Every Resource Type
 
 **Representation** – a **wait-for graph**
 
@@ -27,7 +27,7 @@ flowchart TD
     P3 --> P1
 ```
 
-### 2. Several Instances of Each Resource Type
+## 2. Several Instances of Each Resource Type
 
 Use three data structures ( `m` resource types, `n` processes ):
 
@@ -56,7 +56,7 @@ Use three data structures ( `m` resource types, `n` processes ):
 4  If any Finish[i] = false  ⇒  those processes are deadlocked
 ```
 
-### Example
+## Example
 
 **System**: 5 processes (P0–P4), 3 resource types: A(7), B(2), C(6)
 **Snapshot at T₀**
@@ -89,7 +89,7 @@ Iterative search:
 
 All `Finish[i] = true` ⇒ **no deadlock**.
 
-### New Request Produces Deadlock
+## New Request Produces Deadlock
 
 Later P2 requests one more C (`Request[P2]` becomes `[0,0,1]`).
 
@@ -104,7 +104,7 @@ Running algorithm again:
 
 Processes **P1, P2, P3, P4 remain false** ⇒ **deadlock exists** involving those four processes.
 
-### Invocation Frequency
+## Invocation Frequency
 
 * **Trade-off**
 
