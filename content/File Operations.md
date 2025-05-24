@@ -5,8 +5,8 @@ weight: 3
 ---
 ## Libraries Required
 ```c
-#include <fcntl.h>
-#include <unistd.h>
+#include <fcntlh>
+#include <unistdh>
 ```
 
 ## Types
@@ -17,7 +17,7 @@ FILE*       // pointer to struct that represent file stream
 ```
 
 ## open()
-Opens a file and returns a file descriptor for it.
+Opens a file and returns a file descriptor for it
 ```c
 int open(const char *pathname, int flags, mode_t mode);
 ```
@@ -27,7 +27,7 @@ int open(const char *pathname, int flags, mode_t mode);
 
 **Example:**
 ```c
-int fd = open("example.txt", O_RDONLY);
+int fd = open("exampletxt", O_RDONLY);
 ```
 
 
@@ -47,7 +47,7 @@ ssize_t nread = read(fd, buf, sizeof buf);
 ```
 
 ## write()
-Writes data from a buffer to a file descriptor.
+Writes data from a buffer to a file descriptor
 ```c
 ssize_t write(int fd, const void *buf, size_t count);
 ```
@@ -62,7 +62,7 @@ ssize_t nwritten = write(fd, msg, strlen(msg));
 ```
 
 ## close()
-Closes an open file descriptor.
+Closes an open file descriptor
 ```c
 int close(int fd);
 ```
@@ -76,9 +76,9 @@ close(fd);
 ```
 
 ## printf()
-Writes formatted output to standard output.
+Writes formatted output to standard output
 ```c
-int printf(const char *format, ...);
+int printf(const char *format, );
 ```
 
 **Return Value:**
@@ -92,8 +92,8 @@ int x = 10;
 printf("x = %d\n", x);
 
 // Printing a float
-float f = 3.14;
-printf("f = %.2f\n", f);
+float f = 314;
+printf("f = %2f\n", f);
 
 // Printing a character
 char c = 'A';
@@ -106,8 +106,8 @@ printf("String: %s\n", str);
 // Printing multiple values
 int id = 101;
 char grade = 'A';
-float marks = 89.5;
-printf("ID: %d, Grade: %c, Marks: %.1f\n", id, grade, marks);
+float marks = 895;
+printf("ID: %d, Grade: %c, Marks: %1f\n", id, grade, marks);
 
 // Printing hexadecimal and octal
 int num = 255;
@@ -120,9 +120,9 @@ printf("Address: %p\n", ptr);
 
 
 ## scanf()
-Reads formatted input from standard input.
+Reads formatted input from standard input
 ```c
-int scanf(const char *format, ...);
+int scanf(const char *format, );
 ```
 
 **Return Value:**
@@ -163,7 +163,7 @@ scanf("%d %c %f", &id, &grade, &marks);
 ```
 
 ## dup()
-Duplicates an existing file descriptor to the lowest*numbered unused one.
+Duplicates an existing file descriptor to the lowest*numbered unused one
 ```c
 int dup(int oldfd);
 ```
@@ -178,7 +178,7 @@ int dup_fd = dup(fd);       // dup_fd now refers to the same file
 
 
 ## dup2()
-Duplicates a file descriptor to a specified descriptor number, closing it first if needed.
+Duplicates a file descriptor to a specified descriptor number, closing it first if needed
 ```c
 int dup2(int oldfd, int newfd);
 ```
@@ -193,7 +193,7 @@ dup2(fd, STDOUT_FILENO);    // redirect standard output to fd
 
 ## File Reading Functions
 ### fopen()
-Opens a file and returns a file pointer to it.
+Opens a file and returns a file pointer to it
 ```c
 FILE *fopen(const char *filename, const char *mode);
 ```
@@ -205,11 +205,11 @@ FILE *fopen(const char *filename, const char *mode);
 
 **Example:**
 ```c
-FILE *fp = fopen("example.txt", "r");
+FILE *fp = fopen("exampletxt", "r");
 ```
 
 ### fclose()
-Closes a previously opened file stream.
+Closes a previously opened file stream
 
 ```c
 int fclose(FILE *stream);
@@ -228,7 +228,7 @@ fclose(fp);
 
 
 ### fgets()
-Reads a string from a file, stopping at newline or EOF.
+Reads a string from a file, stopping at newline or EOF
 
 ```c
 char *fgets(char *str, int n, FILE *stream);
@@ -247,7 +247,7 @@ fgets(line, sizeof line, fp);
 
 
 ### fgetc()
-Reads a single character from a file.
+Reads a single character from a file
 
 ```c
 int fgetc(FILE *stream);
@@ -264,7 +264,7 @@ int ch = fgetc(fp);     // returns int, not char
 ```
 
 ### fread()
-Reads binary data from a file stream.
+Reads binary data from a file stream
 
 ```c
 size_t fread(void *ptr, size_t size, size_t count, FILE *stream);
@@ -281,10 +281,10 @@ size_t n = fread(block, 1, sizeof block, fp);
 ```
 
 ### fscanf()
-Reads formatted input from a file stream.
+Reads formatted input from a file stream
 
 ```c
-int fscanf(FILE *stream, const char *format, ...);
+int fscanf(FILE *stream, const char *format, );
 ```
 
 **Return Value:**
@@ -300,7 +300,7 @@ fscanf(fp, "%d %d", &x, &y);
 
 
 ### feof()
-Checks whether the end-of-file indicator is set.
+Checks whether the end-of-file indicator is set
 
 ```c
 int feof(FILE *stream);
@@ -317,7 +317,7 @@ if (feof(fp)) { /* reached end-of-file */ }
 ```
 
 ### ferror()
-Checks whether a file stream has an error.
+Checks whether a file stream has an error
 
 ```c
 int ferror(FILE *stream);
@@ -335,10 +335,10 @@ if (ferror(fp)) { /* handle stream error */ }
 
 ## File Writing Functions
 ### fprintf()
-Writes formatted output to a file stream.
+Writes formatted output to a file stream
 
 ```c
-int fprintf(FILE *stream, const char *format, ...);
+int fprintf(FILE *stream, const char *format, );
 ```
 
 **Return Value:**
@@ -352,7 +352,7 @@ fprintf(fp, "Value = %d\n", 42);
 ```
 
 ### fputs()
-Writes a null-terminated string to a file.
+Writes a null-terminated string to a file
 
 ```c
 int fputs(const char *str, FILE *stream);
@@ -369,7 +369,7 @@ fputs("Line of text\n", fp);
 ```
 
 ### fputc()
-Writes a single character to a file.
+Writes a single character to a file
 
 ```c
 int fputc(int c, FILE *stream);
@@ -386,7 +386,7 @@ fputc('A', fp);
 ```
 
 ### fwrite()
-Writes binary data to a file stream.
+Writes binary data to a file stream
 
 ```c
 size_t fwrite(const void *ptr, size_t size, size_t count, FILE *stream);
@@ -402,7 +402,7 @@ fwrite(block, 1, sizeof block, fp);
 ```
 
 ### fflush()
-Flushes a file’s output buffer to disk.
+Flushes a file’s output buffer to disk
 
 ```c
 int fflush(FILE *stream);
@@ -416,4 +416,134 @@ int fflush(FILE *stream);
 **Example:**
 ```c
 fflush(fp);     // force buffered output to disk
+```
+## Printing Functions
+
+### putchar()
+
+Prints a single character to `stdout`
+
+```c
+int putchar(int char);
+```
+
+**Return Value:**
+
+* Success: The character printed
+* Error: `EOF`
+
+**Example:**
+
+```c
+putchar('A');    // prints A
+```
+
+### puts()
+
+Prints a **string followed by a newline** to `stdout`
+
+```c
+int puts(const char *str);
+```
+
+**Return Value:**
+
+* Success: Non-negative number
+* Error: `EOF`
+
+**Example:**
+
+```c
+puts("Hello");   // prints: Hello\n
+```
+
+### printf()
+
+Prints a **formatted string** to `stdout`
+
+```c
+int printf(const char *format, );
+```
+
+**Return Value:**
+
+* Success: Number of characters printed
+* Error: Negative number
+
+**Example:**
+
+```c
+printf("Age: %d\n", 25);   // prints: Age: 25
+```
+
+**Format Specifiers:**
+
+| Specifier | Meaning         |
+| --------- | --------------- |
+| `%d`      | Integer         |
+| `%f`      | Floating-point  |
+| `%c`      | Character       |
+| `%s`      | String          |
+| `%x`      | Hexadecimal     |
+| `%p`      | Pointer address |
+| `%%`      | Literal `%`     |
+
+### fprintf()
+
+Prints a **formatted string to a file stream**
+
+```c
+int fprintf(FILE *stream, const char *format, );
+```
+
+**Return Value:**
+
+* Success: Number of characters printed
+* Error: Negative number
+
+**Example:**
+
+```c
+fprintf(fp, "Score: %d\n", score);   // writes to a file
+```
+
+### sprintf()
+
+Prints a **formatted string into a buffer** (string)
+
+```c
+int sprintf(char *str, const char *format, );
+```
+
+**Return Value:**
+
+* Success: Number of characters written
+* Error: Negative number
+
+**Example:**
+
+```c
+char buffer[100];
+sprintf(buffer, "Name: %s", name);      // buffer gets the formatted string
+```
+
+>[!WARNING] Unsafe: No bounds checking – risk of buffer overflow
+
+### snprintf()
+
+Safer version of `sprintf()`, limits the output to avoid overflows
+
+```c
+int snprintf(char *str, size_t size, const char *format, );
+```
+
+**Return Value:**
+
+* Characters that *would* have been written (even if truncated)
+
+**Example:**
+
+```c
+char buf[10];
+snprintf(buf, sizeof(buf), "%d", 1234567890);   // safely formats with limit
 ```
