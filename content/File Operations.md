@@ -332,6 +332,25 @@ int ferror(FILE *stream);
 ```c
 if (ferror(fp)) { /* handle stream error */ }
 ```
+### fstat()
+
+Gets metadata of a file via file descriptor
+
+```c
+int fstat(int fd, struct stat *statbuf);
+```
+
+**Return Value:**
+
+* Success: 0
+* Error: -1
+
+**Example:**
+
+```c
+int fd = open("example.txt", O_RDONLY);
+fstat(fd, &st);
+```
 
 ## File Writing Functions
 ### fprintf()
