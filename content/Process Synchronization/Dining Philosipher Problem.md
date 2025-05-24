@@ -1,6 +1,6 @@
 ---
 breadcrumbs: true
-title: Dining Philosipher Problem
+title: Dining Philosopher Problem
 weight: 8
 ---
 ## Problem Statement
