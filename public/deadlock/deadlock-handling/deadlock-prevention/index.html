@@ -11,18 +11,34 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
 <title>Deadlock Prevention – </title>
-  <meta name="description" content="" /><link rel="canonical" href="/deadlock/deadlock-handling/deadlock-prevention/" itemprop="url" />
+  <meta name="description" content="Deadlock can be prevented by breaking one of the four necessary conditions:
+1. Mutual Exclusion Condition: Only one process at a time can hold a resource. Prevention: Not needed for sharable resources (like read-only files). Required only for non-sharable resources (like printers, files for writing). 2. Hold and Wait Condition: A process is holding at least one resource and waiting for others." /><link rel="canonical" href="/deadlock/deadlock-handling/deadlock-prevention/" itemprop="url" />
 
 <meta property="og:title" content="Deadlock Prevention" />
-<meta property="og:description" content="" />
+<meta property="og:description" content="Deadlock can be prevented by breaking one of the four necessary conditions:
+1. Mutual Exclusion
+    
+Condition: Only one process at a time can hold a resource.
+Prevention: Not needed for sharable resources (like read-only files).
+Required only for non-sharable resources (like printers, files for writing).
+
+2. Hold and Wait
+    
+
+Condition: A process is holding at least one resource and waiting for others." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/deadlock/deadlock-handling/deadlock-prevention/" /><meta property="article:section" content="deadlock" />
 
 
 
   <meta itemprop="name" content="Deadlock Prevention">
+  <meta itemprop="description" content="Deadlock can be prevented by breaking one of the four necessary conditions:
+1. Mutual Exclusion Condition: Only one process at a time can hold a resource. Prevention: Not needed for sharable resources (like read-only files). Required only for non-sharable resources (like printers, files for writing). 2. Hold and Wait Condition: A process is holding at least one resource and waiting for others.">
+  <meta itemprop="wordCount" content="272">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Deadlock Prevention">
+  <meta name="twitter:description" content="Deadlock can be prevented by breaking one of the four necessary conditions:
+1. Mutual Exclusion Condition: Only one process at a time can hold a resource. Prevention: Not needed for sharable resources (like read-only files). Required only for non-sharable resources (like printers, files for writing). 2. Hold and Wait Condition: A process is holding at least one resource and waiting for others.">
 
     <link rel="preload" href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" as="style" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
     <link href="/css/compiled/main.min.9a2a4c6e602ce30f10fa86afbb1ce624db853742eeccc2e954764594ee62c18f.css" rel="stylesheet" integrity="sha256-mipMbmAs4w8Q&#43;oavuxzmJNuFN0LuzMLpVHZFlO5iwY8=" />
@@ -386,6 +402,14 @@
     
   >Deadlock Prevention
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              ></a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
@@ -820,8 +844,28 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#1-mutual-exclusion">1. Mutual Exclusion
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#2-hold-and-wait">2. Hold and Wait
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#3-no-preemption">3. No Preemption
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#4-circular-wait">4. Circular Wait
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-8 rtl:hx-pr-8 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#visual-representation">Visual Representation:
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -847,7 +891,106 @@
 
         <div class="content">
           <h1>Deadlock Prevention</h1>
-          
+          <p>Deadlock can be prevented by breaking one of the four necessary conditions:</p>
+<h3>1. Mutual Exclusion<span class="hx-absolute -hx-mt-20" id="1-mutual-exclusion"></span>
+    <a href="#1-mutual-exclusion" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li><strong>Condition</strong>: Only one process at a time can hold a resource.</li>
+<li><strong>Prevention</strong>: Not needed for sharable resources (like read-only files).</li>
+<li><strong>Required</strong> only for non-sharable resources (like printers, files for writing).</li>
+</ul>
+<h3>2. Hold and Wait<span class="hx-absolute -hx-mt-20" id="2-hold-and-wait"></span>
+    <a href="#2-hold-and-wait" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>
+<p><strong>Condition</strong>: A process is holding at least one resource and waiting for others.</p>
+</li>
+<li>
+<p><strong>Prevention Strategy</strong>:</p>
+<ul>
+<li>Force processes to request all resources at once</li>
+<li>OR allow them to request resources only when holding none</li>
+</ul>
+</li>
+</ul>
+<pre class="mermaid hx-mt-6">
+  graph TD
+    Start[Start]
+    RequestAll[Process requests all resources at once]
+    Execute[If all available, process executes]
+    Wait[If not, process waits and holds nothing]
+
+    Start --&gt; RequestAll --&gt; Execute
+    RequestAll --&gt; Wait
+</pre><h3>3. No Preemption<span class="hx-absolute -hx-mt-20" id="3-no-preemption"></span>
+    <a href="#3-no-preemption" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>
+<p><strong>Condition</strong>: Resources cannot be forcibly taken</p>
+</li>
+<li>
+<p><strong>Prevention Strategy</strong>:</p>
+<ul>
+<li>If a process holding resources requests another unavailable resource, all held resources are released</li>
+<li>The process is suspended until all needed resources (old + new) are available again</li>
+</ul>
+</li>
+</ul>
+<pre class="mermaid hx-mt-6">
+  flowchart TD
+    A[&#34;Process holding R1&#34;]
+    B[&#34;Requests R2 (unavailable)&#34;]
+    C[&#34;Release R1&#34;]
+    D[&#34;Wait for R1 and R2&#34;]
+    E[&#34;Re-acquire R1 and R2&#34;]
+    F[&#34;Resume Execution&#34;]
+
+    A --&gt; B --&gt; C --&gt; D --&gt; E --&gt; F
+</pre><h3>4. Circular Wait<span class="hx-absolute -hx-mt-20" id="4-circular-wait"></span>
+    <a href="#4-circular-wait" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><ul>
+<li>
+<p><strong>Condition</strong>: A circular chain of waiting processes exists.</p>
+</li>
+<li>
+<p><strong>Prevention Strategy</strong>:</p>
+<ul>
+<li>Impose a <strong>total ordering</strong> on all resources.</li>
+<li>Processes must request resources in <strong>ascending order</strong> only.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Let: R0 &lt; R1 &lt; R2 &lt; R3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Allowed:
+</span></span><span style="display:flex;"><span>P1 requests R0 → R1 → R3
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Disallowed:
+</span></span><span style="display:flex;"><span>P2 holds R3, requests R0 (violates ascending order)</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h4>Visual Representation:<span class="hx-absolute -hx-mt-20" id="visual-representation"></span>
+    <a href="#visual-representation" class="subheading-anchor" aria-label="Permalink for this section"></a></h4><pre class="mermaid hx-mt-6">
+  graph TD
+    R0((R0))
+    R1((R1))
+    R2((R2))
+    R3((R3))
+
+    P1((P1)) --&gt; R0
+    R0 --&gt; P1
+    P1 --&gt; R1
+    R1 --&gt; P1
+    P1 --&gt; R3
+    R3 --&gt; P1
+</pre><p>If all processes follow this order, circular wait <strong>cannot occur</strong>.</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
@@ -876,6 +1019,36 @@
     
     <script defer src="/js/main.min.0942239592f0795dc7213dd1057fd229d7edc19c0ef1a285396eb292d9ca9842.js" integrity="sha256-CUIjlZLweV3HIT3RBX/SKdftwZwO8aKFOW6yktnKmEI="></script>
 <script defer src="/lib/flexsearch/flexsearch.bundle.min.0425860527cc9968f9f049421c7a56b39327d475e2e3a8f550416be3a9134327.js" integrity="sha256-BCWGBSfMmWj58ElCHHpWs5Mn1HXi46j1UEFr46kTQyc="></script>
-    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script>
+    <script defer src="/en.search.min.0b444174a2d66936193755eccfb66af827ce3d9e3aa2223167ea9490ce97ace4.js" integrity="sha256-C0RBdKLWaTYZN1Xsz7Zq&#43;CfOPZ46oiIxZ&#43;qUkM6XrOQ="></script><script defer src="/lib/mermaid/mermaid.min.0d2b6f2361e7e0ce466a6ed458e03daa5584b42ef6926c3beb62eb64670ca261.js" integrity="sha256-DStvI2Hn4M5Gam7UWOA9qlWEtC72kmw762LrZGcMomE="></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    
+    document.querySelectorAll(".mermaid").forEach(el => {
+      el.dataset.original = el.innerHTML;
+    });
+
+    const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+    mermaid.initialize({ startOnLoad: true, theme: theme });
+
+    let timeout;
+    new MutationObserver(() => {
+      clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        const theme = document.documentElement.classList.contains("dark") ? "dark" : "default";
+        document.querySelectorAll(".mermaid").forEach(el => {
+          
+          el.innerHTML = el.dataset.original;
+          el.removeAttribute("data-processed");
+        });
+        mermaid.initialize({ startOnLoad: true, theme: theme });
+        mermaid.init();
+      }, 150);
+    }).observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"]
+    });
+  });
+</script>
+
   </body>
 </html>
