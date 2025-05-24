@@ -14,13 +14,13 @@ Five philosophers sit around a circular table. Each philosopher alternates betwe
 
 Each philosopher must pick up their **left** and **right** forks to eat. Each fork is shared between adjacent philosophers.
 
-## Solution (Naive)
+## Solution 1
 
 ### Synchronization Primitives
 
 | Semaphore | Initial Value | Purpose                                                                          |
 | --------- | ------------- | -------------------------------------------------------------------------------- |
-| `fork[i]` | `1`           | Represents availability of fork `i`. Only one philosopher can hold it at a time. |
+| `fork[i]` | 1             | Represents availability of fork `i`. Only one philosopher can hold it at a time. |
 
 ### Shared Data
 
@@ -76,7 +76,7 @@ All four Coffman conditions for deadlock are present.
 | **No Starvation**    | ❌ If a philosopher is always blocked by others. |
 | **Concurrency**      | ✅ When forks are free, philosophers eat freely. |
 
-## Solution (Improved)
+## Solution 2
 
 To avoid deadlock and ensure progress and bounded waiting, the solution must prevent all four philosophers from holding one fork and waiting for the other.
 
@@ -177,3 +177,37 @@ while (true) {
 | **Deadlock-Free**    | `test()` only allows eating if neighbors are not eating.                    |
 | **No Starvation**    | Each philosopher eventually gets a chance to eat via FIFO semaphore `S[i]`. |
 | **Concurrency**      | Multiple non-neighbor philosophers can eat simultaneously.                  |
+
+## Solution 3
+
+### Synchronization Primitives
+
+| Semaphore | Initial Value | Purpose                         |
+| --------- | ------------- | ------------------------------- |
+|   T       |      4        | Limit philosophers at the table |
+|   FORK    |      1        | One semaphore per fork          |
+
+### Shared Data
+
+```c
+#define N 5
+
+semaphore T = 4;                        // Limit philosophers at the table
+semaphore FORK[5] = {1, 1, 1, 1, 1};    // One semaphore per fork
+```
+
+### Philosopher Code
+
+```c
+Pi(){
+  while(TRUE){
+    wait(T);
+      wait(FORK[i]);
+        wait(FORK[(i + 1) % 5]);
+          eat;
+        signal(FORK[(i + 1) % 5]);
+      signal(FORK[i]);
+    signal(T);
+  }
+}
+```
