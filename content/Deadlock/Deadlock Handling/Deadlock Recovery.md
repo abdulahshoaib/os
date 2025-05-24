@@ -3,8 +3,6 @@ title: Deadlock Recovery
 next: Virtual Memory
 weight: 4
 ---
-### Deadlock Recovery
-
 When a deadlock is detected (e.g., via detection algorithms), the system must recover to resume normal operation
 
 Two main strategies:
