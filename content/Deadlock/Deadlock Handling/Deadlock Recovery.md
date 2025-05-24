@@ -23,7 +23,7 @@ Two main strategies:
 
 This is called victim selection. We aim to minimize the total recovery cost
 
-#### Factors to Consider:
+#### Factors to Consider
 
 | Factor                      | Description                                                   |
 | --------------------------- | ------------------------------------------------------------- |
@@ -41,7 +41,7 @@ This is called victim selection. We aim to minimize the total recovery cost
 
 Instead of terminating the process, we roll it back to an earlier safe state (i.e., a checkpoint).
 
-### Rollback Strategy:
+### Rollback Strategy
 
 * Return the process to a known safe state
 * Restart execution from that point
@@ -52,7 +52,7 @@ Instead of terminating the process, we roll it back to an earlier safe state (i.
 
 If the same process is always selected as the victim, it may never finish ⇒ starvation
 
-### Solution:
+### Solution
 
 Include the number of rollbacks in the cost metric
 Processes that have already been rolled back many times should be less likely to be chosen again.
