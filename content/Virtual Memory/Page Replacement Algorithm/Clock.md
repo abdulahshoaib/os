@@ -33,8 +33,8 @@ This approximates **Least Recently Used (LRU)** behavior with much less overhead
 
 ## Example
 
-Reference string: 0 4 1 4 2 4 3 4 2 4 0 4 1
-Frames: 3
+* Reference string: 0 4 1 4 2 4 3 4 2 4 0 4 1
+* Frames: 3
 
 ### Initial setup:
 
