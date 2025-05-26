@@ -14,11 +14,24 @@ outputs:
   section: [HTML, RSS]
 
 params:
-  displayUpdatedDate: true
-  dateFormat: "January 2, 2006"
+  description: Operating System Notes for dummies like me
+
   navbar:
     displayTitle: true
     displayLogo: false
+    width: wide
+
+  highlight:
+    copy:
+      enable: true
+      display: hover
+
+  footer:
+    enable: false
+
+  displayUpdatedDate: true
+  dateFormat: "January 2, 2006"
+
 
 menu:
   main:
@@ -34,7 +47,3 @@ menu:
       url: "https://github.com/abdulahshoaib/os"
       params:
         icon: github
-
-footer:
-    enable: false
-    displayPoweredBy: false
