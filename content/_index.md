@@ -1,11 +1,7 @@
 ---
 breadcrumb: false
-cascade:
-  type: docs
+title: Operating System
 ---
-
-## Operating System
-
 The sole purpose of this website is to give reference for the C POSIX lib and the functions that are commonly used
 
 {{< cards >}}
