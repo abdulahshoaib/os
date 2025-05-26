@@ -17,7 +17,7 @@ The sole purpose of this website is to give reference for the C POSIX lib and th
   {{< card icon="lock-closed" link="semaphores" title="Semaphores" >}}
   {{< card icon="collection" link="shared-memory" title="Shared Memory" >}}
   {{< card icon="link" link="cpu-scheduling" title="CPU Scheduling" >}}
-  {{< card icon="status-online" link="process-snychronization" title="Process Snychronization" >}}
+  {{< card icon="status-online" link="process-synchronization" title="Process Snychronization" >}}
   {{< card icon="x-circle" link="deadlock" title="Deadlock" >}}
   {{< card icon="view-list" link="virtual-memory" title="Virtual Memory" >}}
 {{< /cards >}}
