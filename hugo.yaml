@@ -1,17 +1,11 @@
 title: "Operating System Notes"
 enableGitInfo: true
 defaultContentLanguage: en
+enableInlineShortcodes: true
 
 module:
   imports:
     - path: github.com/imfing/hextra
-
-enableInlineShortcodes: true
-
-outputs:
-  home: [HTML]
-  page: [HTML]
-  section: [HTML, RSS]
 
 params:
   description: Operating System Notes for dummies like me
@@ -35,9 +29,6 @@ params:
 
 menu:
   main:
-    - name: docs
-      pageRef: /
-      weight: 3
     - name: Search
       weight: 4
       params:
