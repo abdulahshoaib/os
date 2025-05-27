@@ -3,12 +3,27 @@ enableGitInfo: true
 defaultContentLanguage: en
 enableInlineShortcodes: true
 
+markup:
+  highlight:
+    anchorLineNos: true
+    codeFences: true
+    guessSyntax: true
+    lineNos: true
+    lineNumbersInTable: false
+    noClasses: true
+    style: rose-pine
+    tabWidth: 4
+    wrapperClass: highlight
+
 module:
   imports:
     - path: github.com/imfing/hextra
 
 params:
   description: Operating System Notes for dummies like me
+
+  customCSS:
+    - css/index.css
 
   navbar:
     displayTitle: true
